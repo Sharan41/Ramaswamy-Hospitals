@@ -1,0 +1,139 @@
+import { useI18n } from '../i18n'
+import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+
+export default function Contact() {
+  const { t } = useI18n()
+  
+  const socialLinks = [
+    { 
+      name: t.contact.instagram, 
+      desc: t.contact.instagramText,
+      icon: "IG",
+      url: "#"
+    },
+    { 
+      name: t.contact.linktree, 
+      desc: t.contact.linktreeText,
+      icon: "LT",
+      url: "#"
+    },
+    { 
+      name: t.contact.whatsapp, 
+      desc: t.contact.whatsappText,
+      icon: "WA",
+      url: "#"
+    }
+  ]
+
+  return (
+    <section className="section">
+      {/* Hero Section */}
+      <FadeIn>
+        <div className="contact-hero">
+          <h1>{t.contact.title}</h1>
+          <p className="contact-subtitle">
+            {t.contact.subtitle}
+          </p>
+        </div>
+      </FadeIn>
+
+      {/* Contact Info Cards */}
+      <StaggerContainer className="contact-info-grid">
+        <div className="contact-info-card">
+          <div className="contact-info-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3>{t.contact.address}</h3>
+          <p>{t.contact.addressLine1}</p>
+          <p>{t.contact.addressLine2}</p>
+          <p>{t.contact.addressLine3}</p>
+          <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="contact-link">
+            {t.contact.viewMaps} →
+          </a>
+        </div>
+
+        <div className="contact-info-card">
+          <div className="contact-info-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3>{t.contact.phone}</h3>
+          <div className="contact-phone-group">
+            <div className="contact-phone-label">{t.contact.emergency}</div>
+            <a href="tel:+919912757854" className="contact-phone-number">+91 99127 57854</a>
+          </div>
+          <div className="contact-phone-group">
+            <div className="contact-phone-label">{t.contact.appointments}</div>
+            <a href="tel:+919646837777" className="contact-phone-number">+91 96468 37777</a>
+          </div>
+        </div>
+
+        <div className="contact-info-card">
+          <div className="contact-info-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h3>{t.contact.email}</h3>
+          <p><a href="mailto:ramaswamyhospitals@gmail.com" className="contact-email">ramaswamyhospitals@gmail.com</a></p>
+          <div style={{ marginTop: 16 }}>
+            <div className="contact-phone-label">{t.contact.forInquiries}</div>
+            <a href="mailto:appointments@ramaswamyhospitals.com" className="contact-email">appointments@ramaswamyhospitals.com</a>
+          </div>
+        </div>
+
+        <div className="contact-info-card">
+          <div className="contact-info-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>{t.contact.hours}</h3>
+          <div className="contact-hours-item">
+            <strong>{t.contact.emergencyHours}</strong>
+          </div>
+          <div className="contact-hours-divider"></div>
+          <div className="contact-hours-item">
+            <strong>{t.contact.opdHours}</strong>
+          </div>
+          <div className="contact-hours-item">{t.contact.monSat}</div>
+          <div className="contact-hours-item">{t.contact.sunday}</div>
+        </div>
+      </StaggerContainer>
+
+      {/* Social Media */}
+      <div style={{ marginTop: 80 }}>
+        <FadeIn>
+          <h2 className="section-heading">{t.contact.connectWithUs}</h2>
+        </FadeIn>
+        <StaggerContainer className="contact-social-grid">
+          {socialLinks.map((social, index) => (
+            <a key={index} href={social.url} target="_blank" rel="noreferrer" className="contact-social-card">
+              <div className="contact-social-icon">{social.icon}</div>
+              <h3>{social.name}</h3>
+              <p>{social.desc}</p>
+              <div className="contact-social-arrow">→</div>
+            </a>
+          ))}
+        </StaggerContainer>
+      </div>
+
+      {/* Emergency Alert */}
+      <FadeIn>
+        <div className="contact-emergency-alert">
+          <div className="emergency-alert-indicator"></div>
+          <div>
+            <h3>{t.contact.emergencyInfo}</h3>
+            <p>{t.contact.emergencyInfoText}</p>
+          </div>
+        </div>
+      </FadeIn>
+    </section>
+  )
+}
