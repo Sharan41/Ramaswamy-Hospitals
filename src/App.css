@@ -1309,7 +1309,8 @@ html {
 
   /* Contact Extra Small Mobile */
   .contact-info-card {
-    padding: 20px 16px;
+    padding: 24px 20px;
+    overflow: hidden;
   }
 
   .contact-info-icon {
@@ -1324,14 +1325,28 @@ html {
 
   .contact-info-card h3 {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .contact-info-card p {
     font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .contact-phone-number {
     font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .contact-email {
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
   }
 
   .contact-social-card {
@@ -3217,6 +3232,9 @@ html {
   font-size: 1.1rem;
   font-weight: 700;
   text-decoration: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .contact-phone-number:hover {
@@ -3227,6 +3245,11 @@ html {
   color: var(--brand);
   text-decoration: none;
   font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .contact-email:hover {
@@ -4408,6 +4431,9 @@ html {
   .contact-info-card {
     padding: 32px 24px;
     border-radius: 16px;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .contact-info-icon {
@@ -4424,15 +4450,30 @@ html {
   .contact-info-card h3 {
     font-size: 1.25rem;
     margin-bottom: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .contact-info-card p {
     font-size: 1rem;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .contact-phone-number {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .contact-email {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    display: inline-block;
+    max-width: 100%;
   }
 
   .contact-phone-label {
@@ -4441,6 +4482,7 @@ html {
 
   .contact-phone-group {
     margin-bottom: 16px;
+    overflow: hidden;
   }
 
   .contact-social-grid {
