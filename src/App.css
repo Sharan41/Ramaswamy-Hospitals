@@ -1221,6 +1221,25 @@ html {
     font-size: 0.8rem;
   }
 
+  /* About Page Extra Small Mobile */
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-stat-card {
+    padding: 20px 16px;
+  }
+
+  .about-stat-number {
+    font-size: 2.5rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
   /* Achievements Extra Small Mobile */
   .achievements-stats-grid {
     grid-template-columns: 1fr;
@@ -2821,12 +2840,29 @@ html {
     margin: 0 auto;
   }
 
+  .about-stats-container {
+    padding: 32px 20px;
+    margin: 32px 0;
+  }
+
   .about-stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-stat-card {
+    padding: 16px 12px;
   }
 
   .about-stat-number {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .values-grid,
@@ -4626,6 +4662,33 @@ html {
   .about-hero-image {
     min-height: 300px;
     padding: 24px;
+  }
+
+  .about-stats-container {
+    padding: 32px 20px;
+    margin: 32px 0;
+    border-radius: 16px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-stat-card {
+    padding: 16px 10px;
+  }
+
+  .about-stat-number {
+    font-size: 2rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.4;
   }
 
   .about-mission-vision {
