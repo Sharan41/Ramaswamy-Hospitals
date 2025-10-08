@@ -1,7 +1,9 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
 import bannerLogo from '../assets/banner-logo.jpg'
+import crestLogo from '../assets/crest-logo.jpg'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import CountUp from '../components/CountUp'
 
 export default function Home() {
   const { t } = useI18n()
@@ -96,7 +98,9 @@ export default function Home() {
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
               </div>
-              <div className="home-stat-number">500+</div>
+              <div className="home-stat-number">
+                <CountUp end="500" duration={2500} suffix="+" />
+              </div>
               <div className="home-stat-label">{t.home.surgeries}</div>
             </div>
             <div className="home-stat-item">
@@ -108,7 +112,9 @@ export default function Home() {
                   <line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>
               </div>
-              <div className="home-stat-number">25+</div>
+              <div className="home-stat-number">
+                <CountUp end="25" duration={2000} suffix="+" />
+              </div>
               <div className="home-stat-label">{t.home.yearsOfCare}</div>
             </div>
             <div className="home-stat-item">
@@ -120,12 +126,30 @@ export default function Home() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
               </div>
-              <div className="home-stat-number">20+</div>
+              <div className="home-stat-number">
+                <CountUp end="20" duration={2200} suffix="+" />
+              </div>
               <div className="home-stat-label">{t.home.specialties}</div>
             </div>
           </StaggerContainer>
         </section>
       </ScaleIn>
+
+      {/* Leader Section */}
+      <FadeIn>
+        <div className="home-leader-section">
+          <div className="home-leader-card">
+            <div className="home-leader-image">
+              <img src={crestLogo} alt="Dr. Ramaswamy" />
+            </div>
+            <div className="home-leader-content">
+              <h3>Dr. Ramaswamy</h3>
+              <p className="home-leader-title">{t.about.founderTitle}</p>
+              <p className="home-leader-bio">{t.about.founderBio}</p>
+            </div>
+          </div>
+        </div>
+      </FadeIn>
 
       {/* Excellence Section */}
       <section className="home-excellence-section">

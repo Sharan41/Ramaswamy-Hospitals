@@ -123,17 +123,6 @@ export default function Contact() {
           ))}
         </StaggerContainer>
       </div>
-
-      {/* Emergency Alert */}
-      <FadeIn>
-        <div className="contact-emergency-alert">
-          <div className="emergency-alert-indicator"></div>
-          <div>
-            <h3>{t.contact.emergencyInfo}</h3>
-            <p>{t.contact.emergencyInfoText}</p>
-          </div>
-        </div>
-      </FadeIn>
     </section>
   )
 }

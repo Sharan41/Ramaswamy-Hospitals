@@ -1828,6 +1828,59 @@ html {
   line-height: 1.6;
 }
 
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.achievement-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--brand);
+  position: relative;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.achievement-number {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(17, 153, 142, 0.3);
+}
+
+.achievement-card h3 {
+  color: var(--brand);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.achievement-card p {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
 /* Certifications Grid */
 .certifications-grid {
   display: grid;
@@ -3546,6 +3599,58 @@ html {
   font-weight: 500;
 }
 
+/* Leader Section */
+.home-leader-section {
+  margin: 80px 0;
+}
+
+.home-leader-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-leader-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--brand);
+  box-shadow: var(--shadow-md);
+}
+
+.home-leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-leader-content h3 {
+  color: var(--brand);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.home-leader-title {
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.home-leader-bio {
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
 /* Excellence Section */
 .home-excellence-section {
   padding: 80px 0;
@@ -4598,6 +4703,59 @@ html {
 
   .home-stat-label {
     font-size: 0.85rem;
+  }
+
+  .home-leader-section {
+    margin: 48px 0;
+  }
+
+  .home-leader-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .home-leader-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .home-leader-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .home-leader-title {
+    font-size: 1rem;
+  }
+
+  .home-leader-bio {
+    font-size: 1rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .achievement-card {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .achievement-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .achievement-card p {
+    font-size: 1rem;
   }
 
   .home-excellence-section {

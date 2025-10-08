@@ -5,12 +5,12 @@ export default function Achievements() {
   const { t } = useI18n()
   
   const achievements = [
-    { year: "2024", title: t.achievements.excellence2024, description: t.achievements.excellence2024Desc },
-    { year: "2023", title: t.achievements.surgeries500, description: t.achievements.surgeries500Desc },
-    { year: "2022", title: t.achievements.equipment2022, description: t.achievements.equipment2022Desc },
-    { year: "2021", title: t.achievements.covidCare, description: t.achievements.covidCareDesc },
-    { year: "2020", title: t.achievements.emergency2020, description: t.achievements.emergency2020Desc },
-    { year: "2019", title: t.achievements.community2019, description: t.achievements.community2019Desc },
+    { title: t.achievements.excellence2024, description: t.achievements.excellence2024Desc },
+    { title: t.achievements.surgeries500, description: t.achievements.surgeries500Desc },
+    { title: t.achievements.equipment2022, description: t.achievements.equipment2022Desc },
+    { title: t.achievements.covidCare, description: t.achievements.covidCareDesc },
+    { title: t.achievements.emergency2020, description: t.achievements.emergency2020Desc },
+    { title: t.achievements.community2019, description: t.achievements.community2019Desc },
   ]
 
   const stats = [
@@ -55,28 +55,21 @@ export default function Achievements() {
         </div>
       </ScaleIn>
 
-      {/* Timeline Section */}
+      {/* Milestones Section */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>
           <h2 className="section-heading">{t.achievements.keyMilestones}</h2>
         </FadeIn>
         
-        <div className="timeline-container">
+        <StaggerContainer className="achievements-grid">
           {achievements.map((achievement, index) => (
-            <FadeIn key={index}>
-              <div className="timeline-item">
-                <div className="timeline-marker">
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-year">{achievement.year}</div>
-                </div>
-                <div className="timeline-content">
-                  <h3>{achievement.title}</h3>
-                  <p>{achievement.description}</p>
-                </div>
-              </div>
-            </FadeIn>
+            <div key={index} className="achievement-card">
+              <div className="achievement-number">{index + 1}</div>
+              <h3>{achievement.title}</h3>
+              <p>{achievement.description}</p>
+            </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
 
       {/* Certifications Section */}

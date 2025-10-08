@@ -79,6 +79,24 @@ export default function Testimonials() {
         </div>
       </ScaleIn>
 
+      {/* Stats Section */}
+      <FadeIn>
+        <div className="testimonial-stats">
+          <div className="testimonial-stat">
+            <div className="testimonial-stat-number">1,500+</div>
+            <div className="testimonial-stat-label">Happy Patients</div>
+          </div>
+          <div className="testimonial-stat">
+            <div className="testimonial-stat-number">4.9/5</div>
+            <div className="testimonial-stat-label">Average Rating</div>
+          </div>
+          <div className="testimonial-stat">
+            <div className="testimonial-stat-number">98%</div>
+            <div className="testimonial-stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </FadeIn>
+
       {/* Video Testimonial Section */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>
@@ -123,24 +141,6 @@ export default function Testimonials() {
         </ScaleIn>
       </div>
 
-      {/* Stats Section */}
-      <FadeIn>
-        <div className="testimonial-stats">
-          <div className="testimonial-stat">
-            <div className="testimonial-stat-number">1,500+</div>
-            <div className="testimonial-stat-label">Happy Patients</div>
-          </div>
-          <div className="testimonial-stat">
-            <div className="testimonial-stat-number">4.9/5</div>
-            <div className="testimonial-stat-label">Average Rating</div>
-          </div>
-          <div className="testimonial-stat">
-            <div className="testimonial-stat-number">98%</div>
-            <div className="testimonial-stat-label">Satisfaction Rate</div>
-          </div>
-        </div>
-      </FadeIn>
-
       {/* Other Testimonials */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>
@@ -168,15 +168,6 @@ export default function Testimonials() {
           ))}
         </StaggerContainer>
       </div>
-
-      {/* CTA Section */}
-      <FadeIn>
-        <div className="testimonials-cta">
-          <h2>{t.testimonials.shareExperience}</h2>
-          <p>{t.testimonials.shareText}</p>
-          <button className="btn btn-large">{t.testimonials.writeReview}</button>
-        </div>
-      </FadeIn>
     </section>
   )
 }

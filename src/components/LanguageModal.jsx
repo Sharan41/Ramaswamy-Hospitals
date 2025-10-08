@@ -55,7 +55,6 @@ export default function LanguageModal({ onSelectLanguage }) {
               onClick={() => handleLanguageSelect('en')}
               aria-label="Select English language"
             >
-              <span className="language-flag">🇬🇧</span>
               <span className="language-name">English</span>
               <span className="language-native">Continue in English</span>
             </button>
@@ -65,7 +64,6 @@ export default function LanguageModal({ onSelectLanguage }) {
               onClick={() => handleLanguageSelect('te')}
               aria-label="Select Telugu language"
             >
-              <span className="language-flag">🇮🇳</span>
               <span className="language-name">తెలుగు</span>
               <span className="language-native">తెలుగులో కొనసాగించండి</span>
             </button>

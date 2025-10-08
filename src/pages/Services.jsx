@@ -122,16 +122,6 @@ export default function Services() {
           ))}
         </StaggerContainer>
       </div>
-
-      {/* Emergency CTA */}
-      <FadeIn>
-        <div className="services-emergency-cta">
-          <div className="emergency-cta-badge">Emergency</div>
-          <h2>{t.services.needCare}</h2>
-          <p>{t.services.needCareText}</p>
-          <a href="tel:+919912757854" className="btn btn-large">{t.services.callEmergency}</a>
-        </div>
-      </FadeIn>
     </section>
   )
 }
