@@ -2679,14 +2679,14 @@ body {
 
 /* Disable hover effects on touch devices for smoother scrolling */
 @media (hover: hover) and (pointer: fine) {
-  .mission-vision-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+.mission-vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
   }
 }
 
 .mission-card {
-  background: linear-gradient(135deg, #fff5f5, #ffe4e6);
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
   border-left: 6px solid var(--brand);
 }
 
@@ -2746,10 +2746,10 @@ body {
 
 /* Disable hover effects on touch devices for smoother scrolling */
 @media (hover: hover) and (pointer: fine) {
-  .value-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--brand);
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand);
   }
 }
 
@@ -2858,10 +2858,10 @@ body {
 
 /* Disable hover effects on touch devices for smoother scrolling */
 @media (hover: hover) and (pointer: fine) {
-  .facility-highlight-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
+.facility-highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
   }
 }
 
@@ -2913,9 +2913,9 @@ body {
 
 /* Disable hover effects on touch devices for smoother scrolling */
 @media (hover: hover) and (pointer: fine) {
-  .photo-gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
+.photo-gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
   }
 }
 
