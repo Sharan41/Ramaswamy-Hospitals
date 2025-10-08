@@ -3,48 +3,48 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import CountUp from '../components/CountUp'
 
-const testimonials = [
-  {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The care I received was exceptional and the staff was incredibly compassionate. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    author: "Rajesh Kumar",
-    location: "Kavali",
-    rating: 5,
-    featured: true
-  },
-  {
-    quote: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames. The doctors here are highly skilled and took the time to explain everything.",
-    author: "Lakshmi Devi",
-    location: "Nellore",
-    rating: 5
-  },
-  {
-    quote: "Donec eu libero sit amet quam egestas semper. I'm grateful for the excellent treatment and the modern facilities provided here.",
-    author: "Venkata Rao",
-    location: "Gudur",
-    rating: 5
-  },
-  {
-    quote: "Nulla facilisi donec hendrerit orci sed velit dictum. The emergency care team saved my life and I can't thank them enough.",
-    author: "Priya Sharma",
-    location: "Kavali",
-    rating: 5
-  },
-  {
-    quote: "Maecenas vel lectus vel nulla facilisis ornare eu non turpis. The nursing staff was attentive and caring throughout my stay.",
-    author: "Suresh Babu",
-    location: "Atmakur",
-    rating: 5
-  },
-  {
-    quote: "Sed nisi nulla quis sem at nibh elementum imperdiet. From consultation to recovery, every step was handled professionally.",
-    author: "Anitha Reddy",
-    location: "Kavali",
-    rating: 5
-  }
-]
-
 export default function Testimonials() {
   const { t } = useI18n()
+  
+  const testimonials = [
+    {
+      quote: t.testimonials.patient1Quote,
+      author: t.testimonials.patient1Name,
+      location: t.testimonials.patient1Location,
+      rating: 5,
+      featured: true
+    },
+    {
+      quote: t.testimonials.patient2Quote,
+      author: t.testimonials.patient2Name,
+      location: t.testimonials.patient2Location,
+      rating: 5
+    },
+    {
+      quote: t.testimonials.patient3Quote,
+      author: t.testimonials.patient3Name,
+      location: t.testimonials.patient3Location,
+      rating: 5
+    },
+    {
+      quote: t.testimonials.patient4Quote,
+      author: t.testimonials.patient4Name,
+      location: t.testimonials.patient4Location,
+      rating: 5
+    },
+    {
+      quote: t.testimonials.patient5Quote,
+      author: t.testimonials.patient5Name,
+      location: t.testimonials.patient5Location,
+      rating: 5
+    },
+    {
+      quote: t.testimonials.patient6Quote,
+      author: t.testimonials.patient6Name,
+      location: t.testimonials.patient6Location,
+      rating: 5
+    }
+  ]
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   

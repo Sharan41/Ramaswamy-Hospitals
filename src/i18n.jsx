@@ -16,6 +16,12 @@ export const translations = {
       location: '📍 Vishanalayam Street, Kavali, Nellore',
       emergency: '🚨 Emergency'
     },
+    common: {
+      viewDetails: 'View Details',
+      learnMore: 'Learn more',
+      home: 'Home',
+      about: 'About'
+    },
     quickActions: {
       call: 'Call',
       whatsapp: 'WhatsApp',
@@ -139,7 +145,25 @@ export const translations = {
       feature1: 'Real patient experiences',
       feature2: 'Authentic testimonials',
       feature3: 'Healthcare success stories',
-      whatPatientsSay: 'What Our Patients Say'
+      whatPatientsSay: 'What Our Patients Say',
+      patient1Name: 'Rajesh Kumar',
+      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.RAMASWAMY HOSPITALS.',
+      patient1Location: 'Kavali',
+      patient2Name: 'Lakshmi Devi',
+      patient2Quote: 'The doctors here are highly skilled and took the time to explain everything. Excellent hospital with modern facilities.',
+      patient2Location: 'Nellore',
+      patient3Name: 'Venkata Rao',
+      patient3Quote: 'I am grateful for the excellent treatment and the modern facilities provided here. The staff was very caring and professional.',
+      patient3Location: 'Gudur',
+      patient4Name: 'Priya Sharma',
+      patient4Quote: 'The emergency care team saved my life and I cannot thank them enough. Outstanding medical care in times of crisis.',
+      patient4Location: 'Kavali',
+      patient5Name: 'Suresh Babu',
+      patient5Quote: 'The nursing staff was attentive and caring throughout my stay. The hospital maintains excellent hygiene standards.',
+      patient5Location: 'Atmakur',
+      patient6Name: 'Anitha Reddy',
+      patient6Quote: 'From consultation to recovery, every step was handled professionally. Highly recommend this hospital to everyone.',
+      patient6Location: 'Kavali'
     },
     achievements: {
       title: 'Achievements & Milestones',
@@ -295,6 +319,12 @@ export const translations = {
       location: '📍 విషణాలయం వీధి, కావలి, నెల్లూరు',
       emergency: '🚨 ఎమర్జెన్సీ'
     },
+    common: {
+      viewDetails: 'వివరాలు చూడండి',
+      learnMore: 'మరింత తెలుసుకోండి',
+      home: 'హోమ్',
+      about: 'గురించి'
+    },
     quickActions: {
       call: 'కాల్ చేయండి',
       whatsapp: 'వాట్సాప్',
@@ -418,7 +448,25 @@ export const translations = {
       feature1: 'నిజమైన రోగుల అనుభవాలు',
       feature2: 'ప్రామాణికమైన సాక్ష్యాలు',
       feature3: 'ఆరోగ్య సంరక్షణ విజయ కథలు',
-      whatPatientsSay: 'మా రోగులు ఏమి చెబుతున్నారు'
+      whatPatientsSay: 'మా రోగులు ఏమి చెబుతున్నారు',
+      patient1Name: 'రాజేష్ కుమార్',
+      patient1Quote: 'నేను పొందిన సంరక్షణ అసాధారణమైనది మరియు సిబ్బంది చాలా సానుభూతితో ఉన్నారు. డాక్టర్.రామస్వామి హాస్పిటల్స్‌లో చికిత్సకు నేను చాలా కృతజ్ఞుడను.',
+      patient1Location: 'కావలి',
+      patient2Name: 'లక్ష్మి దేవి',
+      patient2Quote: 'ఇక్కడ వైద్యులు అత్యంత నైపుణ్యం కలిగి ఉన్నారు మరియు అన్నింటినీ వివరించడానికి సమయం తీసుకున్నారు. ఆధునిక సదుపాయాలతో అద్భుతమైన ఆసుపత్రి.',
+      patient2Location: 'నెల్లూరు',
+      patient3Name: 'వెంకట రావు',
+      patient3Quote: 'ఇక్కడ అందించిన అద్భుతమైన చికిత్స మరియు ఆధునిక సౌకర్యాలకు నేను కృతజ్ఞుడను. సిబ్బంది చాలా శ్రద్ధగా మరియు వృత్తిపరంగా ఉన్నారు.',
+      patient3Location: 'గూడూరు',
+      patient4Name: 'ప్రియా శర్మ',
+      patient4Quote: 'అత్యవసర సంరక్షణ బృందం నా ప్రాణాలను కాపాడింది మరియు వారికి తగినంత ధన్యవాదాలు చెప్పలేను. సంక్షోభ సమయాల్లో అత్యుత్తమ వైద్య సంరక్షణ.',
+      patient4Location: 'కావలి',
+      patient5Name: 'సురేష్ బాబు',
+      patient5Quote: 'నా బస చాలా కాలం నర్సింగ్ సిబ్బంది శ్రద్ధగా మరియు శ్రద్ధతో ఉన్నారు. ఆసుపత్రి అద్భుతమైన పరిశుభ్రత ప్రమాణాలను నిర్వహిస్తుంది.',
+      patient5Location: 'ఆత్మకూరు',
+      patient6Name: 'అనిత రెడ్డి',
+      patient6Quote: 'సంప్రదింపు నుండి కోలుకునే వరకు, ప్రతి దశ వృత్తిపరంగా నిర్వహించబడింది. ఈ ఆసుపత్రిని అందరికీ గట్టిగా సిఫార్సు చేస్తాను.',
+      patient6Location: 'కావలి'
     },
     achievements: {
       title: 'విజయాలు మరియు మైలురాళ్లు',
