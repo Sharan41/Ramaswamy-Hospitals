@@ -116,7 +116,20 @@ export const translations = {
     },
     testimonials: {
       title: 'Patient Testimonials',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hear what our patients have to say about their experiences at our hospital.'
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hear what our patients have to say about their experiences at our hospital.',
+      happyPatients: 'Happy Patients',
+      averageRating: 'Average Rating',
+      satisfactionRate: 'Satisfaction Rate',
+      patientStories: 'Patient Stories',
+      hearDirectly: 'Hear directly from our patients about their experiences',
+      videoTitle: 'Patient Testimonial Video',
+      videoSubtitle: 'Click to watch patient experiences',
+      realStories: 'Real Stories, Real Care',
+      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.RAMASWAMY HOSPITALS.',
+      feature1: 'Real patient experiences',
+      feature2: 'Authentic testimonials',
+      feature3: 'Healthcare success stories',
+      whatPatientsSay: 'What Our Patients Say'
     },
     achievements: {
       title: 'Achievements & Milestones',
@@ -211,7 +224,14 @@ export const translations = {
       bookConsultationText: 'Schedule an appointment with our experienced doctors. We are here to provide you with the best medical care.',
       ctaTitle: 'Need a Consultation?',
       ctaText: 'Contact us today to schedule an appointment with our experienced medical team. We are here to provide you with the best healthcare.',
-      callNow: 'Call Now'
+      callNow: 'Call Now',
+      whyChoose: 'Why Choose Our Doctors',
+      feature1Title: 'Highly Qualified',
+      feature1Desc: 'All our doctors are highly qualified with advanced degrees and certifications from renowned institutions.',
+      feature2Title: 'Experienced Team',
+      feature2Desc: 'Our medical team brings decades of combined experience in their respective specialties.',
+      feature3Title: 'Patient-Centered',
+      feature3Desc: 'We prioritize patient care and comfort, ensuring personalized attention for every individual.'
     },
     facilities: {
       title: 'Our Facilities',
@@ -365,7 +385,20 @@ export const translations = {
     },
     testimonials: {
       title: 'రోగుల ప్రశంసలు',
-      subtitle: 'మా ఆసుపత్రిలో చికిత్స పొందిన రోగుల అనుభవాలను వినండి. వారి అభిప్రాయాలు మాకు చాలా విలువైనవి.'
+      subtitle: 'మా ఆసుపత్రిలో చికిత్స పొందిన రోగుల అనుభవాలను వినండి. వారి అభిప్రాయాలు మాకు చాలా విలువైనవి.',
+      happyPatients: 'సంతోషకరమైన రోగులు',
+      averageRating: 'సగటు రేటింగ్',
+      satisfactionRate: 'సంతృప్తి రేటు',
+      patientStories: 'రోగుల కథలు',
+      hearDirectly: 'మా రోగుల అనుభవాల గురించి నేరుగా వినండి',
+      videoTitle: 'రోగి సాక్ష్యం వీడియో',
+      videoSubtitle: 'రోగుల అనుభవాలను చూడటానికి క్లిక్ చేయండి',
+      realStories: 'నిజమైన కథలు, నిజమైన సంరక్షణ',
+      realStoriesDesc: 'మా రోగులు తమ కోలుకునే ప్రయాణాన్ని మరియు డాక్టర్.రామస్వామి హాస్పిటల్స్‌లో వారు పొందిన సానుభూతితో కూడిన సంరక్షణను పంచుకోవడం చూడండి.',
+      feature1: 'నిజమైన రోగుల అనుభవాలు',
+      feature2: 'ప్రామాణికమైన సాక్ష్యాలు',
+      feature3: 'ఆరోగ్య సంరక్షణ విజయ కథలు',
+      whatPatientsSay: 'మా రోగులు ఏమి చెబుతున్నారు'
     },
     achievements: {
       title: 'విజయాలు మరియు మైలురాళ్లు',
@@ -460,7 +493,14 @@ export const translations = {
       bookConsultationText: 'మా అనుభవజ్ఞులైన వైద్యులతో అపాయింట్‌మెంట్ షెడ్యూల్ చేయండి. ఉత్తమ వైద్య సంరక్షణ అందించడానికి మేము ఇక్కడ ఉన్నాము.',
       ctaTitle: 'సంప్రదింపు అవసరమా?',
       ctaText: 'మా అనుభవజ్ఞులైన వైద్య బృందంతో అపాయింట్‌మెంట్ షెడ్యూల్ చేయడానికి ఈరోజే మమ్మల్ని సంప్రదించండి. ఉత్తమ ఆరోగ్య సంరక్షణ అందించడానికి మేము ఇక్కడ ఉన్నాము.',
-      callNow: 'ఇప్పుడే కాల్ చేయండి'
+      callNow: 'ఇప్పుడే కాల్ చేయండి',
+      whyChoose: 'మా వైద్యులను ఎందుకు ఎంచుకోవాలి',
+      feature1Title: 'అత్యంత అర్హత కలిగినవారు',
+      feature1Desc: 'మా వైద్యులందరూ ప్రసిద్ధ సంస్థల నుండి అధునాతన డిగ్రీలు మరియు ధృవపత్రాలతో అత్యంత అర్హత కలిగి ఉన్నారు.',
+      feature2Title: 'అనుభవజ్ఞుల బృందం',
+      feature2Desc: 'మా వైద్య బృందం వారి సంబంధిత ప్రత్యేకతలలో దశాబ్దాల సంయుక్త అనుభవాన్ని కలిగి ఉంది.',
+      feature3Title: 'రోగి-కేంద్రీకృతం',
+      feature3Desc: 'మేము రోగి సంరక్షణ మరియు సౌకర్యానికి ప్రాధాన్యత ఇస్తాము, ప్రతి వ్యక్తికి వ్యక్తిగత శ్రద్ధను నిర్ధారిస్తాము.'
     },
     facilities: {
       title: 'మా సౌకర్యాలు',

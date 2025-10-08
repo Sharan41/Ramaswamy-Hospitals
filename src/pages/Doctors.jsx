@@ -100,23 +100,23 @@ export default function Doctors() {
       {/* Why Choose Our Doctors */}
       <div style={{ marginTop: 80 }}>
         <FadeIn>
-          <h2 className="section-heading">Why Choose Our Doctors</h2>
+          <h2 className="section-heading">{t.doctors.whyChoose}</h2>
         </FadeIn>
         <StaggerContainer className="doctor-features-grid">
           <div className="doctor-feature-card">
             <div className="doctor-feature-number">01</div>
-            <h3>Highly Qualified</h3>
-            <p>All our doctors are highly qualified with advanced degrees and certifications from renowned institutions.</p>
+            <h3>{t.doctors.feature1Title}</h3>
+            <p>{t.doctors.feature1Desc}</p>
           </div>
           <div className="doctor-feature-card">
             <div className="doctor-feature-number">02</div>
-            <h3>Experienced Team</h3>
-            <p>Our medical team brings decades of combined experience in their respective specialties.</p>
+            <h3>{t.doctors.feature2Title}</h3>
+            <p>{t.doctors.feature2Desc}</p>
           </div>
           <div className="doctor-feature-card">
             <div className="doctor-feature-number">03</div>
-            <h3>Patient-Centered</h3>
-            <p>We prioritize patient care and comfort, ensuring personalized attention for every individual.</p>
+            <h3>{t.doctors.feature3Title}</h3>
+            <p>{t.doctors.feature3Desc}</p>
           </div>
         </StaggerContainer>
       </div>

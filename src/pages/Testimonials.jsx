@@ -155,19 +155,19 @@ export default function Testimonials() {
             <div className="testimonial-stat-number">
               <CountUp end="1500" duration={2500} suffix="+" />
             </div>
-            <div className="testimonial-stat-label">Happy Patients</div>
+            <div className="testimonial-stat-label">{t.testimonials.happyPatients}</div>
           </div>
           <div className="testimonial-stat">
             <div className="testimonial-stat-number">
               <CountUp end="4.9" duration={2000} suffix="/5" />
             </div>
-            <div className="testimonial-stat-label">Average Rating</div>
+            <div className="testimonial-stat-label">{t.testimonials.averageRating}</div>
           </div>
           <div className="testimonial-stat">
             <div className="testimonial-stat-number">
               <CountUp end="98" duration={2200} suffix="%" />
             </div>
-            <div className="testimonial-stat-label">Satisfaction Rate</div>
+            <div className="testimonial-stat-label">{t.testimonials.satisfactionRate}</div>
           </div>
         </div>
       </FadeIn>
@@ -175,8 +175,8 @@ export default function Testimonials() {
       {/* Video Testimonial Section */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>
-          <h2 className="section-heading">Patient Stories</h2>
-          <p className="section-subheading">Hear directly from our patients about their experiences</p>
+          <h2 className="section-heading">{t.testimonials.patientStories}</h2>
+          <p className="section-subheading">{t.testimonials.hearDirectly}</p>
         </FadeIn>
         <ScaleIn>
           <div className="video-testimonial-container">
@@ -185,30 +185,30 @@ export default function Testimonials() {
                 <circle cx="12" cy="12" r="10"/>
                 <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/>
               </svg>
-              <div className="video-testimonial-title">Patient Testimonial Video</div>
-              <div className="video-testimonial-subtitle">Click to watch patient experiences</div>
+              <div className="video-testimonial-title">{t.testimonials.videoTitle}</div>
+              <div className="video-testimonial-subtitle">{t.testimonials.videoSubtitle}</div>
             </div>
             <div className="video-testimonial-info">
-              <h3>Real Stories, Real Care</h3>
-              <p>Watch our patients share their journey to recovery and the compassionate care they received at Dr.RAMASWAMY HOSPITALS.</p>
+              <h3>{t.testimonials.realStories}</h3>
+              <p>{t.testimonials.realStoriesDesc}</p>
               <div className="video-testimonial-features">
                 <div className="video-feature-item">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
-                  <span>Real patient experiences</span>
+                  <span>{t.testimonials.feature1}</span>
                 </div>
                 <div className="video-feature-item">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
-                  <span>Authentic testimonials</span>
+                  <span>{t.testimonials.feature2}</span>
                 </div>
                 <div className="video-feature-item">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
-                  <span>Healthcare success stories</span>
+                  <span>{t.testimonials.feature3}</span>
                 </div>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function Testimonials() {
       {/* Other Testimonials */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>
-          <h2 className="section-heading">What Our Patients Say</h2>
+          <h2 className="section-heading">{t.testimonials.whatPatientsSay}</h2>
         </FadeIn>
         
         <StaggerContainer className="testimonials-grid">
