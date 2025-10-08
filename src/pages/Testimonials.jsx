@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import CountUp from '../components/CountUp'
 
 const testimonials = [
   {
@@ -85,9 +86,7 @@ export default function Testimonials() {
       {/* Featured Testimonial Carousel */}
       <ScaleIn>
         <div className="testimonial-carousel-container">
-          <button className="carousel-btn carousel-btn-prev" onClick={handlePrev} aria-label="Previous testimonial">
-            ‹
-          </button>
+          <button className="carousel-btn carousel-btn-prev" onClick={handlePrev} aria-label="Previous testimonial"></button>
           
           <div className="featured-testimonial" key={currentIndex}>
             <div className="featured-quote-icon">"</div>
@@ -106,9 +105,7 @@ export default function Testimonials() {
             </div>
           </div>
           
-          <button className="carousel-btn carousel-btn-next" onClick={handleNext} aria-label="Next testimonial">
-            ›
-          </button>
+          <button className="carousel-btn carousel-btn-next" onClick={handleNext} aria-label="Next testimonial"></button>
           
           {/* Carousel Indicators */}
           <div className="carousel-indicators">
@@ -128,15 +125,21 @@ export default function Testimonials() {
       <FadeIn>
         <div className="testimonial-stats">
           <div className="testimonial-stat">
-            <div className="testimonial-stat-number">1,500+</div>
+            <div className="testimonial-stat-number">
+              <CountUp end="1500" duration={2500} suffix="+" />
+            </div>
             <div className="testimonial-stat-label">Happy Patients</div>
           </div>
           <div className="testimonial-stat">
-            <div className="testimonial-stat-number">4.9/5</div>
+            <div className="testimonial-stat-number">
+              <CountUp end="4.9" duration={2000} suffix="/5" />
+            </div>
             <div className="testimonial-stat-label">Average Rating</div>
           </div>
           <div className="testimonial-stat">
-            <div className="testimonial-stat-number">98%</div>
+            <div className="testimonial-stat-number">
+              <CountUp end="98" duration={2200} suffix="%" />
+            </div>
             <div className="testimonial-stat-label">Satisfaction Rate</div>
           </div>
         </div>

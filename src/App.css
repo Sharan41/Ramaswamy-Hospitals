@@ -1320,26 +1320,29 @@ body {
   }
 
   /* Carousel Extra Small Mobile */
+  .featured-testimonial {
+    min-height: 320px;
+    padding: 36px 20px;
+  }
+
   .carousel-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+    border-width: 2px;
   }
 
   .carousel-btn-prev {
-    left: 5px;
+    left: 8px;
   }
 
   .carousel-btn-next {
-    right: 5px;
-  }
-
-  .featured-testimonial {
-    padding: 32px 20px;
+    right: 8px;
   }
 
   .featured-testimonial-quote {
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .carousel-indicators {
@@ -2068,7 +2071,22 @@ body {
   color: white;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  transition: opacity 0.5s ease-in-out;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Carousel Navigation Buttons */
@@ -2076,36 +2094,55 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--white);
   color: var(--brand);
-  border: none;
-  width: 50px;
-  height: 50px;
+  border: 3px solid var(--brand);
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.8rem;
+  font-weight: 700;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  backdrop-filter: blur(10px);
 }
 
 .carousel-btn:hover {
-  background: white;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  background: var(--brand);
+  color: var(--white);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  border-color: var(--brand);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(1.05);
 }
 
 .carousel-btn-prev {
-  left: -25px;
+  left: -28px;
 }
 
 .carousel-btn-next {
-  right: -25px;
+  right: -28px;
+}
+
+.carousel-btn-prev::before {
+  content: '‹';
+  display: block;
+  margin-right: 2px;
+}
+
+.carousel-btn-next::before {
+  content: '›';
+  display: block;
+  margin-left: 2px;
 }
 
 /* Carousel Indicators */
@@ -3008,10 +3045,16 @@ body {
     margin: 32px 0;
   }
 
+  .featured-testimonial {
+    min-height: 350px;
+    padding: 48px 32px;
+  }
+
   .carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    border-width: 2px;
   }
 
   .carousel-btn-prev {

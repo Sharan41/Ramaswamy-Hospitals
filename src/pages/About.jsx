@@ -1,15 +1,16 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import CountUp from '../components/CountUp'
 import crestLogo from '../assets/crest-logo.jpg'
 
 export default function About() {
   const { t } = useI18n()
   
   const stats = [
-    { number: "25+", label: "Years Experience" },
-    { number: "10,000+", label: "Patients Treated" },
-    { number: "15+", label: "Specialties" },
-    { number: "24/7", label: "Emergency Care" }
+    { number: "25", suffix: "+", label: "Years Experience", duration: 2000 },
+    { number: "10000", suffix: "+", label: "Patients Treated", duration: 2800 },
+    { number: "15", suffix: "+", label: "Specialties", duration: 1800 },
+    { number: "24", suffix: "/7", label: "Emergency Care", duration: 1500 }
   ]
 
   const values = [
@@ -58,7 +59,9 @@ export default function About() {
           <StaggerContainer className="about-stats-grid">
             {stats.map((stat, index) => (
               <div key={index} className="about-stat-card">
-                <div className="about-stat-number">{stat.number}</div>
+                <div className="about-stat-number">
+                  <CountUp end={stat.number} duration={stat.duration} suffix={stat.suffix} />
+                </div>
                 <div className="about-stat-label">{stat.label}</div>
               </div>
             ))}

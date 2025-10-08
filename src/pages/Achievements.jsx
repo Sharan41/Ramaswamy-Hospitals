@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import CountUp from '../components/CountUp'
 
 export default function Achievements() {
   const { t } = useI18n()
@@ -14,10 +15,10 @@ export default function Achievements() {
   ]
 
   const stats = [
-    { number: "25+", label: "Years of Excellence" },
-    { number: "10,000+", label: "Patients Treated" },
-    { number: "500+", label: "Successful Surgeries" },
-    { number: "15+", label: "Specialties" }
+    { number: "25", suffix: "+", label: "Years of Excellence", duration: 2000 },
+    { number: "10000", suffix: "+", label: "Patients Treated", duration: 2800 },
+    { number: "500", suffix: "+", label: "Successful Surgeries", duration: 2500 },
+    { number: "15", suffix: "+", label: "Specialties", duration: 1800 }
   ]
 
   const certifications = [
@@ -47,7 +48,9 @@ export default function Achievements() {
           <StaggerContainer className="achievements-stats-grid">
             {stats.map((stat, index) => (
               <div key={index} className="stat-card">
-                <div className="stat-number">{stat.number}</div>
+                <div className="stat-number">
+                  <CountUp end={stat.number} duration={stat.duration} suffix={stat.suffix} />
+                </div>
                 <div className="stat-label">{stat.label}</div>
               </div>
             ))}
