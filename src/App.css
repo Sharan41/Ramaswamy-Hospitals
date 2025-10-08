@@ -1404,12 +1404,12 @@ body {
   }
 
   .carousel-dot {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   .carousel-dot.active {
-    width: 20px;
+    width: 14px;
   }
 
   /* Contact Extra Small Mobile */
@@ -2660,7 +2660,7 @@ body {
 /* Mission & Vision */
 .mission-vision-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin: 64px 0;
   touch-action: pan-y; /* Allow vertical scrolling */
@@ -2686,13 +2686,13 @@ body {
 }
 
 .mission-card {
-  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
   border-left: 6px solid var(--brand);
 }
 
 .vision-card {
   background: linear-gradient(135deg, #eff6ff, #dbeafe);
-  border-left: 6px solid var(--accent);
+  border-left: 6px solid var(--brand);
 }
 
 .mission-vision-label {
@@ -3170,12 +3170,12 @@ body {
   }
 
   .carousel-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   .carousel-dot.active {
-    width: 24px;
+    width: 16px;
   }
 
   .featured-testimonial {
