@@ -15,20 +15,20 @@ export default function About() {
 
   const values = [
     { 
-      title: "Compassionate Care",
-      description: "We treat every patient with empathy and dignity, ensuring comfort and support throughout their healthcare journey."
+      title: t.about.value1Title,
+      description: t.about.value1Desc
     },
     {
-      title: "Medical Excellence", 
-      description: "Our team of experienced doctors and specialists deliver the highest standard of medical care using evidence-based practices."
+      title: t.about.value2Title, 
+      description: t.about.value2Desc
     },
     {
-      title: "Innovation",
-      description: "We continuously invest in advanced medical technology and stay updated with the latest healthcare innovations."
+      title: t.about.value3Title,
+      description: t.about.value3Desc
     },
     {
-      title: "Integrity",
-      description: "We maintain transparency and honesty in all our interactions, building trust with patients and their families."
+      title: t.about.value4Title,
+      description: t.about.value4Desc
     }
   ]
 
@@ -90,7 +90,7 @@ export default function About() {
       {/* Our Values */}
       <div style={{ marginTop: 80 }}>
         <FadeIn>
-          <h2 className="section-heading">Our Core Values</h2>
+          <h2 className="section-heading">{t.about.coreValues}</h2>
         </FadeIn>
         <StaggerContainer className="values-grid">
           {values.map((value, index) => (

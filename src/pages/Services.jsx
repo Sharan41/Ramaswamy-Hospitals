@@ -62,10 +62,10 @@ export default function Services() {
   ]
   
   const highlights = [
-    { title: "24/7 Emergency", desc: "Round-the-clock emergency medical services" },
-    { title: "Advanced Equipment", desc: "State-of-the-art medical technology" },
-    { title: "Expert Team", desc: "Experienced doctors and specialists" },
-    { title: "Affordable Care", desc: "Quality healthcare at reasonable costs" }
+    { title: t.services.highlight1Title, desc: t.services.highlight1Desc },
+    { title: t.services.highlight2Title, desc: t.services.highlight2Desc },
+    { title: t.services.highlight3Title, desc: t.services.highlight3Desc },
+    { title: t.services.highlight4Title, desc: t.services.highlight4Desc }
   ]
 
   return (

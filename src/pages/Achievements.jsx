@@ -22,12 +22,12 @@ export default function Achievements() {
   ]
 
   const certifications = [
-    { name: "ISO 9001:2015", desc: "Certified Healthcare Facility" },
-    { name: "NABH", desc: "Accreditation (Example)" },
-    { name: "Green Hospital", desc: "Initiative Participant" },
-    { name: "ACLS Certified", desc: "Advanced Cardiac Life Support Team" },
-    { name: "Infection Control", desc: "Excellence Recognition" },
-    { name: "Patient Safety", desc: "Compliance Award" }
+    { name: t.achievements.cert1Name, desc: t.achievements.cert1Desc },
+    { name: t.achievements.cert2Name, desc: t.achievements.cert2Desc },
+    { name: t.achievements.cert3Name, desc: t.achievements.cert3Desc },
+    { name: t.achievements.cert4Name, desc: t.achievements.cert4Desc },
+    { name: t.achievements.cert5Name, desc: t.achievements.cert5Desc },
+    { name: t.achievements.cert6Name, desc: t.achievements.cert6Desc }
   ]
   
   return (

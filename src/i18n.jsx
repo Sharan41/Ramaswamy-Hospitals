@@ -73,7 +73,16 @@ export const translations = {
       modernInfraDesc: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae ultricies eget tempor sit amet.',
       comfortable: 'Comfortable Environment',
       comfortableDesc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.',
-      photoGallery: 'Photo Gallery'
+      photoGallery: 'Photo Gallery',
+      coreValues: 'Our Core Values',
+      value1Title: 'Compassionate Care',
+      value1Desc: 'We treat every patient with empathy and dignity, ensuring comfort and support throughout their healthcare journey.',
+      value2Title: 'Medical Excellence',
+      value2Desc: 'Our team of experienced doctors and specialists deliver the highest standard of medical care using evidence-based practices.',
+      value3Title: 'Innovation',
+      value3Desc: 'We continuously invest in advanced medical technology and stay updated with the latest healthcare innovations.',
+      value4Title: 'Integrity',
+      value4Desc: 'We maintain transparency and honesty in all our interactions, building trust with patients and their families.'
     },
     services: {
       title: 'Our Services',
@@ -95,7 +104,15 @@ export const translations = {
       radiology: 'Radiology',
       radiologyDesc: 'Integer nec odio praesent libero sed cursus ante dapibus. Comprehensive imaging services including X-ray, ultrasound, CT scan, and MRI facilities.',
       surgery: 'Surgery',
-      surgeryDesc: 'Sed nisi nulla quis sem at nibh elementum imperdiet. Modern surgical facilities with experienced surgeons performing complex procedures with minimally invasive techniques.'
+      surgeryDesc: 'Sed nisi nulla quis sem at nibh elementum imperdiet. Modern surgical facilities with experienced surgeons performing complex procedures with minimally invasive techniques.',
+      highlight1Title: '24/7 Emergency',
+      highlight1Desc: 'Round-the-clock emergency medical services',
+      highlight2Title: 'Advanced Equipment',
+      highlight2Desc: 'State-of-the-art medical technology',
+      highlight3Title: 'Expert Team',
+      highlight3Desc: 'Experienced doctors and specialists',
+      highlight4Title: 'Affordable Care',
+      highlight4Desc: 'Quality healthcare at reasonable costs'
     },
     testimonials: {
       title: 'Patient Testimonials',
@@ -119,7 +136,19 @@ export const translations = {
       community2019: 'Community Health Initiative Launch',
       community2019Desc: 'Maecenas vel lectus vel nulla facilisis ornare. Started free health camps and awareness programs for the local community.',
       yearsExcellence: '25+ Years of Excellence',
-      yearsExcellenceText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Since our establishment, we have been dedicated to providing exceptional healthcare services to our community. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      yearsExcellenceText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Since our establishment, we have been dedicated to providing exceptional healthcare services to our community. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      cert1Name: 'ISO 9001:2015',
+      cert1Desc: 'Certified Healthcare Facility',
+      cert2Name: 'NABH',
+      cert2Desc: 'Accreditation (Example)',
+      cert3Name: 'Green Hospital',
+      cert3Desc: 'Initiative Participant',
+      cert4Name: 'ACLS Certified',
+      cert4Desc: 'Advanced Cardiac Life Support Team',
+      cert5Name: 'Infection Control',
+      cert5Desc: 'Excellence Recognition',
+      cert6Name: 'Patient Safety',
+      cert6Desc: 'Compliance Award'
     },
     contact: {
       title: 'Contact & Location',
@@ -293,7 +322,16 @@ export const translations = {
       modernInfraDesc: 'మా ఆసుపత్రి భవనం ఆధునిక నిర్మాణ శైలిలో రూపొందించబడింది. ఇది రోగులకు మరియు వారి కుటుంబ సభ్యులకు సౌకర్యవంతమైన వాతావరణాన్ని అందిస్తుంది.',
       comfortable: 'సౌకర్యవంతమైన వాతావరణం',
       comfortableDesc: 'మేము మా రోగులకు హాయిగా మరియు సౌకర్యవంతంగా అనుభూతి చెందే వాతావరణాన్ని అందించడానికి కృషి చేస్తున్నాము. మా గదులు శుభ్రంగా మరియు హాయిగా ఉంటాయి.',
-      photoGallery: 'ఫోటో గ్యాలరీ'
+      photoGallery: 'ఫోటో గ్యాలరీ',
+      coreValues: 'మా ప్రధాన విలువలు',
+      value1Title: 'సానుభూతితో కూడిన సంరక్షణ',
+      value1Desc: 'మేము ప్రతి రోగిని సానుభూతి మరియు గౌరవంతో చూస్తాము, వారి ఆరోగ్య సంరక్షణ ప్రయాణం అంతటా సౌకర్యం మరియు మద్దతును నిర్ధారిస్తాము.',
+      value2Title: 'వైద్య శ్రేష్ఠత',
+      value2Desc: 'మా అనుభవజ్ఞులైన వైద్యులు మరియు నిపుణుల బృందం సాక్ష్యం-ఆధారిత పద్ధతులను ఉపయోగించి అత్యున్నత స్థాయి వైద్య సంరక్షణను అందిస్తుంది.',
+      value3Title: 'ఆవిష్కరణ',
+      value3Desc: 'మేము అధునాతన వైద్య సాంకేతికతలో నిరంతరం పెట్టుబడి పెడుతూ, తాజా ఆరోగ్య సంరక్షణ ఆవిష్కరణలతో నవీకరించబడి ఉంటాము.',
+      value4Title: 'సమగ్రత',
+      value4Desc: 'మేము మా అన్ని పరస్పర చర్యలలో పారదర్శకత మరియు నిజాయితీని కొనసాగిస్తాము, రోగులు మరియు వారి కుటుంబాలతో నమ్మకాన్ని నిర్మిస్తాము.'
     },
     services: {
       title: 'మా సేవలు',
@@ -315,7 +353,15 @@ export const translations = {
       radiology: 'రేడియాలజీ',
       radiologyDesc: 'సమగ్ర ఇమేజింగ్ సేవలు. ఎక్స్-రే, అల్ట్రాసౌండ్, సిటి స్కాన్ మరియు ఎమ్ఆర్ఐ సౌకర్యాలు అందుబాటులో ఉన్నాయి.',
       surgery: 'శస్త్రచికిత్స',
-      surgeryDesc: 'ఆధునిక శస్త్రచికిత్స సౌకర్యాలు. అనుభవజ్ఞులైన శస్త్రవైద్యులు కనిష్ట ఇన్వాసివ్ పద్ధతులతో సంక్లిష్ట శస్త్రచికిత్సలు చేస్తారు.'
+      surgeryDesc: 'ఆధునిక శస్త్రచికిత్స సౌకర్యాలు. అనుభవజ్ఞులైన శస్త్రవైద్యులు కనిష్ట ఇన్వాసివ్ పద్ధతులతో సంక్లిష్ట శస్త్రచికిత్సలు చేస్తారు.',
+      highlight1Title: '24/7 అత్యవసర సేవ',
+      highlight1Desc: 'రౌండ్-ది-క్లాక్ అత్యవసర వైద్య సేవలు',
+      highlight2Title: 'అధునాతన పరికరాలు',
+      highlight2Desc: 'అత్యాధునిక వైద్య సాంకేతికత',
+      highlight3Title: 'నిపుణుల బృందం',
+      highlight3Desc: 'అనుభవజ్ఞులైన వైద్యులు మరియు నిపుణులు',
+      highlight4Title: 'సరసమైన సంరక్షణ',
+      highlight4Desc: 'సరసమైన ధరలలో నాణ్యమైన ఆరోగ్య సంరక్షణ'
     },
     testimonials: {
       title: 'రోగుల ప్రశంసలు',
@@ -339,7 +385,19 @@ export const translations = {
       community2019: 'కమ్యూనిటీ ఆరోగ్య కార్యక్రమం ప్రారంభం',
       community2019Desc: 'స్థానిక సమాజం కోసం ఉచిత ఆరోగ్య శిబిరాలు మరియు అవగాహన కార్యక్రమాలను ప్రారంభించాము.',
       yearsExcellence: '25+ సంవత్సరాల శ్రేష్ఠత',
-      yearsExcellenceText: 'మా స్థాపన నుండి, మేము మా సమాజానికి అసాధారణమైన ఆరోగ్య సంరక్షణ సేవలను అందించడంలో అంకితం చేయబడ్డాము. నాణ్యత, భద్రత మరియు రోగి శ్రేయస్సు మా ప్రధాన లక్ష్యాలు.'
+      yearsExcellenceText: 'మా స్థాపన నుండి, మేము మా సమాజానికి అసాధారణమైన ఆరోగ్య సంరక్షణ సేవలను అందించడంలో అంకితం చేయబడ్డాము. నాణ్యత, భద్రత మరియు రోగి శ్రేయస్సు మా ప్రధాన లక్ష్యాలు.',
+      cert1Name: 'ISO 9001:2015',
+      cert1Desc: 'ధృవీకరించబడిన ఆరోగ్య సంరక్షణ సౌకర్యం',
+      cert2Name: 'NABH',
+      cert2Desc: 'అక్రిడిటేషన్ (ఉదాహరణ)',
+      cert3Name: 'గ్రీన్ హాస్పిటల్',
+      cert3Desc: 'చొరవ పాల్గొనేవారు',
+      cert4Name: 'ACLS ధృవీకరణ',
+      cert4Desc: 'అధునాతన కార్డియాక్ లైఫ్ సపోర్ట్ టీం',
+      cert5Name: 'ఇన్ఫెక్షన్ కంట్రోల్',
+      cert5Desc: 'శ్రేష్ఠత గుర్తింపు',
+      cert6Name: 'రోగి భద్రత',
+      cert6Desc: 'అనుగుణత పురస్కారం'
     },
     contact: {
       title: 'సంప్రదింపు మరియు స్థానం',
