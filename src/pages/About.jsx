@@ -70,22 +70,20 @@ export default function About() {
       </ScaleIn>
 
       {/* Mission & Vision */}
-      <div className="mission-vision-container">
-        <FadeIn>
+      <FadeIn>
+        <div className="mission-vision-container">
           <div className="mission-vision-card mission-card">
             <div className="mission-vision-label">Mission</div>
             <h2>{t.about.mission}</h2>
             <p>{t.about.missionText}</p>
           </div>
-        </FadeIn>
-        <FadeIn>
           <div className="mission-vision-card vision-card">
             <div className="mission-vision-label">Vision</div>
             <h2>{t.about.vision}</h2>
             <p>{t.about.visionText}</p>
           </div>
-        </FadeIn>
-      </div>
+        </div>
+      </FadeIn>
 
       {/* Our Values */}
       <div style={{ marginTop: 80 }}>
