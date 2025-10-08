@@ -295,8 +295,35 @@ p { margin: 0 0 1rem; }
   font-weight: 600;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-.btn:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover { 
+  background: var(--brand-dark); 
+  transform: translateY(-3px) scale(1.02); 
+  box-shadow: var(--shadow-lg); 
+}
 .btn-secondary { background: var(--accent); color: var(--text); }
 .btn-secondary:hover { background: var(--accent-light); }
 
@@ -354,6 +381,13 @@ p { margin: 0 0 1rem; }
   color: var(--white);
   font-size: 2rem;
   font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 8px 24px rgba(17, 153, 142, 0.4);
+  background: linear-gradient(135deg, var(--brand-light), var(--brand));
 }
 
 /* Doctor Cards */
@@ -362,8 +396,13 @@ p { margin: 0 0 1rem; }
   transition: all 0.3s ease;
 }
 .doctor-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(17, 153, 142, 0.15);
+}
+
+.doctor-card:hover .doctor-avatar {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(17, 153, 142, 0.3);
 }
 .doctor-avatar {
   width: 120px;
@@ -1011,6 +1050,19 @@ body {
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Remove tap highlight on mobile */
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-light));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 2px 8px rgba(17, 153, 142, 0.4);
 }
 
 /* Language Selection Modal */
@@ -2077,50 +2129,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  will-change: transform, opacity;
-  animation: smoothSlideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  animation: slideFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes smoothSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(40px) scale(0.98);
-    filter: blur(2px);
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-/* Smooth staggered fade-in for content */
-.featured-testimonial-stars {
-  animation: fadeInContent 0.8s ease-out 0.1s forwards;
-  opacity: 0;
-}
-
-.featured-testimonial-quote {
-  animation: fadeInContent 0.8s ease-out 0.25s forwards;
-  opacity: 0;
-}
-
-.featured-testimonial-author {
-  animation: fadeInContent 0.8s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInContent {
+@keyframes slideFromRight {
   from {
+    transform: translateX(100%);
     opacity: 0;
-    transform: translateY(15px);
   }
   to {
+    transform: translateX(0);
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -2186,8 +2206,6 @@ body {
   justify-content: center;
   gap: 12px;
   margin-top: 24px;
-  animation: fadeInContent 0.8s ease-out 0.6s forwards;
-  opacity: 0;
 }
 
 .carousel-dot {
@@ -3926,9 +3944,14 @@ body {
 }
 
 .home-feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(17, 153, 142, 0.2);
   border-color: var(--brand);
+}
+
+.home-feature-card:hover .home-feature-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: var(--brand-light);
 }
 
 .home-feature-card::before {
@@ -3991,21 +4014,55 @@ body {
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
   z-index: 1000;
   transition: all 0.3s ease;
-  animation: float 3s ease-in-out infinite;
+  animation: whatsappPulse 2s infinite, whatsappEntrance 0.6s ease-out;
+}
+
+.floating-whatsapp::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #25D366;
+  animation: whatsappRipple 1.5s infinite;
+  z-index: -1;
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes whatsappRipple {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes whatsappEntrance {
+  from {
+    transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .floating-whatsapp:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  transform: translateY(-5px) scale(1.15);
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+  animation: none;
 }
 
 /* Hero Decorative Shapes */

@@ -6,6 +6,7 @@ import crestLogo from './assets/crest-logo.jpg'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
+import ScrollProgress from './components/ScrollProgress.jsx'
 
 function App() {
   const { t, lang, setLang } = useI18n()
@@ -28,6 +29,8 @@ function App() {
   }
   return (
     <div className={`app ${mobileOpen ? 'mobile-open' : ''}`}>
+      <ScrollProgress />
+      <ScrollToTop />
       <LanguageModal onSelectLanguage={setLang} />
       <a href="#main-content" className="skip-link">Skip to main content</a>
       
