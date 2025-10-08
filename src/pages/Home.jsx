@@ -176,7 +176,7 @@ export default function Home() {
         <section className="home-quick-services">
           <h2>{t.home.quickAccess}</h2>
           <StaggerContainer className="quick-services-grid">
-            <Link to="/doctors" className="quick-service-card">
+            <Link to="/doctors" className="quick-service-card" onClick={() => window.scrollTo(0, 0)}>
               <div className="quick-service-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
@@ -186,7 +186,7 @@ export default function Home() {
               <h3>{t.home.findDoctor}</h3>
               <p>{t.home.findDoctorDesc}</p>
             </Link>
-            <Link to="/services" className="quick-service-card">
+            <Link to="/services" className="quick-service-card" onClick={() => window.scrollTo(0, 0)}>
               <div className="quick-service-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -204,7 +204,7 @@ export default function Home() {
               <h3>{t.home.emergencyCareCard}</h3>
               <p>{t.home.emergencyCareCardDesc}</p>
             </a>
-            <Link to="/facilities" className="quick-service-card">
+            <Link to="/facilities" className="quick-service-card" onClick={() => window.scrollTo(0, 0)}>
               <div className="quick-service-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="3" y="3" width="18" height="18" rx="2"/>

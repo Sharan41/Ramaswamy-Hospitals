@@ -5,22 +5,29 @@ export default function ScrollToTop() {
   const { pathname } = useLocation()
   
   useEffect(() => {
-    // Force scroll to top immediately on route change
-    // This overrides the smooth scroll behavior in CSS
+    // Aggressive scroll to top with multiple attempts
     const scrollToTop = () => {
       window.scrollTo(0, 0)
-      // Also scroll the document element and body for better browser compatibility
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0
+      
+      // Force all scrollable containers to top
+      const main = document.getElementById('main-content')
+      if (main) main.scrollTop = 0
     }
     
-    // Execute immediately
+    // Immediate scroll
     scrollToTop()
     
-    // Also execute after a tiny delay to catch any delayed renders
-    const timeoutId = setTimeout(scrollToTop, 0)
+    // Multiple fallback scrolls to catch animations/delays
+    const timeouts = [
+      setTimeout(scrollToTop, 0),
+      setTimeout(scrollToTop, 10),
+      setTimeout(scrollToTop, 50),
+      setTimeout(scrollToTop, 100)
+    ]
     
-    return () => clearTimeout(timeoutId)
+    return () => timeouts.forEach(clearTimeout)
   }, [pathname])
   
   return null
