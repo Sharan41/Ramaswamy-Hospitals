@@ -103,7 +103,6 @@ function App() {
       )}
       
       <main className="main" id="main-content" role="main">
-        <ScrollToTop />
         <Breadcrumbs />
         <Outlet />
       </main>
