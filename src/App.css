@@ -1046,6 +1046,7 @@ body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  touch-action: pan-y pinch-zoom; /* Allow vertical scrolling and pinch zoom */
 }
 
 * {
@@ -1670,12 +1671,18 @@ body {
   .hamburger { display: inline-flex; }
   .mobile-open .nav { display: none; }
   .mobile-open .mobile-menu { display: block; }
-  .main { padding: 20px 20px 80px; overflow-x: hidden; } /* Extra padding for quick actions bar */
+  .main { 
+    padding: 20px 20px 80px; 
+    overflow-x: hidden;
+    touch-action: pan-y; /* Allow vertical scrolling */
+  } /* Extra padding for quick actions bar */
   .section { 
     padding: 24px; 
     overflow-x: hidden;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    touch-action: pan-y; /* Allow vertical scrolling */
+    -webkit-transform: translate3d(0,0,0); /* Force hardware acceleration */
   }
   .grid { grid-template-columns: 1fr; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
@@ -1757,6 +1764,7 @@ body {
 .animate-fade-in-up,
 .animate-scale-in {
   opacity: 0;
+  touch-action: pan-y; /* Allow vertical scrolling during animations */
 }
 
 .animate-fade-in.animate-in {
@@ -1775,6 +1783,8 @@ body {
 .stagger-container > * {
   opacity: 0;
   transform: translateY(30px);
+  touch-action: pan-y; /* Allow vertical scrolling */
+  -webkit-transform: translateY(30px) translateZ(0); /* Force hardware acceleration */
 }
 
 /* When parent has animate-in, children animate with stagger */
@@ -2636,6 +2646,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 32px;
   margin: 64px 0;
+  touch-action: pan-y; /* Allow vertical scrolling */
 }
 
 .mission-vision-card {
@@ -5099,7 +5110,8 @@ body {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 0 20px;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to allow touch scrolling */
+    touch-action: pan-y; /* Allow vertical scrolling */
   }
 
   .about-hero {
@@ -5144,6 +5156,7 @@ body {
     padding: 32px 20px;
     margin: 32px 0;
     border-radius: 16px;
+    touch-action: pan-y; /* Allow vertical scrolling */
   }
 
   .about-stats-grid {
