@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 
@@ -43,9 +44,31 @@ const testimonials = [
 
 export default function Testimonials() {
   const { t } = useI18n()
+  const [currentIndex, setCurrentIndex] = useState(0)
   
-  const featuredTestimonial = testimonials[0]
-  const otherTestimonials = testimonials.slice(1)
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+    }, 5000)
+    
+    return () => clearInterval(interval)
+  }, [])
+  
+  const featuredTestimonial = testimonials[currentIndex]
+  const otherTestimonials = testimonials.filter((_, index) => index !== currentIndex)
+  
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+  }
+  
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+  }
+  
+  const handleDotClick = (index) => {
+    setCurrentIndex(index)
+  }
   
   return (
     <section className="section">
@@ -59,22 +82,44 @@ export default function Testimonials() {
         </div>
       </FadeIn>
 
-      {/* Featured Testimonial */}
+      {/* Featured Testimonial Carousel */}
       <ScaleIn>
-        <div className="featured-testimonial">
-          <div className="featured-quote-icon">"</div>
-          <div className="featured-testimonial-stars">
-            {'★'.repeat(featuredTestimonial.rating)}
+        <div className="testimonial-carousel-container">
+          <button className="carousel-btn carousel-btn-prev" onClick={handlePrev} aria-label="Previous testimonial">
+            ‹
+          </button>
+          
+          <div className="featured-testimonial" key={currentIndex}>
+            <div className="featured-quote-icon">"</div>
+            <div className="featured-testimonial-stars">
+              {'★'.repeat(featuredTestimonial.rating)}
+            </div>
+            <p className="featured-testimonial-quote">{featuredTestimonial.quote}</p>
+            <div className="featured-testimonial-author">
+              <div className="featured-author-avatar">
+                {featuredTestimonial.author.split(' ').map(n => n[0]).join('')}
+              </div>
+              <div>
+                <div className="featured-author-name">{featuredTestimonial.author}</div>
+                <div className="featured-author-location">{featuredTestimonial.location}</div>
+              </div>
+            </div>
           </div>
-          <p className="featured-testimonial-quote">{featuredTestimonial.quote}</p>
-          <div className="featured-testimonial-author">
-            <div className="featured-author-avatar">
-              {featuredTestimonial.author.split(' ').map(n => n[0]).join('')}
-            </div>
-            <div>
-              <div className="featured-author-name">{featuredTestimonial.author}</div>
-              <div className="featured-author-location">{featuredTestimonial.location}</div>
-            </div>
+          
+          <button className="carousel-btn carousel-btn-next" onClick={handleNext} aria-label="Next testimonial">
+            ›
+          </button>
+          
+          {/* Carousel Indicators */}
+          <div className="carousel-indicators">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => handleDotClick(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </ScaleIn>

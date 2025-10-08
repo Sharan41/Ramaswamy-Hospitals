@@ -999,6 +999,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Smooth Scroll Behavior */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Remove tap highlight on mobile */
 }
 
 /* Language Selection Modal */
@@ -1305,6 +1317,43 @@ html {
 
   .achievements-banner p {
     font-size: 0.9rem;
+  }
+
+  /* Carousel Extra Small Mobile */
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .carousel-btn-prev {
+    left: 5px;
+  }
+
+  .carousel-btn-next {
+    right: 5px;
+  }
+
+  .featured-testimonial {
+    padding: 32px 20px;
+  }
+
+  .featured-testimonial-quote {
+    font-size: 1rem;
+  }
+
+  .carousel-indicators {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .carousel-dot.active {
+    width: 20px;
   }
 
   /* Contact Extra Small Mobile */
@@ -2005,6 +2054,12 @@ html {
 }
 
 /* Featured Testimonial */
+/* Testimonial Carousel Container */
+.testimonial-carousel-container {
+  position: relative;
+  margin: 48px 0;
+}
+
 .featured-testimonial {
   position: relative;
   background: linear-gradient(135deg, var(--brand), var(--brand-light));
@@ -2012,8 +2067,75 @@ html {
   border-radius: 24px;
   color: white;
   box-shadow: var(--shadow-lg);
-  margin: 48px 0;
   overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--brand);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.carousel-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn-prev {
+  left: -25px;
+}
+
+.carousel-btn-next {
+  right: -25px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: var(--brand-light);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background: var(--brand);
+  width: 32px;
+  border-radius: 6px;
 }
 
 .featured-quote-icon {
@@ -2882,6 +3004,33 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .testimonial-carousel-container {
+    margin: 32px 0;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn-prev {
+    left: 10px;
+  }
+
+  .carousel-btn-next {
+    right: 10px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .carousel-dot.active {
+    width: 24px;
+  }
+
   .featured-testimonial {
     padding: 40px 24px;
   }
