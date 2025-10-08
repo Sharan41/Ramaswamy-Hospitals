@@ -98,7 +98,7 @@ export default function Services() {
       {/* Services Grid */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>
-          <h2 className="section-heading">Our Medical Services</h2>
+          <h2 className="section-heading">{t.services.medicalServices}</h2>
         </FadeIn>
         
         <StaggerContainer className="services-grid-new">

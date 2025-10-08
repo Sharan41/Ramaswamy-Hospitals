@@ -174,7 +174,7 @@ export default function Home() {
       {/* Quick Services Preview */}
       <FadeIn>
         <section className="home-quick-services">
-          <h2>Quick Access</h2>
+          <h2>{t.home.quickAccess}</h2>
           <StaggerContainer className="quick-services-grid">
             <Link to="/doctors" className="quick-service-card">
               <div className="quick-service-icon">
@@ -183,8 +183,8 @@ export default function Home() {
                   <circle cx="12" cy="7" r="4"/>
                 </svg>
               </div>
-              <h3>Find a Doctor</h3>
-              <p>Expert medical professionals</p>
+              <h3>{t.home.findDoctor}</h3>
+              <p>{t.home.findDoctorDesc}</p>
             </Link>
             <Link to="/services" className="quick-service-card">
               <div className="quick-service-icon">
@@ -192,8 +192,8 @@ export default function Home() {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                 </svg>
               </div>
-              <h3>Our Services</h3>
-              <p>Comprehensive healthcare</p>
+              <h3>{t.home.ourServicesCard}</h3>
+              <p>{t.home.ourServicesCardDesc}</p>
             </Link>
             <a href="tel:+919912757854" className="quick-service-card">
               <div className="quick-service-icon">
@@ -201,8 +201,8 @@ export default function Home() {
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
               </div>
-              <h3>Emergency Care</h3>
-              <p>24/7 availability</p>
+              <h3>{t.home.emergencyCareCard}</h3>
+              <p>{t.home.emergencyCareCardDesc}</p>
             </a>
             <Link to="/facilities" className="quick-service-card">
               <div className="quick-service-icon">
@@ -212,8 +212,8 @@ export default function Home() {
                   <path d="M9 21V9"/>
                 </svg>
               </div>
-              <h3>Our Facilities</h3>
-              <p>Modern medical equipment</p>
+              <h3>{t.home.ourFacilitiesCard}</h3>
+              <p>{t.home.ourFacilitiesCardDesc}</p>
             </Link>
           </StaggerContainer>
         </section>

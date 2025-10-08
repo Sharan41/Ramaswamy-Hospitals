@@ -53,7 +53,16 @@ export const translations = {
       ctaTitle: 'Ready to Experience World-Class Healthcare?',
       ctaText: 'Book an appointment with our experienced medical professionals today. We\'re here to help you achieve optimal health.',
       contactUs: 'Contact Us',
-      meetDoctors: 'Meet Our Doctors'
+      meetDoctors: 'Meet Our Doctors',
+      quickAccess: 'Quick Access',
+      findDoctor: 'Find a Doctor',
+      findDoctorDesc: 'Expert medical professionals',
+      ourServicesCard: 'Our Services',
+      ourServicesCardDesc: 'Comprehensive healthcare',
+      emergencyCareCard: 'Emergency Care',
+      emergencyCareCardDesc: '24/7 availability',
+      ourFacilitiesCard: 'Our Facilities',
+      ourFacilitiesCardDesc: 'Modern medical equipment'
     },
     about: {
       title: 'About Us',
@@ -112,7 +121,8 @@ export const translations = {
       highlight3Title: 'Expert Team',
       highlight3Desc: 'Experienced doctors and specialists',
       highlight4Title: 'Affordable Care',
-      highlight4Desc: 'Quality healthcare at reasonable costs'
+      highlight4Desc: 'Quality healthcare at reasonable costs',
+      medicalServices: 'Our Medical Services'
     },
     testimonials: {
       title: 'Patient Testimonials',
@@ -322,7 +332,16 @@ export const translations = {
       ctaTitle: 'ప్రపంచ-స్థాయి ఆరోగ్య సంరక్షణను అనుభవించడానికి సిద్ధంగా ఉన్నారా?',
       ctaText: 'ఈరోజే మా అనుభవజ్ఞులైన వైద్య నిపుణులతో అపాయింట్‌మెంట్ బుక్ చేసుకోండి. సరైన ఆరోగ్యాన్ని సాధించడంలో మీకు సహాయం చేయడానికి మేము ఇక్కడ ఉన్నాము.',
       contactUs: 'సంప్రదించండి',
-      meetDoctors: 'మా వైద్యులను కలవండి'
+      meetDoctors: 'మా వైద్యులను కలవండి',
+      quickAccess: 'త్వరిత ప్రాప్యత',
+      findDoctor: 'వైద్యుడిని కనుగొనండి',
+      findDoctorDesc: 'నిపుణ వైద్య నిపుణులు',
+      ourServicesCard: 'మా సేవలు',
+      ourServicesCardDesc: 'సమగ్ర ఆరోగ్య సంరక్షణ',
+      emergencyCareCard: 'అత్యవసర సంరక్షణ',
+      emergencyCareCardDesc: '24/7 అందుబాటు',
+      ourFacilitiesCard: 'మా సౌకర్యాలు',
+      ourFacilitiesCardDesc: 'ఆధునిక వైద్య పరికరాలు'
     },
     about: {
       title: 'మా గురించి',
@@ -381,7 +400,8 @@ export const translations = {
       highlight3Title: 'నిపుణుల బృందం',
       highlight3Desc: 'అనుభవజ్ఞులైన వైద్యులు మరియు నిపుణులు',
       highlight4Title: 'సరసమైన సంరక్షణ',
-      highlight4Desc: 'సరసమైన ధరలలో నాణ్యమైన ఆరోగ్య సంరక్షణ'
+      highlight4Desc: 'సరసమైన ధరలలో నాణ్యమైన ఆరోగ్య సంరక్షణ',
+      medicalServices: 'మా వైద్య సేవలు'
     },
     testimonials: {
       title: 'రోగుల ప్రశంసలు',
