@@ -95,17 +95,11 @@ export const translations = {
       radiology: 'Radiology',
       radiologyDesc: 'Integer nec odio praesent libero sed cursus ante dapibus. Comprehensive imaging services including X-ray, ultrasound, CT scan, and MRI facilities.',
       surgery: 'Surgery',
-      surgeryDesc: 'Sed nisi nulla quis sem at nibh elementum imperdiet. Modern surgical facilities with experienced surgeons performing complex procedures with minimally invasive techniques.',
-      needCare: 'Need Immediate Care?',
-      needCareText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our emergency department is open 24/7 to provide immediate care when you need it most.',
-      callEmergency: 'Call Emergency: +91 000-000-0000'
+      surgeryDesc: 'Sed nisi nulla quis sem at nibh elementum imperdiet. Modern surgical facilities with experienced surgeons performing complex procedures with minimally invasive techniques.'
     },
     testimonials: {
       title: 'Patient Testimonials',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hear what our patients have to say about their experiences at our hospital.',
-      shareExperience: 'Share Your Experience',
-      shareText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. We value your feedback and would love to hear about your experience at Dr.RAMASWAMY HOSPITALS.',
-      writeReview: 'Write a Review'
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hear what our patients have to say about their experiences at our hospital.'
     },
     achievements: {
       title: 'Achievements & Milestones',
@@ -155,9 +149,7 @@ export const translations = {
       bookAppointment: 'Book an Appointment',
       bookAppointmentText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Schedule your consultation with our experienced medical team today.',
       callNow: 'Call Now',
-      bookOnline: 'Book Online',
-      emergencyInfo: 'Emergency Information',
-      emergencyInfoText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In case of a medical emergency, please call our emergency hotline immediately or visit our emergency department. We are available 24/7 to provide immediate care.'
+      bookOnline: 'Book Online'
     },
     doctors: {
       title: 'Our Doctors',
@@ -293,7 +285,7 @@ export const translations = {
       visionText: 'అసాధారణమైన వైద్య సంరక్షణ, దయతో కూడిన సేవ మరియు నాణ్యమైన చికిత్స మరియు ఆరోగ్య అవగాహన కార్యక్రమాల ద్వారా కమ్యూనిటీ ఆరోగ్యాన్ని మెరుగుపరచడానికి మా నిబద్ధతకు గుర్తింపు పొందిన, ఈ ప్రాంతంలో అగ్రగామి ఆరోగ్య సంరక్షణ ప్రదాతగా ఉండటం.',
       leadership: 'నాయకత్వ బృందం',
       founderTitle: 'వ్యవస్థాపకుడు మరియు ముఖ్య వైద్య అధికారి',
-      founderBio: 'డాక్టర్ రామస్వామి 30 సంవత్సరాలకు పైగా వైద్య అనుభవం కలిగి ఉన్నారు. వారు ఈ ఆసుపత్రిని స్థాపించి, సమాజానికి నాణ్యమైన ఆరోగ్య సంరక్షణ అందించడంలో అగ్రగామిగా ఉన్నారు.',
+      founderBio: 'డాక్టర్ రామస్వామి డాక్టర్ రామస్వామి హాస్పిటల్స్ వ్యవస్థాపకుడు మరియు ముఖ్య వైద్య అధికారి, కావలి సమాజానికి అసాధారణమైన ఆరోగ్య సంరక్షణ అందించడంలో 25 సంవత్సరాలకు పైగా అంకితభావంతో ఉన్నారు. అతని నాయకత్వంలో, ఆసుపత్రి ఒక దృష్టి నుండి నమ్మదగిన ఆరోగ్య సంరక్షణ సంస్థగా ఎదిగింది, దయతో కూడిన సంరక్షణ మరియు వైద్య శ్రేష్ఠతకు ప్రసిద్ధి చెందింది.',
       facilities: 'మా సౌకర్యాలు',
       stateOfArt: 'అత్యాధునిక పరికరాలు',
       stateOfArtDesc: 'మా ఆసుపత్రిలో అత్యాధునిక వైద్య పరికరాలు మరియు సాంకేతికత అందుబాటులో ఉన్నాయి. ఇది ఖచ్చితమైన రోగ నిర్ధారణ మరియు చికిత్సకు సహాయపడుతుంది.',
@@ -323,17 +315,11 @@ export const translations = {
       radiology: 'రేడియాలజీ',
       radiologyDesc: 'సమగ్ర ఇమేజింగ్ సేవలు. ఎక్స్-రే, అల్ట్రాసౌండ్, సిటి స్కాన్ మరియు ఎమ్ఆర్ఐ సౌకర్యాలు అందుబాటులో ఉన్నాయి.',
       surgery: 'శస్త్రచికిత్స',
-      surgeryDesc: 'ఆధునిక శస్త్రచికిత్స సౌకర్యాలు. అనుభవజ్ఞులైన శస్త్రవైద్యులు కనిష్ట ఇన్వాసివ్ పద్ధతులతో సంక్లిష్ట శస్త్రచికిత్సలు చేస్తారు.',
-      needCare: 'తక్షణ సంరక్షణ అవసరమా?',
-      needCareText: 'మా అత్యవసర విభాగం 24/7 తెరిచి ఉంటుంది. మీకు అవసరమైనప్పుడు తక్షణ సంరక్షణ అందించడానికి మేము ఇక్కడ ఉన్నాము.',
-      callEmergency: 'ఎమర్జెన్సీకి కాల్ చేయండి: +91 000-000-0000'
+      surgeryDesc: 'ఆధునిక శస్త్రచికిత్స సౌకర్యాలు. అనుభవజ్ఞులైన శస్త్రవైద్యులు కనిష్ట ఇన్వాసివ్ పద్ధతులతో సంక్లిష్ట శస్త్రచికిత్సలు చేస్తారు.'
     },
     testimonials: {
       title: 'రోగుల ప్రశంసలు',
-      subtitle: 'మా ఆసుపత్రిలో చికిత్స పొందిన రోగుల అనుభవాలను వినండి. వారి అభిప్రాయాలు మాకు చాలా విలువైనవి.',
-      shareExperience: 'మీ అనుభవాన్ని పంచుకోండి',
-      shareText: 'మేము మీ అభిప్రాయాన్ని విలువైనదిగా భావిస్తాము. మీ అనుభవం గురించి మాకు తెలియజేయండి.',
-      writeReview: 'సమీక్ష రాయండి'
+      subtitle: 'మా ఆసుపత్రిలో చికిత్స పొందిన రోగుల అనుభవాలను వినండి. వారి అభిప్రాయాలు మాకు చాలా విలువైనవి.'
     },
     achievements: {
       title: 'విజయాలు మరియు మైలురాళ్లు',
@@ -383,9 +369,7 @@ export const translations = {
       bookAppointment: 'అపాయింట్‌మెంట్ బుక్ చేయండి',
       bookAppointmentText: 'మా అనుభవజ్ఞులైన వైద్య బృందంతో మీ సంప్రదింపును ఈరోజే షెడ్యూల్ చేయండి.',
       callNow: 'ఇప్పుడే కాల్ చేయండి',
-      bookOnline: 'ఆన్‌లైన్‌లో బుక్ చేయండి',
-      emergencyInfo: 'అత్యవసర సమాచారం',
-      emergencyInfoText: 'వైద్య అత్యవసర పరిస్థితుల్లో, దయచేసి వెంటనే మా అత్యవసర హాట్‌లైన్‌కు కాల్ చేయండి లేదా మా అత్యవసర విభాగాన్ని సందర్శించండి. తక్షణ సంరక్షణ అందించడానికి మేము 24/7 అందుబాటులో ఉన్నాము.'
+      bookOnline: 'ఆన్‌లైన్‌లో బుక్ చేయండి'
     },
     doctors: {
       title: 'మా వైద్యులు',
