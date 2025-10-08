@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import bannerLogo from '../assets/banner-logo.jpg'
 import crestLogo from '../assets/crest-logo.jpg'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
 
 export default function Home() {
@@ -52,10 +53,14 @@ export default function Home() {
 
       {/* Hero Section */}
       <FadeIn>
-        <section className="hero-section-new" role="banner">
-          {/* Decorative shapes */}
-          <div className="hero-shape hero-shape-1"></div>
-          <div className="hero-shape hero-shape-2"></div>
+        <section className="hero-section-new hero-parallax" role="banner">
+          {/* Decorative shapes with parallax */}
+          <ParallaxSection speed={0.3}>
+            <div className="hero-shape hero-shape-1"></div>
+          </ParallaxSection>
+          <ParallaxSection speed={0.5}>
+            <div className="hero-shape hero-shape-2"></div>
+          </ParallaxSection>
           
           <div className="hero-content-new">
             <div className="hero-badge">{t.home.heroBadge}</div>

@@ -1,8 +1,20 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import { useToast } from '../components/Toast'
 
 export default function Contact() {
   const { t } = useI18n()
+  const toast = useToast()
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Simulate form submission
+    toast.success('Message sent successfully! We will contact you soon.', 5000)
+    // You can also use:
+    // toast.error('Failed to send message. Please try again.')
+    // toast.warning('Please fill in all required fields.')
+    // toast.info('Processing your request...')
+  }
   
   const socialLinks = [
     { 

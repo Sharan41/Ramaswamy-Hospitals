@@ -4,6 +4,7 @@ import { lazy } from 'react'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { I18nProvider } from './i18n'
+import { ToastProvider } from './components/Toast.jsx'
 import App from './App.jsx'
 import LoadingScreen from './components/LoadingScreen.jsx'
 
@@ -48,9 +49,11 @@ if (!root) {
     createRoot(root).render(
       <StrictMode>
         <I18nProvider>
-          <Suspense fallback={<LoadingScreen />}>
-            <RouterProvider router={router} />
-          </Suspense>
+          <ToastProvider>
+            <Suspense fallback={<LoadingScreen />}>
+              <RouterProvider router={router} />
+            </Suspense>
+          </ToastProvider>
         </I18nProvider>
       </StrictMode>,
     )

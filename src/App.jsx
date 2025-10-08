@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
 import ScrollProgress from './components/ScrollProgress.jsx'
+import PageTransition from './components/PageTransition.jsx'
 
 function App() {
   const { t, lang, setLang } = useI18n()
@@ -104,7 +105,9 @@ function App() {
       
       <main className="main" id="main-content" role="main">
         <Breadcrumbs />
-        <Outlet />
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
       </main>
       
       {/* Mobile Quick Actions Bar */}
