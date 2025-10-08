@@ -2061,6 +2061,8 @@ body {
 .testimonial-carousel-container {
   position: relative;
   margin: 48px 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .featured-testimonial {
@@ -2075,17 +2077,50 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  animation: smoothSlideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-@keyframes slideIn {
+@keyframes smoothSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(40px) scale(0.98);
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Smooth staggered fade-in for content */
+.featured-testimonial-stars {
+  animation: fadeInContent 0.8s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.featured-testimonial-quote {
+  animation: fadeInContent 0.8s ease-out 0.25s forwards;
+  opacity: 0;
+}
+
+.featured-testimonial-author {
+  animation: fadeInContent 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInContent {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -2151,6 +2186,8 @@ body {
   justify-content: center;
   gap: 12px;
   margin-top: 24px;
+  animation: fadeInContent 0.8s ease-out 0.6s forwards;
+  opacity: 0;
 }
 
 .carousel-dot {
@@ -2160,19 +2197,22 @@ body {
   border: 2px solid var(--brand);
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 0;
+  will-change: transform, background-color;
 }
 
 .carousel-dot:hover {
   background: var(--brand-light);
   transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-dot.active {
   background: var(--brand);
   width: 32px;
   border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .featured-quote-icon {
