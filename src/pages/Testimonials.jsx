@@ -47,6 +47,8 @@ export default function Testimonials() {
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
   
   // Auto-rotate testimonials every 5 seconds (pauses on user interaction)
   useEffect(() => {
@@ -58,6 +60,34 @@ export default function Testimonials() {
     
     return () => clearInterval(interval)
   }, [isPaused])
+  
+  // Touch swipe handlers
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+  
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+  
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+    
+    if (isLeftSwipe) {
+      handleNext({ preventDefault: () => {}, stopPropagation: () => {} })
+    }
+    if (isRightSwipe) {
+      handlePrev({ preventDefault: () => {}, stopPropagation: () => {} })
+    }
+    
+    // Reset
+    setTouchStart(0)
+    setTouchEnd(0)
+  }
   
   const featuredTestimonial = testimonials[currentIndex]
   const otherTestimonials = testimonials.filter((_, index) => index !== currentIndex)
@@ -108,7 +138,13 @@ export default function Testimonials() {
             ‹
           </button>
           
-          <div className="featured-testimonial" key={currentIndex}>
+          <div 
+            className="featured-testimonial" 
+            key={currentIndex}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div className="featured-quote-icon">"</div>
             <div className="featured-testimonial-stars">
               {'★'.repeat(featuredTestimonial.rating)}

@@ -1378,38 +1378,27 @@ body {
     padding: 36px 20px;
   }
 
+  /* Hide carousel controls on mobile - swipe only */
   .carousel-btn {
-    width: 42px;
-    height: 42px;
-    font-size: 1.4rem;
-    border-width: 2px;
+    display: none;
   }
 
-  .carousel-btn-prev {
-    left: 8px;
-  }
-
+  .carousel-btn-prev,
   .carousel-btn-next {
-    right: 8px;
+    display: none;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .carousel-dot {
+    display: none;
   }
 
   .featured-testimonial-quote {
     font-size: 1rem;
     line-height: 1.6;
-  }
-
-  .carousel-indicators {
-    gap: 8px;
-    margin-top: 16px;
-  }
-
-  .carousel-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .carousel-dot.active {
-    width: 14px;
   }
 
   /* Contact Extra Small Mobile */
@@ -3159,28 +3148,22 @@ body {
     padding: 48px 32px;
   }
 
+  /* Hide carousel controls on tablet - swipe only */
   .carousel-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 1.6rem;
-    border-width: 2px;
+    display: none;
   }
 
-  .carousel-btn-prev {
-    left: 10px;
-  }
-
+  .carousel-btn-prev,
   .carousel-btn-next {
-    right: 10px;
+    display: none;
+  }
+
+  .carousel-indicators {
+    display: none;
   }
 
   .carousel-dot {
-    width: 8px;
-    height: 8px;
-  }
-
-  .carousel-dot.active {
-    width: 16px;
+    display: none;
   }
 
   .featured-testimonial {
