@@ -1814,6 +1814,20 @@ body {
   }
 }
 
+/* Simplify animations on mobile for better performance */
+@media (max-width: 768px) {
+  .stagger-container.animate-in > * {
+    animation-duration: 0.3s !important; /* Faster animations on mobile */
+  }
+  
+  .stagger-container.animate-in > *:nth-child(1),
+  .stagger-container.animate-in > *:nth-child(2),
+  .stagger-container.animate-in > *:nth-child(3),
+  .stagger-container.animate-in > *:nth-child(4) {
+    animation-delay: 0s !important; /* Remove stagger delay on mobile */
+  }
+}
+
 /* ===== ACHIEVEMENTS PAGE STYLES ===== */
 
 /* Hero Section */
@@ -2621,6 +2635,9 @@ body {
 .about-stat-card {
   text-align: center;
   padding: 20px;
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .about-stat-number {
@@ -2654,11 +2671,18 @@ body {
   border-radius: 20px;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: auto;
 }
 
-.mission-vision-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+/* Disable hover effects on touch devices for smoother scrolling */
+@media (hover: hover) and (pointer: fine) {
+  .mission-vision-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .mission-card {
@@ -2712,14 +2736,21 @@ body {
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: auto;
   position: relative;
   border: 2px solid transparent;
 }
 
-.value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--brand);
+/* Disable hover effects on touch devices for smoother scrolling */
+@media (hover: hover) and (pointer: fine) {
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--brand);
+  }
 }
 
 .value-number {
@@ -2761,6 +2792,9 @@ body {
   border-radius: 20px;
   box-shadow: var(--shadow-md);
   margin-top: 32px;
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .leader-spotlight-avatar {
@@ -2816,12 +2850,19 @@ body {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: auto;
 }
 
-.facility-highlight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--accent);
+/* Disable hover effects on touch devices for smoother scrolling */
+@media (hover: hover) and (pointer: fine) {
+  .facility-highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+  }
 }
 
 .facility-highlight-number {
@@ -2864,11 +2905,18 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: auto;
 }
 
-.photo-gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-lg);
+/* Disable hover effects on touch devices for smoother scrolling */
+@media (hover: hover) and (pointer: fine) {
+  .photo-gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .photo-placeholder {
