@@ -2129,18 +2129,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  will-change: transform;
-  animation: slideFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: gentleFadeSlide 0.5s ease-out;
 }
 
-@keyframes slideFromRight {
+@keyframes gentleFadeSlide {
   from {
-    transform: translateX(100%);
     opacity: 0;
+    transform: translateX(20px);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -2186,18 +2185,6 @@ body {
 
 .carousel-btn-next {
   right: -28px;
-}
-
-.carousel-btn-prev::before {
-  content: '‹';
-  display: block;
-  margin-right: 2px;
-}
-
-.carousel-btn-next::before {
-  content: '›';
-  display: block;
-  margin-left: 2px;
 }
 
 /* Carousel Indicators */

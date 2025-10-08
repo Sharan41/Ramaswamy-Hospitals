@@ -46,29 +46,42 @@ const testimonials = [
 export default function Testimonials() {
   const { t } = useI18n()
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
   
-  // Auto-rotate testimonials every 5 seconds
+  // Auto-rotate testimonials every 5 seconds (pauses on user interaction)
   useEffect(() => {
+    if (isPaused) return
+    
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
     }, 5000)
     
     return () => clearInterval(interval)
-  }, [])
+  }, [isPaused])
   
   const featuredTestimonial = testimonials[currentIndex]
   const otherTestimonials = testimonials.filter((_, index) => index !== currentIndex)
   
-  const handlePrev = () => {
+  const handlePrev = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsPaused(true)
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+    setTimeout(() => setIsPaused(false), 3000) // Resume after 3 seconds
   }
   
-  const handleNext = () => {
+  const handleNext = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsPaused(true)
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+    setTimeout(() => setIsPaused(false), 3000) // Resume after 3 seconds
   }
   
   const handleDotClick = (index) => {
+    setIsPaused(true)
     setCurrentIndex(index)
+    setTimeout(() => setIsPaused(false), 3000) // Resume after 3 seconds
   }
   
   return (
@@ -86,7 +99,14 @@ export default function Testimonials() {
       {/* Featured Testimonial Carousel */}
       <ScaleIn>
         <div className="testimonial-carousel-container">
-          <button className="carousel-btn carousel-btn-prev" onClick={handlePrev} aria-label="Previous testimonial"></button>
+          <button 
+            className="carousel-btn carousel-btn-prev" 
+            onClick={handlePrev} 
+            aria-label="Previous testimonial"
+            type="button"
+          >
+            ‹
+          </button>
           
           <div className="featured-testimonial" key={currentIndex}>
             <div className="featured-quote-icon">"</div>
@@ -105,7 +125,14 @@ export default function Testimonials() {
             </div>
           </div>
           
-          <button className="carousel-btn carousel-btn-next" onClick={handleNext} aria-label="Next testimonial"></button>
+          <button 
+            className="carousel-btn carousel-btn-next" 
+            onClick={handleNext} 
+            aria-label="Next testimonial"
+            type="button"
+          >
+            ›
+          </button>
           
           {/* Carousel Indicators */}
           <div className="carousel-indicators">
