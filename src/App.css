@@ -3232,6 +3232,41 @@ body {
   margin: 0 auto 48px;
 }
 
+/* Services Hero with Background Image */
+.services-hero-with-bg {
+  max-width: 100%;
+  min-height: 400px;
+  margin: -32px -32px 48px -32px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 32px;
+}
+
+.services-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services-hero-with-bg h1 {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 24px;
+  font-size: 3rem;
+}
+
+.services-hero-with-bg .services-subtitle {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
 .services-subtitle {
   font-size: 1.1rem;
   color: var(--text);
@@ -5403,6 +5438,24 @@ body {
   .facilities-subtitle {
     font-size: 1.1rem;
     line-height: 1.7;
+  }
+
+  /* Mobile Services Hero with Background */
+  .services-hero-with-bg {
+    min-height: 300px;
+    margin: -20px -20px 32px -20px;
+    padding: 60px 20px;
+    border-radius: 12px;
+  }
+
+  .services-hero-with-bg h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .services-hero-with-bg .services-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .facilities-highlights {

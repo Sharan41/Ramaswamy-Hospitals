@@ -1,6 +1,6 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
-import facilitiesHeroImage from '../assets/WhatsApp Image 2025-10-10 at 13.37.21.jpeg'
+import facilitiesHeroImage from '../assets/WhatsApp Image 2025-10-10 at 13.51.29.jpeg'
 
 export default function Facilities() {
   const { t } = useI18n()
