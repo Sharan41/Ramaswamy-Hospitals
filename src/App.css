@@ -3236,7 +3236,7 @@ body {
 .services-hero-with-bg {
   max-width: 100%;
   min-height: 400px;
-  margin: -32px -32px 48px -32px;
+  margin: 0 0 48px 0;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -4347,7 +4347,7 @@ body {
 .facilities-hero-with-bg {
   max-width: 100%;
   min-height: 400px;
-  margin: -32px -32px 48px -32px;
+  margin: 0 0 48px 0;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -5415,7 +5415,7 @@ body {
   /* Mobile Facilities Hero with Background */
   .facilities-hero-with-bg {
     min-height: 300px;
-    margin: -20px -20px 32px -20px;
+    margin: 0 0 32px 0;
     padding: 60px 20px;
     border-radius: 12px;
   }
@@ -5443,7 +5443,7 @@ body {
   /* Mobile Services Hero with Background */
   .services-hero-with-bg {
     min-height: 300px;
-    margin: -20px -20px 32px -20px;
+    margin: 0 0 32px 0;
     padding: 60px 20px;
     border-radius: 12px;
   }
