@@ -3281,6 +3281,7 @@ body {
   margin: 48px 0;
   box-shadow: var(--shadow-md);
   border: 2px solid var(--accent-light);
+  touch-action: pan-y;
 }
 
 .service-highlights-grid {
@@ -3766,11 +3767,31 @@ body {
 @media (max-width: 768px) {
   .service-highlights-container {
     padding: 32px 20px;
+    touch-action: pan-y;
+    will-change: auto;
   }
 
   .service-highlights-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .service-highlight-item {
+    touch-action: pan-y;
+  }
+
+  .service-highlight-item h3 {
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .service-highlight-item p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .services-grid-new {
@@ -4392,6 +4413,7 @@ body {
   margin: 48px 0;
   box-shadow: var(--shadow-md);
   border: 2px solid var(--accent-light);
+  touch-action: pan-y;
 }
 
 .facilities-highlights-grid {
@@ -5601,11 +5623,31 @@ body {
 
   .facilities-highlights-container {
     padding: 32px 20px;
+    touch-action: pan-y;
+    will-change: auto;
   }
 
   .facilities-highlights-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .facility-highlight-item {
+    touch-action: pan-y;
+  }
+
+  .facility-highlight-item h3 {
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .facility-highlight-item p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .facilities-visit-cta {
