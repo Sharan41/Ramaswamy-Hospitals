@@ -59,7 +59,7 @@ export default function Home() {
             <div className="hero-badge">{t.home.heroBadge}</div>
             <h1 className="hero-title-new">{t.brand}</h1>
             <p className="hero-subtitle-new">
-              {t.home.tagline}
+              Providing compassionate, quality healthcare to our community for over <strong>25 years</strong>. Led by Dr. Ramaswamy, we are dedicated to exceptional medical care with a patient-first approach.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-large btn-with-icon" to="/services" aria-label="Browse our medical services">
@@ -154,7 +154,7 @@ export default function Home() {
         <FadeIn>
           <div className="home-excellence-header">
             <h2>{t.home.excellence}</h2>
-            <p>{t.home.excellenceSubtitle}</p>
+            <p>Providing compassionate, quality healthcare to our community for over <strong>25 years</strong></p>
           </div>
         </FadeIn>
         
