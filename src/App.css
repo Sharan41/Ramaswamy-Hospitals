@@ -4308,6 +4308,41 @@ body {
   margin: 0 auto 48px;
 }
 
+/* Facilities Hero with Background Image */
+.facilities-hero-with-bg {
+  max-width: 100%;
+  min-height: 400px;
+  margin: -32px -32px 48px -32px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 32px;
+}
+
+.facilities-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.facilities-hero-with-bg h1 {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 24px;
+  font-size: 3rem;
+}
+
+.facilities-hero-with-bg .facilities-subtitle {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
 .facilities-subtitle {
   font-size: 1.1rem;
   color: var(--text);
@@ -5340,6 +5375,24 @@ body {
     max-width: 800px;
     margin: 0 auto 48px;
     padding: 0 20px;
+  }
+
+  /* Mobile Facilities Hero with Background */
+  .facilities-hero-with-bg {
+    min-height: 300px;
+    margin: -20px -20px 32px -20px;
+    padding: 60px 20px;
+    border-radius: 12px;
+  }
+
+  .facilities-hero-with-bg h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .facilities-hero-with-bg .facilities-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .facilities-hero h1 {

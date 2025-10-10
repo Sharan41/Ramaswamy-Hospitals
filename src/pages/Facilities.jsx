@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
+import facilitiesHeroImage from '../assets/WhatsApp Image 2025-10-10 at 13.37.21.jpeg'
 
 export default function Facilities() {
   const { t } = useI18n()
@@ -73,13 +74,23 @@ export default function Facilities() {
   
   return (
     <section className="section">
-      {/* Hero Section */}
+      {/* Hero Section with Background Image */}
       <FadeIn>
-        <div className="facilities-hero">
-          <h1>{t.facilities.title}</h1>
-          <p className="facilities-subtitle">
-            {t.facilities.subtitle}
-          </p>
+        <div 
+          className="facilities-hero facilities-hero-with-bg"
+          style={{ 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${facilitiesHeroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="facilities-hero-content">
+            <h1>{t.facilities.title}</h1>
+            <p className="facilities-subtitle">
+              {t.facilities.subtitle}
+            </p>
+          </div>
         </div>
       </FadeIn>
 
