@@ -49,3 +49,4 @@ export function LoadingGrid({ count = 3, type = 'card' }) {
     </div>
   )
 }
+

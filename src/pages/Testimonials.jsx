@@ -208,50 +208,6 @@ export default function Testimonials() {
         </div>
       </FadeIn>
 
-      {/* Video Testimonial Section */}
-      <div style={{ marginTop: 64 }}>
-        <FadeIn>
-          <h2 className="section-heading">{t.testimonials.patientStories}</h2>
-          <p className="section-subheading">{t.testimonials.hearDirectly}</p>
-        </FadeIn>
-        <ScaleIn>
-          <div className="video-testimonial-container">
-            <div className="video-testimonial-placeholder">
-              <svg className="video-play-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"/>
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/>
-              </svg>
-              <div className="video-testimonial-title">{t.testimonials.videoTitle}</div>
-              <div className="video-testimonial-subtitle">{t.testimonials.videoSubtitle}</div>
-            </div>
-            <div className="video-testimonial-info">
-              <h3>{t.testimonials.realStories}</h3>
-              <p>{t.testimonials.realStoriesDesc}</p>
-              <div className="video-testimonial-features">
-                <div className="video-feature-item">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  <span>{t.testimonials.feature1}</span>
-                </div>
-                <div className="video-feature-item">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  <span>{t.testimonials.feature2}</span>
-                </div>
-                <div className="video-feature-item">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  <span>{t.testimonials.feature3}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ScaleIn>
-      </div>
-
       {/* Other Testimonials */}
       <div style={{ marginTop: 64 }}>
         <FadeIn>

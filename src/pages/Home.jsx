@@ -1,7 +1,7 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
-import bannerLogo from '../assets/banner-logo.jpg'
-import crestLogo from '../assets/crest-logo.jpg'
+import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
+import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
@@ -17,26 +17,21 @@ export default function Home() {
     },
     { 
       number: "02",
-      title: t.home.advancedTech, 
-      desc: t.home.advancedTechDesc 
-    },
-    { 
-      number: "03",
       title: t.home.emergency247, 
       desc: t.home.emergency247Desc 
     },
     { 
-      number: "04",
+      number: "03",
       title: t.home.patientCentered, 
       desc: t.home.patientCenteredDesc 
     },
     { 
-      number: "05",
+      number: "04",
       title: t.home.affordableCare, 
       desc: t.home.affordableCareDesc 
     },
     { 
-      number: "06",
+      number: "05",
       title: t.home.comprehensiveServices, 
       desc: t.home.comprehensiveServicesDesc 
     },
@@ -138,7 +133,7 @@ export default function Home() {
         <div className="home-leader-section">
           <div className="home-leader-card">
             <div className="home-leader-image">
-              <img src={crestLogo} alt="Dr. Ramaswamy" />
+              <img src={leaderImage} alt="Dr. Ramaswamy" />
             </div>
             <div className="home-leader-content">
               <h3>Dr. Ramaswamy</h3>

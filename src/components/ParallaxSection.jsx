@@ -93,3 +93,4 @@ export const ParallaxHero = ({ children, backgroundImage, className = '' }) => {
   )
 }
 
+

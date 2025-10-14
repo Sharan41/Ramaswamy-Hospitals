@@ -1,7 +1,7 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import CountUp from '../components/CountUp'
-import crestLogo from '../assets/crest-logo.jpg'
+import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 
 export default function About() {
   const { t } = useI18n()
@@ -47,7 +47,7 @@ export default function About() {
         </FadeIn>
         <ScaleIn>
           <div className="about-hero-image">
-            <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" />
+            <img src={leaderImage} alt="Dr.RAMASWAMY HOSPITALS" />
             <div className="about-hero-image-caption">Dr.RAMASWAMY HOSPITALS - Serving the community since 1999</div>
           </div>
         </ScaleIn>
