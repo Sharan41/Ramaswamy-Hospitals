@@ -53,8 +53,7 @@ export default function Home() {
           <div className="hero-content-new">
             <div className="hero-badge">{t.home.heroBadge}</div>
             <h1 className="hero-title-new">{t.brand}</h1>
-            <p className="hero-subtitle-new">
-              {t.home.tagline}
+            <p className="hero-subtitle-new" dangerouslySetInnerHTML={{ __html: t.home.tagline }}>
             </p>
             <div className="hero-actions">
               <Link className="btn btn-large btn-with-icon" to="/services" aria-label="Browse our medical services">

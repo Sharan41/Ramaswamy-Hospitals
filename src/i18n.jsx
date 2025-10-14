@@ -34,7 +34,7 @@ export const translations = {
       copyright: 'All rights reserved.'
     },
     home: {
-      tagline: 'Providing compassionate, quality healthcare to our community for over 25 years. Led by Dr. Ramaswamy, we are dedicated to exceptional medical care with a patient-first approach.',
+      tagline: 'Providing compassionate, quality healthcare to our community for over <strong>25 years</strong>. Led by Dr. Ramaswamy, we are dedicated to exceptional medical care with a patient-first approach.',
       heroBadge: 'Trusted Healthcare Since 1999',
       exploreServices: 'Explore Services',
       callEmergency: 'Emergency Call',
@@ -355,7 +355,7 @@ export const translations = {
       copyright: 'అన్ని హక్కులు సంరక్షించబడ్డాయి.'
     },
     home: {
-      tagline: '25 సంవత్సరాలకు పైగా మా సమాజానికి దయతో కూడిన, నాణ్యమైన ఆరోగ్య సంరక్షణ అందిస్తున్నాము. డాక్టర్ రామస్వామి నాయకత్వంలో, మేము రోగి-ప్రథమ విధానంతో అసాధారణమైన వైద్య సంరక్షణకు అంకితం చేయబడ్డాము.',
+      tagline: '<strong>25 సంవత్సరాలకు</strong> పైగా మా సమాజానికి దయతో కూడిన, నాణ్యమైన ఆరోగ్య సంరక్షణ అందిస్తున్నాము. డాక్టర్ రామస్వామి నాయకత్వంలో, మేము రోగి-ప్రథమ విధానంతో అసాధారణమైన వైద్య సంరక్షణకు అంకితం చేయబడ్డాము.',
       heroBadge: '1999 నుండి నమ్మదగిన ఆరోగ్య సంరక్షణ',
       exploreServices: 'సేవలను అన్వేషించండి',
       callEmergency: 'ఎమర్జెన్సీ కాల్',
