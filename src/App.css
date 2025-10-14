@@ -3881,6 +3881,7 @@ body {
   width: 100%;
   max-width: 500px;
   margin-left: auto;
+  margin-right: 20px;
 }
 
 .hero-image-new img {

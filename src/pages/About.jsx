@@ -109,7 +109,7 @@ export default function About() {
         <ScaleIn>
           <div className="leader-spotlight">
             <div className="leader-spotlight-avatar">
-              <div className="leader-spotlight-initials">DR</div>
+              <img src={leaderImage} alt="Dr. Ramaswamy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
             </div>
             <div className="leader-spotlight-info">
               <h3>Dr. Ramaswamy</h3>
