@@ -149,7 +149,7 @@ export default function Home() {
         <FadeIn>
           <div className="home-excellence-header">
             <h2>{t.home.excellence}</h2>
-            <p>Providing compassionate, quality healthcare to our community for over <strong>25 years</strong></p>
+            <p>{t.home.excellenceSubtitle}</p>
           </div>
         </FadeIn>
         
