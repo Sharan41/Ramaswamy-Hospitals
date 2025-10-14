@@ -149,7 +149,7 @@ export default function Home() {
         <FadeIn>
           <div className="home-excellence-header">
             <h2>{t.home.excellence}</h2>
-            <p>{t.home.excellenceSubtitle}</p>
+            <p dangerouslySetInnerHTML={{ __html: t.home.excellenceSubtitle }}></p>
           </div>
         </FadeIn>
         
