@@ -468,11 +468,32 @@ p { margin: 0 0 1rem; }
 .doctor-card {
   text-align: center;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: shimmer 20s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .doctor-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card:hover::before {
+  opacity: 0.3;
 }
 
 .doctor-card:hover .doctor-avatar {
@@ -504,12 +525,33 @@ p { margin: 0 0 1rem; }
 .facility-card {
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.facility-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: shimmer 20s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .facility-card:hover {
   border-left-color: var(--brand);
   transform: translateX(4px);
   box-shadow: var(--shadow-md);
+}
+
+.facility-card:hover::before {
+  opacity: 0.35;
 }
 
 .facility-card h3 {
@@ -1999,6 +2041,32 @@ body {
 .stat-card {
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: shimmer 20s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card:hover::before {
+  opacity: 0.4;
 }
 
 .stat-number {
@@ -2720,31 +2788,7 @@ body {
 }
 
 /* Decorative background elements - reduced opacity for better text readability */
-.about-hero-container::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, rgba(42, 91, 108, 0.03), rgba(33, 72, 85, 0.03));
-  border-radius: 50%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.about-hero-container::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 150px;
-  height: 150px;
-  background: linear-gradient(135deg, rgba(176, 188, 161, 0.03), rgba(176, 188, 161, 0.05));
-  border-radius: 50%;
-  z-index: 0;
-  pointer-events: none;
-}
+/* Spherical shapes removed for cleaner look */
 
 .about-hero {
   text-align: left;
@@ -3678,6 +3722,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
 }
 
 .service-card-new:hover {
@@ -3696,6 +3741,23 @@ body {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.service-card-new::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: shimmer 20s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .service-card-new:hover {
@@ -3706,6 +3768,10 @@ body {
 
 .service-card-new:hover::before {
   transform: scaleX(1);
+}
+
+.service-card-new:hover::after {
+  opacity: 0.4;
 }
 
 .service-card-icon-wrapper {
@@ -4209,8 +4275,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-  padding: 80px 0;
-  min-height: 600px;
+  padding: 50px 0;
+  min-height: 450px;
 }
 
 .hero-content-new {
@@ -5375,11 +5441,7 @@ body {
     gap: 40px;
   }
 
-  .about-hero-container::before,
-  .about-hero-container::after {
-    width: 150px;
-    height: 150px;
-  }
+  /* Spherical shapes removed */
 
   .about-hero {
     text-align: center;
@@ -5904,19 +5966,7 @@ body {
     touch-action: pan-y; /* Allow vertical scrolling */
   }
 
-  .about-hero-container::before {
-    top: -30px;
-    left: -30px;
-    width: 100px;
-    height: 100px;
-  }
-
-  .about-hero-container::after {
-    bottom: -20px;
-    right: -20px;
-    width: 80px;
-    height: 80px;
-  }
+  /* Spherical shapes removed */
 
   .about-hero {
     text-align: center;
