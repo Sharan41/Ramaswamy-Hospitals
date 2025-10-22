@@ -470,6 +470,7 @@ p { margin: 0 0 1rem; }
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .doctor-card::before {
@@ -487,6 +488,24 @@ p { margin: 0 0 1rem; }
   transition: opacity 0.3s ease;
 }
 
+.doctor-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+}
+
 .doctor-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -494,6 +513,10 @@ p { margin: 0 0 1rem; }
 
 .doctor-card:hover::before {
   opacity: 0.3;
+}
+
+.doctor-card:active::after {
+  animation: glossyShine 0.6s ease-out;
 }
 
 .doctor-card:hover .doctor-avatar {
@@ -527,6 +550,7 @@ p { margin: 0 0 1rem; }
   border-left: 4px solid transparent;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .facility-card::before {
@@ -544,6 +568,24 @@ p { margin: 0 0 1rem; }
   transition: opacity 0.3s ease;
 }
 
+.facility-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+}
+
 .facility-card:hover {
   border-left-color: var(--brand);
   transform: translateX(4px);
@@ -552,6 +594,10 @@ p { margin: 0 0 1rem; }
 
 .facility-card:hover::before {
   opacity: 0.35;
+}
+
+.facility-card:active::after {
+  animation: glossyShine 0.6s ease-out;
 }
 
 .facility-card h3 {
@@ -2046,6 +2092,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .stat-card::before {
@@ -2063,12 +2110,34 @@ body {
   transition: opacity 0.3s ease;
 }
 
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+}
+
 .stat-card:hover {
   transform: translateY(-8px);
 }
 
 .stat-card:hover::before {
   opacity: 0.4;
+}
+
+.stat-card:active::after {
+  animation: glossyShine 0.6s ease-out;
 }
 
 .stat-number {
@@ -3711,37 +3780,6 @@ body {
 .service-highlight-item {
   text-align: center;
   position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
-  padding: 8px;
-  border-radius: 16px;
-}
-
-.service-highlight-item::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(42, 91, 108, 0.12) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: shimmer 20s linear infinite;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 0;
-}
-
-.service-highlight-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: rgba(176, 188, 161, 0.08);
-  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.12);
-}
-
-.service-highlight-item:hover::before {
-  opacity: 0.5;
 }
 
 .service-highlight-number {
@@ -3758,41 +3796,18 @@ body {
   font-weight: 700;
   margin: 0 auto 16px;
   box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  z-index: 1;
-}
-
-.service-highlight-item:hover .service-highlight-number {
-  transform: scale(1.15) rotate(360deg);
-  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.4);
-  background: linear-gradient(135deg, var(--accent), var(--brand));
 }
 
 .service-highlight-item h3 {
   color: var(--brand);
   margin: 0 0 8px 0;
   font-size: 1.2rem;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.service-highlight-item:hover h3 {
-  color: var(--accent);
 }
 
 .service-highlight-item p {
   color: var(--text);
   font-size: 0.95rem;
   margin: 0;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.service-highlight-item:hover p {
-  color: var(--brand);
 }
 
 /* Services Grid */
@@ -3814,6 +3829,7 @@ body {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .service-card-new:hover {
@@ -3838,16 +3854,19 @@ body {
 .service-card-new::after {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: shimmer 20s linear infinite;
-  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  transition: none;
   pointer-events: none;
-  transition: opacity 0.3s ease;
   z-index: 1;
 }
 
@@ -3861,8 +3880,8 @@ body {
   transform: scaleX(1);
 }
 
-.service-card-new:hover::after {
-  opacity: 0.4;
+.service-card-new:active::after {
+  animation: glossyShine 0.6s ease-out;
 }
 
 .service-card-icon-wrapper {
@@ -4485,6 +4504,15 @@ body {
   }
 }
 
+@keyframes glossyShine {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
 .home-stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -4497,7 +4525,7 @@ body {
   text-align: center;
   color: white;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
+  cursor: pointer;
   position: relative;
   padding: 24px;
   border-radius: 16px;
@@ -4520,6 +4548,24 @@ body {
   z-index: 0;
 }
 
+.home-stat-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+}
+
 .home-stat-item:hover {
   transform: translateY(-8px);
   background: rgba(255, 255, 255, 0.08);
@@ -4527,6 +4573,10 @@ body {
 
 .home-stat-item:hover::before {
   opacity: 0.6;
+}
+
+.home-stat-item:active::after {
+  animation: glossyShine 0.6s ease-out;
 }
 
 .home-stat-item:hover .home-stat-icon {
@@ -5212,38 +5262,6 @@ body {
 
 .facility-highlight-item {
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
-  padding: 8px;
-  border-radius: 16px;
-}
-
-.facility-highlight-item::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(42, 91, 108, 0.12) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: shimmer 20s linear infinite;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  z-index: 0;
-}
-
-.facility-highlight-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: rgba(176, 188, 161, 0.08);
-  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.12);
-}
-
-.facility-highlight-item:hover::before {
-  opacity: 0.5;
 }
 
 .facility-highlight-badge {
@@ -5259,28 +5277,12 @@ body {
   font-weight: 700;
   margin: 0 auto 16px;
   box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  z-index: 1;
-}
-
-.facility-highlight-item:hover .facility-highlight-badge {
-  transform: scale(1.15) rotate(360deg);
-  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.4);
-  background: linear-gradient(135deg, var(--accent), var(--brand));
 }
 
 .facility-highlight-item h3 {
   color: var(--brand);
   margin: 0 0 8px 0;
   font-size: 1.2rem;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.facility-highlight-item:hover h3 {
-  color: var(--accent);
 }
 
 .facility-highlight-item p {
@@ -5288,13 +5290,6 @@ body {
   font-size: 0.95rem;
   margin: 0;
   line-height: 1.6;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.facility-highlight-item:hover p {
-  color: var(--brand);
 }
 
 /* Facilities Grid */
