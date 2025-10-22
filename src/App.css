@@ -4409,7 +4409,7 @@ body {
   animation: gradientShift 8s ease infinite;
   padding: 64px 40px;
   border-radius: 20px;
-  margin: -40px 0 80px 0;
+  margin: 60px 0 80px 0;
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
