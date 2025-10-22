@@ -134,7 +134,7 @@ function App() {
         <a href="https://wa.me/919912757854" className="quick-action-btn secondary" target="_blank" rel="noreferrer" aria-label="WhatsApp">
           <span>{t.quickActions.whatsapp}</span>
         </a>
-        <a href="https://maps.google.com" className="quick-action-btn" target="_blank" rel="noreferrer" aria-label="Get directions">
+        <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" className="quick-action-btn" target="_blank" rel="noreferrer" aria-label="Get directions">
           <span>{t.quickActions.directions}</span>
         </a>
       </div>
@@ -142,7 +142,7 @@ function App() {
       <footer className="footer" role="contentinfo">
         <div>© {new Date().getFullYear()} {t.brand}</div>
         <div className="links">
-          <a href="https://maps.google.com" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
+          <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
           <a href="#" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
           <a href="#" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
         </div>

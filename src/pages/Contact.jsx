@@ -60,7 +60,7 @@ export default function Contact() {
           <p>{t.contact.addressLine1}</p>
           <p>{t.contact.addressLine2}</p>
           <p>{t.contact.addressLine3}</p>
-          <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="contact-link">
+          <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" className="contact-link">
             {t.contact.viewMaps} →
           </a>
         </div>
@@ -106,6 +106,40 @@ export default function Contact() {
           <div className="contact-hours-item">{t.contact.sunday}</div>
         </div>
       </StaggerContainer>
+
+      {/* Google Maps Location */}
+      <div style={{ marginTop: 80 }}>
+        <FadeIn>
+          <h2 className="section-heading">{t.contact.findUs}</h2>
+          <p className="section-subtitle">{t.contact.findUsSubtitle}</p>
+        </FadeIn>
+        <ScaleIn>
+          <div className="contact-map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.364682218248!2d79.9951669!3d14.916762299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7bf0315d787b%3A0xfaf1df2ed7d74779!2sKandukuri%20Hospitals!5e0!3m2!1sen!2sin!4v1761138643381!5m2!1sen!2sin" 
+              className="contact-map-iframe"
+              title="Dr. Ramaswamy Hospitals Location"
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div className="contact-map-overlay">
+              <a 
+                href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn btn-large"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                {t.contact.getDirections}
+              </a>
+            </div>
+          </div>
+        </ScaleIn>
+      </div>
 
       {/* Social Media */}
       <div style={{ marginTop: 80 }}>

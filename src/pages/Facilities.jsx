@@ -296,7 +296,7 @@ export default function Facilities() {
           </div>
           <h2>{t.facilities.visitUs}</h2>
           <p>{t.facilities.visitUsText}</p>
-          <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="btn btn-large">
+          <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" className="btn btn-large">
             {t.facilities.getDirections}
           </a>
         </div>
