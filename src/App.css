@@ -1281,6 +1281,17 @@ body {
   }
 }
 
+/* Tablet and Mobile - Remove sticky topbar (already have mobile quick actions bar) */
+@media (max-width: 860px) {
+  .topbar {
+    position: static;
+  }
+
+  .header {
+    top: 0 !important;
+  }
+}
+
 /* Extra Small Mobile Devices */
 @media (max-width: 480px) {
   .topbar {
@@ -5199,7 +5210,7 @@ body {
   /* Header Mobile Improvements */
   .header {
     position: sticky;
-    top: 42px;
+    top: 0;
     z-index: 999;
   }
 
