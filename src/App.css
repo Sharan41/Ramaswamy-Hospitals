@@ -128,6 +128,22 @@ p { margin: 0 0 1rem; }
   font-weight: 500;
 }
 
+.topbar-address {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.topbar-address:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.topbar-address:hover .topbar-icon {
+  transform: translateY(-2px);
+}
+
 .topbar-icon {
   width: 16px;
   height: 16px;

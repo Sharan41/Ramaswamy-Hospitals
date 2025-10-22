@@ -46,13 +46,13 @@ function App() {
         <div className="topbar-content">
           <div className="topbar-left">
             <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="topbar-logo" />
-            <span className="topbar-item">
+            <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-address" aria-label="Get directions to hospital">
               <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
               Vishanalayam Street, Kavali, Nellore
-            </span>
+            </a>
           </div>
           <div className="topbar-right">
             <a href="tel:+919912757854" className="topbar-cta topbar-emergency">
@@ -143,8 +143,8 @@ function App() {
         <div>© {new Date().getFullYear()} {t.brand}</div>
         <div className="links">
           <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
-          <a href="#" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
-          <a href="#" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
+          <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
+          <a href="https://www.instagram.com/drramaswamyhospitals/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
         </div>
       </footer>
     </div>

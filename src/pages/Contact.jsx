@@ -22,19 +22,19 @@ export default function Contact() {
       name: t.contact.instagram, 
       desc: t.contact.instagramText,
       icon: "IG",
-      url: "#"
+      url: "https://www.instagram.com/drramaswamyhospitals/"
     },
     { 
       name: t.contact.linktree, 
       desc: t.contact.linktreeText,
       icon: "LT",
-      url: "#"
+      url: "https://linktr.ee/drramaswamyhospitals"
     },
     { 
       name: t.contact.whatsapp, 
       desc: t.contact.whatsappText,
       icon: "WA",
-      url: "#"
+      url: "https://wa.me/919912757854"
     }
   ]
 
