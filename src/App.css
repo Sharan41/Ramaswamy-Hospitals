@@ -1339,10 +1339,10 @@ body {
   }
 }
 
-/* Tablet and Mobile - Remove sticky topbar (already have mobile quick actions bar) */
+/* Tablet and Mobile - Hide topbar (already have mobile quick actions bar) */
 @media (max-width: 860px) {
   .topbar {
-    position: static;
+    display: none;
   }
 
   .header {
@@ -1353,23 +1353,7 @@ body {
 /* Extra Small Mobile Devices */
 @media (max-width: 480px) {
   .topbar {
-    font-size: 0.7rem;
-  }
-
-  .topbar-content {
-    padding: 6px 12px;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .topbar-left {
-    flex: 1;
-    min-width: 150px;
-  }
-
-  .topbar-logo {
-    width: 28px;
-    height: 28px;
+    display: none;
   }
 
   .topbar-item {
@@ -3727,6 +3711,37 @@ body {
 .service-highlight-item {
   text-align: center;
   position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.service-highlight-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(42, 91, 108, 0.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: shimmer 20s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.service-highlight-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(176, 188, 161, 0.08);
+  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.12);
+}
+
+.service-highlight-item:hover::before {
+  opacity: 0.5;
 }
 
 .service-highlight-number {
@@ -3743,18 +3758,41 @@ body {
   font-weight: 700;
   margin: 0 auto 16px;
   box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.service-highlight-item:hover .service-highlight-number {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.4);
+  background: linear-gradient(135deg, var(--accent), var(--brand));
 }
 
 .service-highlight-item h3 {
   color: var(--brand);
   margin: 0 0 8px 0;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.service-highlight-item:hover h3 {
+  color: var(--accent);
 }
 
 .service-highlight-item p {
   color: var(--text);
   font-size: 0.95rem;
   margin: 0;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.service-highlight-item:hover p {
+  color: var(--brand);
 }
 
 /* Services Grid */
@@ -5174,6 +5212,38 @@ body {
 
 .facility-highlight-item {
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.facility-highlight-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(42, 91, 108, 0.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: shimmer 20s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.facility-highlight-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(176, 188, 161, 0.08);
+  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.12);
+}
+
+.facility-highlight-item:hover::before {
+  opacity: 0.5;
 }
 
 .facility-highlight-badge {
@@ -5189,12 +5259,28 @@ body {
   font-weight: 700;
   margin: 0 auto 16px;
   box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.facility-highlight-item:hover .facility-highlight-badge {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.4);
+  background: linear-gradient(135deg, var(--accent), var(--brand));
 }
 
 .facility-highlight-item h3 {
   color: var(--brand);
   margin: 0 0 8px 0;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.facility-highlight-item:hover h3 {
+  color: var(--accent);
 }
 
 .facility-highlight-item p {
@@ -5202,6 +5288,13 @@ body {
   font-size: 0.95rem;
   margin: 0;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.facility-highlight-item:hover p {
+  color: var(--brand);
 }
 
 /* Facilities Grid */
