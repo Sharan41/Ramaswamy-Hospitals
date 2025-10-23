@@ -41,7 +41,7 @@ export const translations = {
       copyright: 'All rights reserved.'
     },
     home: {
-      tagline: '<strong>First super speciality</strong> hospital in Kavali. Providing compassionate, quality healthcare to our community for over <strong>25 years</strong>.',
+      tagline: '<strong>First Multi speciality hospital</strong> in Kavali. Providing compassionate, quality healthcare to our community for over <strong>25 years</strong>.',
       heroBadge: 'Trusted Healthcare Since 1999',
       exploreServices: 'Explore Services',
       callEmergency: 'Emergency Call',
@@ -61,7 +61,7 @@ export const translations = {
       yearsOfCare: 'Years of Care',
       patientsCured: 'Patients Cured',
       whyChoose: 'Why Choose Us',
-      experiencedTeam: 'Experienced Team',
+      experiencedTeam: 'EXPERIENCED TEAM',
       experiencedTeamDesc: 'At Dr. Ramaswamy Hospitals, our strength lies in our team of <strong>highly qualified and experienced medical professionals</strong> who are dedicated to delivering exceptional patient care. From skilled surgeons and specialized consultants to compassionate nurses and support staff, every member of our team works with commitment, precision, and empathy. With years of hands-on experience and continuous training, our experts ensure that each patient receives the highest standard of treatment, backed by advanced medical technology and personalized attention. Together, we strive to uphold our legacy of trust, care, and excellence in healthcare.',
       emergency247: '24/7 EMERGENCY CARE',
       emergency247Desc: 'Our emergency team is <strong>always ready—day or night—</strong>to provide swift, expert care when it matters most. With skilled doctors, trained nurses, and advanced facilities, we\'re here every moment to save lives and support patients in critical times.',
@@ -87,7 +87,7 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      intro1: 'Dr. Ramaswamy Hospitals is <strong>Kavali\'s first super-speciality hospital</strong>, founded by Kavali\'s <strong>first Orthopaedic Surgeon</strong> with over <strong>50,000 successful surgeries</strong>. With 25+ years of trusted service, we\'ve introduced many healthcare firsts — from advanced ICUs and dialysis care to 24/7 medical support. Guided by strong ethics and compassion, we continue our mission to provide <strong>quality, affordable, and patient-focused care</strong> to every individual who walks through our doors.',
+      intro1: 'Dr. Ramaswamy Hospitals is <strong>Kavali\'s first Multi-speciality hospital</strong>, founded by Kavali\'s <strong>first Orthopaedic Surgeon</strong> with over <strong>50,000 successful surgeries</strong>. With 25+ years of trusted service, we\'ve introduced many healthcare firsts — from advanced ICUs and dialysis care to 24/7 medical support. Guided by strong ethics and compassion, we continue our mission to provide <strong>quality, affordable, and patient-focused care</strong> to every individual who walks through our doors.',
       intro2: '',
       mission: 'Our Mission',
       missionText: 'At Dr. Ramaswamy Hospitals, our motto is <strong>"To care and to cure."</strong> We are committed to providing <strong>high-quality, affordable healthcare</strong> for everyone. Our focus is on delivering <strong>advanced medical care with compassion</strong>, ensuring safety, comfort, and excellence. We value every patient\'s trust and feedback as we continue to improve our services. With <strong>ethics and empathy</strong> at our core, we strive to be the most trusted healthcare partner for families in Kavali and beyond.',
@@ -295,7 +295,7 @@ export const translations = {
       whyChoose: 'Why Choose Our Doctors',
       feature1Title: 'Highly Qualified',
       feature1Desc: 'All our doctors are highly qualified with advanced degrees and certifications from renowned institutions.',
-      feature2Title: 'Experienced Team',
+      feature2Title: 'EXPERIENCED TEAM',
       feature2Desc: 'Our medical team brings decades of combined experience in their respective specialties.',
       feature3Title: 'Patient-Centered',
       feature3Desc: 'We prioritize patient care and comfort, ensuring personalized attention for every individual.'
@@ -403,7 +403,7 @@ export const translations = {
       copyright: 'అన్ని హక్కులు సంరక్షించబడ్డాయి.'
     },
     home: {
-      tagline: 'కావలిలో <strong>మొదటి సూపర్ స్పెషాలిటీ</strong> హాస్పిటల్. <strong>25 సంవత్సరాలకు</strong> పైగా మా సమాజానికి దయతో కూడిన, నాణ్యమైన ఆరోగ్య సంరక్షణ అందిస్తున్నాము.',
+      tagline: 'కావలిలో <strong>మొదటి మల్టీ స్పెషాలిటీ హాస్పిటల్</strong>. <strong>25 సంవత్సరాలకు</strong> పైగా మా సమాజానికి దయతో కూడిన, నాణ్యమైన ఆరోగ్య సంరక్షణ అందిస్తున్నాము.',
       heroBadge: '1999 నుండి నమ్మదగిన ఆరోగ్య సంరక్షణ',
       exploreServices: 'సేవలను అన్వేషించండి',
       callEmergency: 'ఎమర్జెన్సీ కాల్',
@@ -449,7 +449,7 @@ export const translations = {
     },
     about: {
       title: 'మా గురించి',
-      intro1: 'డాక్టర్ రామస్వామి హాస్పిటల్స్ <strong>కావలి యొక్క మొదటి సూపర్-స్పెషాలిటీ హాస్పిటల్</strong>, కావలి యొక్క <strong>మొదటి ఆర్థోపెడిక్ సర్జన్</strong> చేత స్థాపించబడింది, <strong>50,000 విజయవంతమైన శస్త్రచికిత్సలకు</strong> పైగా. 25+ సంవత్సరాల నమ్మకమైన సేవతో, మేము అనేక ఆరోగ్య సంరక్షణ మొదట్లను ప్రవేశపెట్టాము — అధునాతన ICUలు మరియు డయాలసిస్ సంరక్షణ నుండి 24/7 వైద్య మద్దతు వరకు. బలమైన నైతికత మరియు కరుణతో మార్గదర్శకత్వం, మేము మా తలుపుల గుండా నడిచే ప్రతి వ్యక్తికి <strong>నాణ్యత, సరసమైన మరియు రోగి-కేంద్రీకృత సంరక్షణను</strong> అందించే మా లక్ష్యాన్ని కొనసాగిస్తాము.',
+      intro1: 'డాక్టర్ రామస్వామి హాస్పిటల్స్ <strong>కావలి యొక్క మొదటి మల్టీ-స్పెషాలిటీ హాస్పిటల్</strong>, కావలి యొక్క <strong>మొదటి ఆర్థోపెడిక్ సర్జన్</strong> చేత స్థాపించబడింది, <strong>50,000 విజయవంతమైన శస్త్రచికిత్సలకు</strong> పైగా. 25+ సంవత్సరాల నమ్మకమైన సేవతో, మేము అనేక ఆరోగ్య సంరక్షణ మొదట్లను ప్రవేశపెట్టాము — అధునాతన ICUలు మరియు డయాలసిస్ సంరక్షణ నుండి 24/7 వైద్య మద్దతు వరకు. బలమైన నైతికత మరియు కరుణతో మార్గదర్శకత్వం, మేము మా తలుపుల గుండా నడిచే ప్రతి వ్యక్తికి <strong>నాణ్యత, సరసమైన మరియు రోగి-కేంద్రీకృత సంరక్షణను</strong> అందించే మా లక్ష్యాన్ని కొనసాగిస్తాము.',
       intro2: '',
       mission: 'మా లక్ష్యం',
       missionText: 'డాక్టర్ రామస్వామి హాస్పిటల్స్‌లో, మా నినాదం <strong>"శ్రద్ధ మరియు నయం."</strong> మేము అందరికీ <strong>అధిక-నాణ్యత, సరసమైన ఆరోగ్య సంరక్షణను</strong> అందించడానికి కట్టుబడి ఉన్నాము. మా దృష్టి <strong>కరుణతో అధునాతన వైద్య సంరక్షణను</strong> అందించడం, భద్రత, సౌకర్యం మరియు శ్రేష్ఠతను నిర్ధారించడం. మేము మా సేవలను మెరుగుపరుస్తూ ప్రతి రోగి యొక్క నమ్మకం మరియు అభిప్రాయాన్ని విలువైనదిగా భావిస్తాము. <strong>నైతికత మరియు సానుభూతి</strong> మా ప్రధానంగా ఉన్నందున, కావలి మరియు చుట్టుపక్కల కుటుంబాలకు అత్యంత నమ్మదగిన ఆరోగ్య సంరక్షణ భాగస్వామిగా ఉండటానికి మేము కృషి చేస్తున్నాము.',

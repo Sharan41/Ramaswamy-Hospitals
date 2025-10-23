@@ -4123,129 +4123,6 @@ body {
 
 /* ===== HOME PAGE STYLES ===== */
 
-/* Home CTA Section */
-.home-cta-section {
-  margin: 80px 0 0 0;
-  padding: 0;
-}
-
-.home-cta-content {
-  background: linear-gradient(135deg, #2c6e7c 0%, #3d8a99 50%, #4fa3b3 100%);
-  padding: 60px 40px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  position: relative;
-  overflow: hidden;
-}
-
-.home-cta-content h2 {
-  color: white;
-  font-size: 2.25rem;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-.home-cta-content p {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.1rem;
-  margin-bottom: 32px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-}
-
-.home-cta-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Feedback Form Section */
-.home-feedback-section {
-  margin: 80px 0;
-  padding: 0;
-}
-
-.home-feedback-card {
-  background: white;
-  padding: 48px 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 2px solid #e5e7eb;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.home-feedback-card h3 {
-  font-size: 1.75rem;
-  color: var(--brand);
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.home-feedback-card > p {
-  text-align: center;
-  color: #666;
-  margin-bottom: 32px;
-  font-size: 1rem;
-}
-
-.feedback-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.feedback-form .form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.feedback-form input,
-.feedback-form textarea,
-.feedback-form select {
-  padding: 14px 16px;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-  background: white;
-}
-
-.feedback-form input:focus,
-.feedback-form textarea:focus,
-.feedback-form select:focus {
-  outline: none;
-  border-color: var(--brand);
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
-}
-
-.feedback-select {
-  cursor: pointer;
-}
-
-.custom-subject-input {
-  margin-top: -8px;
-}
-
-.feedback-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.feedback-form button {
-  width: 100%;
-  margin-top: 8px;
-}
-
 /* Hero Section */
 .hero-section-new {
   display: grid;
@@ -4936,6 +4813,65 @@ body {
   color: var(--muted);
   font-size: 0.95rem;
   margin: 0;
+}
+
+/* Home CTA Section */
+.home-cta-section {
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  padding: 80px 40px;
+  border-radius: 20px;
+  margin: 80px 0;
+  border: 2px solid var(--accent-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-cta-sparkle {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: sparkle 5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+.home-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-cta-content h2 {
+  font-size: 2.5rem;
+  color: var(--brand);
+  margin: 0 0 20px 0;
+}
+
+.home-cta-content p {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.home-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* ===== FACILITIES PAGE STYLES ===== */
@@ -5842,16 +5778,12 @@ body {
     margin: 48px 0;
   }
 
-  .home-cta-content {
-    padding: 48px 24px;
+  .home-cta-section h2 {
+    font-size: 1.4rem;
   }
 
-  .home-cta-content h2 {
-    font-size: 1.75rem;
-  }
-
-  .home-cta-content p {
-    font-size: 1rem;
+  .home-cta-section p {
+    font-size: 0.95rem;
   }
 
   .home-cta-buttons {
@@ -5861,22 +5793,6 @@ body {
 
   .home-cta-buttons .btn {
     width: 100%;
-  }
-
-  .home-feedback-section {
-    margin: 48px 0;
-  }
-
-  .home-feedback-card {
-    padding: 32px 24px;
-  }
-
-  .home-feedback-card h3 {
-    font-size: 1.5rem;
-  }
-
-  .feedback-form .form-row {
-    grid-template-columns: 1fr;
   }
 
   /* About Page - Match Services/Testimonials Design */
