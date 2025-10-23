@@ -14,7 +14,6 @@ const Services = lazy(() => import('./pages/Services.jsx'))
 const Doctors = lazy(() => import('./pages/Doctors.jsx'))
 const Facilities = lazy(() => import('./pages/Facilities.jsx'))
 const Testimonials = lazy(() => import('./pages/Testimonials.jsx'))
-const Achievements = lazy(() => import('./pages/Achievements.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
@@ -29,7 +28,6 @@ const router = createBrowserRouter([
       { path: 'doctors', element: <Doctors /> },
       { path: 'facilities', element: <Facilities /> },
       { path: 'testimonials', element: <Testimonials /> },
-      { path: 'achievements', element: <Achievements /> },
       { path: 'contact', element: <Contact /> },
       { path: '*', element: <NotFound /> },
     ],

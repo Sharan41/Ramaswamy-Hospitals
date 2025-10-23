@@ -141,6 +141,48 @@ export default function Contact() {
         </ScaleIn>
       </div>
 
+      {/* Contact Form */}
+      <div style={{ marginTop: 80 }}>
+        <FadeIn>
+          <h2 className="section-heading">Send Us a Message</h2>
+          <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 40px', color: '#666' }}>
+            Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible.
+          </p>
+        </FadeIn>
+        <ScaleIn>
+          <form action="https://formspree.io/f/xanykpwb" method="POST" className="contact-form-main">
+            <div className="contact-form-grid">
+              <div className="contact-form-group">
+                <label htmlFor="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div className="contact-form-group">
+                <label htmlFor="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div className="contact-form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+              <div className="contact-form-group">
+                <label htmlFor="subject">Subject</label>
+                <input type="text" id="subject" name="subject" />
+              </div>
+            </div>
+            <div className="contact-form-group">
+              <label htmlFor="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" className="btn btn-large">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+              </svg>
+              Send Message
+            </button>
+          </form>
+        </ScaleIn>
+      </div>
+
       {/* Social Media */}
       <div style={{ marginTop: 80 }}>
         <FadeIn>
