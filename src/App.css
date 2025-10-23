@@ -5373,8 +5373,170 @@ body {
   box-shadow: 0 10px 30px rgba(24, 119, 242, 0.5);
 }
 
+/* Home CTA Section */
+.home-cta-section {
+  margin: 80px 0 0 0;
+  padding: 0;
+}
+
+.home-cta-content {
+  background: linear-gradient(135deg, var(--brand-light) 0%, var(--accent) 100%);
+  padding: 80px 48px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-cta-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: ctaShimmer 3s infinite;
+}
+
+@keyframes ctaShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.home-cta-content h2 {
+  color: var(--brand);
+  font-size: 2.75rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.home-cta-content p {
+  color: var(--text);
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.home-cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* Services CTA Section */
+.services-cta-section {
+  margin: 80px 0 0 0;
+  padding: 0;
+}
+
+.services-cta-content {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 80px 48px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--brand-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.services-cta-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(254, 193, 7, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.services-cta-content h2 {
+  color: var(--brand);
+  font-size: 2.75rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.services-cta-content p {
+  color: var(--text);
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.services-cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
 /* Responsive */
 @media (max-width: 968px) {
+  .home-cta-content,
+  .services-cta-content {
+    padding: 60px 32px;
+  }
+
+  .home-cta-content h2,
+  .services-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .home-cta-content p,
+  .services-cta-content p {
+    font-size: 1.1rem;
+  }
+
+  .home-cta-actions,
+  .services-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-cta-actions .btn,
+  .services-cta-actions .btn {
+    width: 100%;
+  }
+
   .instagram-feed-container {
     grid-template-columns: 1fr;
   }
