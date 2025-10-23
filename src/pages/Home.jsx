@@ -297,7 +297,10 @@ export default function Home() {
           <div className="home-feedback-card">
             <h3>Share Your Feedback</h3>
             <p>We'd love to hear from you. Your feedback helps us serve you better.</p>
-            <form action="https://formspree.io/f/xanykpwb" method="POST" className="feedback-form">
+            <form action="https://formsubmit.co/ramaswamyhospitals@gmail.com" method="POST" className="feedback-form">
+              <input type="hidden" name="_subject" value="New Feedback from Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <div className="form-row">
                 <input type="text" name="name" placeholder="Your Name *" required />
                 <input type="email" name="email" placeholder="Your Email *" required />

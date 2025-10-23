@@ -150,7 +150,10 @@ export default function Contact() {
           </p>
         </FadeIn>
         <ScaleIn>
-          <form action="https://formspree.io/f/xanykpwb" method="POST" className="contact-form-main">
+          <form action="https://formsubmit.co/ramaswamyhospitals@gmail.com" method="POST" className="contact-form-main">
+            <input type="hidden" name="_subject" value="New Contact Form Submission" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <div className="contact-form-grid">
               <div className="contact-form-group">
                 <label htmlFor="name">Full Name *</label>
