@@ -1,6 +1,6 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
@@ -12,6 +12,15 @@ export default function Home() {
   const { t } = useI18n()
   const toast = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Handle scroll to feedback form when hash is present
+  useEffect(() => {
+    if (window.location.hash === '#feedback-form') {
+      setTimeout(() => {
+        document.getElementById('feedback-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 300)
+    }
+  }, [])
 
   const handleFeedbackSubmit = async (e) => {
     e.preventDefault()
@@ -326,7 +335,7 @@ export default function Home() {
 
       {/* Feedback Form Section */}
       <FadeIn>
-        <section className="home-feedback-section">
+        <section id="feedback-form" className="home-feedback-section">
           <div className="home-feedback-card">
             <h3>Share Your Feedback</h3>
             <p>We'd love to hear from you. Your feedback helps us serve you better.</p>

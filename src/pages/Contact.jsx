@@ -186,13 +186,29 @@ export default function Contact() {
                 <input type="tel" id="phone" name="phone" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" />
+                <label htmlFor="subject">Subject *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select Subject *</option>
+                  <option value="Hospital Feedback">Hospital Feedback</option>
+                  <option value="Maintenance Feedback">Maintenance Feedback</option>
+                  <option value="Food Quality">Food Quality</option>
+                  <option value="Feedback on Staffs">Feedback on Staffs</option>
+                  <option value="Feedback on Doctors">Feedback on Doctors</option>
+                  <option value="custom">Other (Please specify below)</option>
+                </select>
               </div>
+            </div>
+            <div className="contact-form-group">
+              <label htmlFor="custom_subject">Custom Subject (if Other selected)</label>
+              <input type="text" id="custom_subject" name="custom_subject" />
             </div>
             <div className="contact-form-group">
               <label htmlFor="message">Message *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <div className="contact-form-group">
+              <label htmlFor="how_did_you_know">How did you know about us?</label>
+              <input type="text" id="how_did_you_know" name="how_did_you_know" />
             </div>
             <button type="submit" className="btn btn-large" disabled={isSubmitting}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>

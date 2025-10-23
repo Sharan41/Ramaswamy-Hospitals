@@ -70,13 +70,22 @@ function App() {
               {t.emergencyBar.whatsapp}
             </a>
             <span className="topbar-divider">or</span>
-            <NavLink to="/contact" className="topbar-cta topbar-feedback">
+            <a 
+              href="/#feedback-form" 
+              className="topbar-cta topbar-feedback"
+              onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault()
+                  document.getElementById('feedback-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                }
+              }}
+            >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
               </svg>
               <span className="topbar-cta-text">Drop a Message</span>
               <span className="topbar-cta-text-short">Message</span>
-            </NavLink>
+            </a>
             <button className="topbar-lang-toggle" onClick={() => setLang(lang === 'en' ? 'te' : 'en')} aria-label="Toggle language">
               <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10"/>
