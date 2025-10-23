@@ -2,7 +2,7 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import PhotoGallery from '../components/PhotoGallery'
-import facilitiesHeroImage from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011357.JPG'
+import facilitiesHeroImage from '../assets/WhatsApp Image 2025-10-10 at 13.48.48.jpeg'
 
 // Import facility images for gallery
 import facility1 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011353.JPG'
