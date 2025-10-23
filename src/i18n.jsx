@@ -270,7 +270,7 @@ export const translations = {
       drSurendraName: 'Dr. Surendra',
       drSurendraSpecialty: 'Nephrologist',
       drSurendraBio: 'Specialist in Nephrology, taking care of renal patients and dialysis patients with expertise in acute renal and chronic general cases.',
-      drSurendraEducation: 'MBBS, MD (Nephrology)',
+      drSurendraEducation: 'M.D. (Gen. Medicine), D.M.(Nephrology)',
       drSurendraSpec1: 'Nephrology',
       drSurendraSpec2: 'Dialysis',
       // Dr. Jaheer Basha
@@ -632,7 +632,7 @@ export const translations = {
       drSurendraName: 'డా. సురేంద్ర',
       drSurendraSpecialty: 'నెఫ్రాలజిస్ట్',
       drSurendraBio: 'నెఫ్రాలజీలో నిపుణుడు, తీవ్రమైన మూత్రపిండ మరియు దీర్ఘకాలిక సాధారణ కేసులలో నైపుణ్యంతో మూత్రపిండ రోగులు మరియు డయాలసిస్ రోగుల సంరక్షణ తీసుకుంటారు.',
-      drSurendraEducation: 'MBBS, MD (నెఫ్రాలజీ)',
+      drSurendraEducation: 'M.D. (సాధారణ వైద్యం), D.M.(నెఫ్రాలజీ)',
       drSurendraSpec1: 'నెఫ్రాలజీ',
       drSurendraSpec2: 'డయాలసిస్',
       // డా. జహీర్ బాషా

@@ -120,6 +120,20 @@ p { margin: 0 0 1rem; }
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
+.topbar-feedback {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+}
+
+.topbar-feedback:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
 .topbar-item {
   display: flex;
   align-items: center;
