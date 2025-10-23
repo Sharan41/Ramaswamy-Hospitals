@@ -42,10 +42,10 @@ export default function Home() {
       {/* Hiring Banner */}
       <div className="hiring-banner">
         <div className="hiring-banner-content">
-          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
-          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
-          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
-          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> for more details. 🩺</span>
         </div>
       </div>
 
@@ -232,29 +232,58 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      {/* CTA Section */}
+      {/* Social Corner - Instagram Feed */}
       <FadeIn>
-        <section className="home-cta-section">
-          <div className="home-cta-sparkle"></div>
-          <div className="home-cta-content">
-            <h2>{t.home.ctaTitle}</h2>
-            <p>{t.home.ctaText}</p>
-            <div className="home-cta-buttons">
-              <Link to="/contact" className="btn btn-large btn-with-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        <section className="social-corner-section">
+          <div className="social-corner-header">
+            <h2>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ display: 'inline-block', marginRight: '12px', verticalAlign: 'middle' }}>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              Social Corner
+            </h2>
+            <p>Stay connected with our latest updates</p>
+          </div>
+          
+          <div className="instagram-feed-container">
+            {/* Instagram Embed - Will show latest posts from the handle */}
+            <div className="instagram-embed-wrapper">
+              <iframe
+                src="https://www.instagram.com/drramaswamyhospitals/embed/"
+                width="100%"
+                height="480"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency="true"
+                title="Instagram Feed"
+                style={{ border: 'none', overflow: 'hidden', borderRadius: '12px' }}
+              ></iframe>
+            </div>
+            
+            <div className="social-corner-cta">
+              <a 
+                href="https://www.instagram.com/drramaswamyhospitals/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="instagram-follow-btn"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
-                {t.home.contactUs}
-              </Link>
-              <Link to="/doctors" className="btn btn-outline-large btn-with-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-                {t.home.meetDoctors}
-              </Link>
+                Follow us on Instagram
+              </a>
+              
+              <div className="social-links">
+                <a href="https://www.instagram.com/drramaswamyhospitals/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" strokeWidth="2"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" strokeWidth="2"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </section>

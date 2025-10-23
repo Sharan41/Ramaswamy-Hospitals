@@ -4379,14 +4379,21 @@ body {
 
 /* ===== HOME PAGE STYLES ===== */
 
+/* Home Page */
+.home {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* Hiring Banner */
 .hiring-banner {
-  background: linear-gradient(90deg, #fef3c7 0%, #fde68a 50%, #fef3c7 100%);
+  background: linear-gradient(90deg, var(--brand-dark) 0%, var(--brand) 50%, var(--brand-dark) 100%);
   padding: 12px 0;
   overflow: hidden;
   position: relative;
-  border-bottom: 2px solid #f59e0b;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 0;
 }
 
 .hiring-banner-content {
@@ -4400,8 +4407,25 @@ body {
   padding: 0 80px;
   font-size: 1rem;
   font-weight: 600;
-  color: #92400e;
+  color: rgba(255, 255, 255, 0.95);
   letter-spacing: 0.5px;
+}
+
+.hiring-phone {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hiring-phone:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 @keyframes scroll-left {
@@ -4422,6 +4446,11 @@ body {
   .hiring-banner-content span {
     font-size: 0.85rem;
     padding: 0 40px;
+  }
+  
+  .hiring-phone {
+    padding: 2px 6px;
+    font-size: 0.85rem;
   }
 }
 
@@ -5180,35 +5209,131 @@ body {
 }
 
 /* Home CTA Section */
-.home-cta-section {
-  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
-  padding: 80px 40px;
-  border-radius: 20px;
+/* Social Corner - Instagram Feed */
+.social-corner-section {
   margin: 80px 0;
-  border: 2px solid var(--accent-light);
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 50%, #fafafa 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
 }
 
-.home-cta-sparkle {
+.social-corner-section::before {
+  content: '';
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: sparkle 5s ease-in-out infinite;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
-@keyframes sparkle {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
+.social-corner-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.social-corner-header h2 {
+  font-size: 2.5rem;
+  color: var(--brand);
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.social-corner-header h2 svg {
+  color: #E4405F;
+}
+
+.social-corner-header p {
+  font-size: 1.1rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.instagram-feed-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.instagram-embed-wrapper {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.social-corner-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: linear-gradient(135deg, #f093337a 0%, #e6683c7a 25%, #dc27437a 50%, #cc23667a 75%, #bc18887a 100%);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(228, 64, 95, 0.15);
+  position: sticky;
+  top: 100px;
+}
+
+.instagram-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(228, 64, 95, 0.3);
+}
+
+.instagram-follow-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(228, 64, 95, 0.4);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-links a {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(228, 64, 95, 0.3);
+}
+
+.social-links a:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(228, 64, 95, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .instagram-feed-container {
+    grid-template-columns: 1fr;
   }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.2);
+  
+  .social-corner-cta {
+    position: relative;
+    top: 0;
   }
 }
 
@@ -5216,19 +5341,6 @@ body {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.home-cta-content h2 {
-  font-size: 2.5rem;
-  color: var(--brand);
-  margin: 0 0 20px 0;
-}
-
-.home-cta-content p {
-  font-size: 1.1rem;
-  color: var(--text);
-  line-height: 1.7;
-  margin-bottom: 40px;
 }
 
 .home-cta-buttons {
@@ -6153,26 +6265,30 @@ body {
     font-size: 0.85rem;
   }
 
-  .home-cta-section {
-    padding: 32px 20px;
+  .social-corner-section {
+    padding: 40px 20px;
     margin: 48px 0;
   }
 
-  .home-cta-section h2 {
-    font-size: 1.4rem;
+  .social-corner-header h2 {
+    font-size: 1.8rem;
   }
 
-  .home-cta-section p {
+  .social-corner-header p {
     font-size: 0.95rem;
   }
 
-  .home-cta-buttons {
-    flex-direction: column;
-    gap: 12px;
+  .instagram-embed-wrapper iframe {
+    height: 400px;
   }
 
-  .home-cta-buttons .btn {
-    width: 100%;
+  .social-corner-cta {
+    padding: 24px 20px;
+  }
+
+  .instagram-follow-btn {
+    font-size: 0.95rem;
+    padding: 14px 24px;
   }
 
   /* About Page - Match Services/Testimonials Design */
