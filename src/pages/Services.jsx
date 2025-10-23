@@ -99,9 +99,6 @@ export default function Services() {
         <StaggerContainer className="services-grid-new">
           {services.map((service, index) => (
             <div key={index} className="service-card-new">
-              <div className="service-card-icon-wrapper">
-                {service.icon}
-              </div>
               <div className="service-card-content">
                 <div className="service-card-category">{service.category}</div>
                 <h3 className="service-card-title">{service.title}</h3>
