@@ -39,6 +39,16 @@ export default function Home() {
 
   return (
     <div className="home">
+      {/* Hiring Banner */}
+      <div className="hiring-banner">
+        <div className="hiring-banner-content">
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
+          <span>🩺 We are hiring GENERAL SURGEON and UROLOGIST. Call +91 7824055789 for more details. 🩺</span>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <FadeIn>
         <section className="hero-section-new hero-parallax" role="banner">
