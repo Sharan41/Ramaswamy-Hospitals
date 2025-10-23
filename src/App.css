@@ -5270,14 +5270,15 @@ body {
 .social-corner-cta {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 32px;
-  background: linear-gradient(135deg, #f093337a 0%, #e6683c7a 25%, #dc27437a 50%, #cc23667a 75%, #bc18887a 100%);
-  border-radius: 16px;
+  gap: 20px;
+  padding: 40px 24px;
+  background: white;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(228, 64, 95, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   position: sticky;
   top: 100px;
+  border: 2px solid #f3f4f6;
 }
 
 .instagram-follow-btn {
@@ -5285,20 +5286,48 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 16px 32px;
+  padding: 18px 28px;
   background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: white;
   text-decoration: none;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(228, 64, 95, 0.3);
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 20px rgba(228, 64, 95, 0.35);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram-follow-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.instagram-follow-btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .instagram-follow-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(228, 64, 95, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(228, 64, 95, 0.5);
+}
+
+.instagram-follow-btn svg,
+.facebook-follow-btn svg {
+  position: relative;
+  z-index: 1;
 }
 
 .facebook-follow-btn {
@@ -5306,21 +5335,42 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #1877f2 0%, #0c63e4 100%);
+  padding: 18px 28px;
+  background: linear-gradient(135deg, #1877f2 0%, #0866ff 100%);
   color: white;
   text-decoration: none;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(24, 119, 242, 0.3);
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.35);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.facebook-follow-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.facebook-follow-btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .facebook-follow-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(24, 119, 242, 0.5);
-  background: linear-gradient(135deg, #0c63e4 0%, #1877f2 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(24, 119, 242, 0.5);
 }
 
 /* Responsive */
@@ -6281,7 +6331,8 @@ body {
   }
 
   .social-corner-cta {
-    padding: 24px 20px;
+    padding: 32px 20px;
+    gap: 16px;
   }
 
   .instagram-follow-btn,
