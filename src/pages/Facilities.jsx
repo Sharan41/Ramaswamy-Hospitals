@@ -5,6 +5,7 @@ import PhotoGallery from '../components/PhotoGallery'
 import facilitiesHeroImage from '../assets/WhatsApp Image 2025-10-10 at 13.48.48.jpeg'
 
 // Import facility images for gallery
+import hospitalExterior from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/WhatsApp Image 2025-10-23 at 18.14.30.jpeg'
 import facility1 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011353.JPG'
 import facility2 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011354.JPG'
 import facility3 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011355.JPG'

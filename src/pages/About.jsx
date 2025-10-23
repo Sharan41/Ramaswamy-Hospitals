@@ -8,6 +8,7 @@ import directorImage from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 
 // Import all facility images
+import hospitalExterior from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/WhatsApp Image 2025-10-23 at 18.14.30.jpeg'
 import facility1 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011353.JPG'
 import facility2 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011354.JPG'
 import facility3 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/R0011355.JPG'
@@ -58,6 +59,7 @@ export default function About() {
   ]
 
   const galleryImages = [
+    { src: hospitalExterior, alt: "Hospital Building", caption: "Dr. Ramaswamy Hospitals - Kavali" },
     { src: facility1, alt: "Hospital Exterior", caption: "Dr. Ramaswamy Hospitals - Main Building" },
     { src: facility2, alt: "Reception Area", caption: "Modern Reception & Waiting Area" },
     { src: facility3, alt: "Patient Care", caption: "Patient Care Excellence" },
