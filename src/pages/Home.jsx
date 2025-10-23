@@ -1,13 +1,46 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
+import { useToast } from '../components/Toast'
 
 export default function Home() {
   const { t } = useI18n()
+  const toast = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleFeedbackSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    const form = e.target
+    const formData = new FormData(form)
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xkgqladw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      
+      if (response.ok) {
+        toast.success('Message sent successfully! We will get back to you soon.', 5000)
+        form.reset()
+      } else {
+        toast.error('Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      toast.error('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   
   const features = [
     { 
@@ -297,17 +330,16 @@ export default function Home() {
           <div className="home-feedback-card">
             <h3>Share Your Feedback</h3>
             <p>We'd love to hear from you. Your feedback helps us serve you better.</p>
-            <form action="https://formsubmit.co/ramaswamyhospitals@gmail.com" method="POST" className="feedback-form">
-              <input type="hidden" name="_subject" value="New Feedback from Website" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
+            <form onSubmit={handleFeedbackSubmit} className="feedback-form">
               <div className="form-row">
                 <input type="text" name="name" placeholder="Your Name *" required />
                 <input type="email" name="email" placeholder="Your Email *" required />
               </div>
               <input type="tel" name="phone" placeholder="Phone Number" />
               <textarea name="message" placeholder="Your Message *" rows="4" required></textarea>
-              <button type="submit" className="btn btn-large">Send Feedback</button>
+              <button type="submit" className="btn btn-large" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Feedback'}
+              </button>
             </form>
           </div>
         </section>

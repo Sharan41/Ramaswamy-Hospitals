@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n'
+import { useState } from 'react'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import { useToast } from '../components/Toast'
@@ -6,15 +7,35 @@ import { useToast } from '../components/Toast'
 export default function Contact() {
   const { t } = useI18n()
   const toast = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Simulate form submission
-    toast.success('Message sent successfully! We will contact you soon.', 5000)
-    // You can also use:
-    // toast.error('Failed to send message. Please try again.')
-    // toast.warning('Please fill in all required fields.')
-    // toast.info('Processing your request...')
+    setIsSubmitting(true)
+    
+    const form = e.target
+    const formData = new FormData(form)
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xkgqladw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      
+      if (response.ok) {
+        toast.success('Message sent successfully! We will contact you soon.', 5000)
+        form.reset()
+      } else {
+        toast.error('Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      toast.error('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
   
   const socialLinks = [
@@ -150,10 +171,7 @@ export default function Contact() {
           </p>
         </FadeIn>
         <ScaleIn>
-          <form action="https://formsubmit.co/ramaswamyhospitals@gmail.com" method="POST" className="contact-form-main">
-            <input type="hidden" name="_subject" value="New Contact Form Submission" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
+          <form onSubmit={handleSubmit} className="contact-form-main">
             <div className="contact-form-grid">
               <div className="contact-form-group">
                 <label htmlFor="name">Full Name *</label>
@@ -176,11 +194,11 @@ export default function Contact() {
               <label htmlFor="message">Message *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
-            <button type="submit" className="btn btn-large">
+            <button type="submit" className="btn btn-large" disabled={isSubmitting}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
               </svg>
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </ScaleIn>
