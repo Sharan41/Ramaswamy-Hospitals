@@ -5380,12 +5380,12 @@ body {
 }
 
 .home-cta-content {
-  background: linear-gradient(135deg, var(--brand-light) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, #2c6e7c 0%, #3d8a99 50%, #4fa3b3 100%);
   padding: 80px 48px;
   border-radius: 24px;
   text-align: center;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -5411,7 +5411,7 @@ body {
 }
 
 .home-cta-content h2 {
-  color: var(--brand);
+  color: white;
   font-size: 2.75rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -5420,7 +5420,7 @@ body {
 }
 
 .home-cta-content p {
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1.25rem;
   margin-bottom: 40px;
   max-width: 800px;
@@ -5447,12 +5447,12 @@ body {
 }
 
 .services-cta-content {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #2c6e7c 0%, #3d8a99 50%, #4fa3b3 100%);
   padding: 80px 48px;
   border-radius: 24px;
   text-align: center;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
-  border: 2px solid var(--brand-light);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -5460,27 +5460,27 @@ body {
 .services-cta-content::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  top: -50px;
+  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
   border-radius: 50%;
 }
 
 .services-cta-content::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(254, 193, 7, 0.15) 0%, transparent 70%);
+  bottom: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
 
 .services-cta-content h2 {
-  color: var(--brand);
+  color: white;
   font-size: 2.75rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -5489,7 +5489,7 @@ body {
 }
 
 .services-cta-content p {
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1.25rem;
   margin-bottom: 40px;
   max-width: 800px;
