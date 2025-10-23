@@ -4,7 +4,7 @@ import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
 import PhotoGallery from '../components/PhotoGallery'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
-import directorImage from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/WhatsApp Image 2025-10-23 at 11.39.19.jpeg'
+import directorImage from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/WhatsApp Image 2025-10-23 at 12.51.39.jpeg'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 
 // Import all facility images
@@ -210,7 +210,7 @@ export default function About() {
         <ScaleIn>
           <div className="leader-spotlight" style={{ marginTop: 40 }}>
             <div className="leader-spotlight-avatar">
-              <img src={directorImage} alt="Mr. Manchikanti Venkata Sowrav" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', borderRadius: '50%' }} />
+              <img src={directorImage} alt="Mr. Manchikanti Venkata Sowrav" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
             </div>
             <div className="leader-spotlight-info">
               <h3>{t.about.directorName}</h3>

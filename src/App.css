@@ -5388,6 +5388,27 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
+  max-width: 100%;
+}
+
+.home-cta-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: ctaShimmer 3s infinite;
+}
+
+@keyframes ctaShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .home-cta-content h2 {
@@ -5395,6 +5416,8 @@ body {
   font-size: 2.25rem;
   margin-bottom: 16px;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
 
 .home-cta-content p {
@@ -5405,6 +5428,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7;
+  position: relative;
+  z-index: 1;
 }
 
 .home-cta-actions {
@@ -5412,6 +5437,8 @@ body {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 /* Services CTA Section */
