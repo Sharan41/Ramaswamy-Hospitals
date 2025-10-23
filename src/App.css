@@ -5375,8 +5375,10 @@ body {
 
 /* Home CTA Section */
 .home-cta-section {
-  margin: 80px 0 0 0;
-  padding: 0;
+  margin: 80px 0;
+  padding: 60px 40px;
+  background: transparent;
+  border-radius: 0;
 }
 
 .home-cta-content {
@@ -5388,7 +5390,8 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .home-cta-content::before {

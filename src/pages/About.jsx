@@ -4,7 +4,7 @@ import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
 import PhotoGallery from '../components/PhotoGallery'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
-import directorImage from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/WhatsApp Image 2025-10-23 at 12.51.39.jpeg'
+import directorImage from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/WhatsApp Image 2025-10-23 at 12.57.23.jpeg'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 
 // Import all facility images
