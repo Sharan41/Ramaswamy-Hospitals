@@ -266,8 +266,8 @@ export default function Facilities() {
         <StaggerContainer className="facilities-grid-new">
           {facilities.map((facility, index) => (
             <div key={index} className="facility-card-new">
-              <div className="facility-card-icon-wrapper">
-                {facility.icon}
+              <div className="facility-card-number">
+                {String(index + 1).padStart(2, '0')}
               </div>
               <div className="facility-card-body">
                 <h3>{facility.title}</h3>
