@@ -336,7 +336,18 @@ export default function Home() {
                 <input type="email" name="email" placeholder="Your Email *" required />
               </div>
               <input type="tel" name="phone" placeholder="Phone Number" />
+              <select name="subject" required className="feedback-select">
+                <option value="">Select Subject *</option>
+                <option value="Hospital Feedback">Hospital Feedback</option>
+                <option value="Maintenance Feedback">Maintenance Feedback</option>
+                <option value="Food Quality">Food Quality</option>
+                <option value="Feedback on Staffs">Feedback on Staffs</option>
+                <option value="Feedback on Doctors">Feedback on Doctors</option>
+                <option value="custom">Other (Please specify below)</option>
+              </select>
+              <input type="text" name="custom_subject" placeholder="Please specify your subject (if Other selected)" className="custom-subject-input" />
               <textarea name="message" placeholder="Your Message *" rows="4" required></textarea>
+              <input type="text" name="how_did_you_know" placeholder="How did you know about us?" />
               <button type="submit" className="btn btn-large" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Send Feedback'}
               </button>
