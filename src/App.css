@@ -239,7 +239,7 @@ p { margin: 0 0 1rem; }
   gap: 24px; 
   align-items: center; 
   justify-content: space-between; 
-  padding: 20px 32px; 
+  padding: 16px 32px; 
 }
 
 .brand { 
@@ -259,7 +259,7 @@ p { margin: 0 0 1rem; }
 }
 
 .brand-banner-logo {
-  height: 50px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -1493,7 +1493,7 @@ body {
   }
 
   .brand-banner-logo {
-    height: 40px;
+    height: 55px;
   }
 
   .hamburger {
