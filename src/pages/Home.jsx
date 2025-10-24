@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 import heroVideo from '../assets/WhatsApp Video 2025-10-23 at 23.05.01 (1).mp4'
-import crestLogo from '../assets/crest-logo.jpg'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
@@ -111,9 +110,8 @@ export default function Home() {
           </div>
           
           <div className="hero-content-new">
-            <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="hero-small-logo" />
             <div className="hero-badge">{t.home.heroBadge}</div>
-            <h1 className="hero-title-new">{t.brand}</h1>
+            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" className="hero-title-image" />
             <p className="hero-subtitle-new" dangerouslySetInnerHTML={{ __html: t.home.tagline }}>
             </p>
             <div className="hero-actions">
