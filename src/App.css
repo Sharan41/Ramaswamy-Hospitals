@@ -252,6 +252,7 @@ p { margin: 0 0 1rem; }
   font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  flex-shrink: 1;
   margin-right: 40px;
 }
 
@@ -6434,28 +6435,10 @@ body {
     padding: 7px 10px;
   }
 
-  .section {
-    padding: 80px 20px;
-  }
 
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .hero-section-new {
-    padding: 60px 0;
-    gap: 48px;
-  }
-
-  .hero-title-new {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle-new {
-    font-size: 1.1rem;
-  }
 }
+
+/* Remove hero compression - keep original sizes */
 
 /* Very Small Laptops (1200px and below) */
 @media (max-width: 1200px) {
@@ -6520,43 +6503,57 @@ body {
     padding: 6px 8px;
   }
 
-  .hero-section-new {
-    padding: 50px 0;
-    gap: 40px;
-  }
-
-  .section {
-    padding: 60px 12px;
-  }
-
-  .container {
-    padding: 0 12px;
-  }
 }
 
 /* HP Probook and similar (1366px) specific optimizations */
 @media (max-width: 1366px) {
+  .topbar-content {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    gap: 5px;
+  }
+
+  .topbar-location {
+    font-size: 0.72rem;
+  }
+
+  .topbar-phone {
+    font-size: 0.72rem;
+    padding: 4px 8px;
+  }
+
+  .topbar-cta {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+
+  .topbar-lang-toggle {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+
   .header-content {
-    padding: 10px 14px;
-    gap: 14px;
+    padding: 10px 12px;
+    gap: 12px;
   }
 
   .brand-banner-logo {
-    height: 56px;
+    height: 54px;
   }
 
   .nav {
-    gap: 6px;
+    gap: 5px;
   }
 
   .nav a {
-    font-size: 0.8rem;
-    padding: 6px 9px;
+    font-size: 0.78rem;
+    padding: 6px 8px;
+    letter-spacing: -0.2px;
   }
 }
 
-/* Hide text on very small laptop screens, show icons only */
-@media (max-width: 1100px) {
+/* Compact mode for tight screens - ensure all nav items visible */
+@media (max-width: 1280px) {
   .topbar-cta-text {
     display: none;
   }
@@ -6566,47 +6563,53 @@ body {
   }
 
   .topbar-location {
-    font-size: 0.68rem;
-    max-width: 180px;
+    font-size: 0.7rem;
+    max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
+  .topbar-content {
+    padding: 5px 8px;
+    gap: 3px;
+  }
+
   .topbar-phone {
-    font-size: 0.68rem;
-    padding: 4px 8px;
+    font-size: 0.7rem;
+    padding: 3px 6px;
   }
 
   .topbar-cta {
-    padding: 4px 8px;
+    padding: 3px 6px;
     min-width: auto;
   }
 
   .topbar-lang-toggle {
-    padding: 4px 8px;
-    font-size: 0.68rem;
+    padding: 3px 6px;
+    font-size: 0.7rem;
   }
 
-  .nav {
-    gap: 4px;
-    flex-wrap: nowrap;
-  }
-
-  .nav a {
-    font-size: 0.75rem;
-    padding: 5px 6px;
-    white-space: nowrap;
-    letter-spacing: -0.3px;
+  .header-content {
+    padding: 8px 8px;
+    gap: 6px;
   }
 
   .brand-banner-logo {
     height: 48px;
   }
 
-  .header-content {
-    padding: 8px 10px;
-    gap: 10px;
+  .nav {
+    gap: 2px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+    padding: 5px 5px;
+    white-space: nowrap;
+    letter-spacing: -0.4px;
   }
 }
 
