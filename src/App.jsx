@@ -3,6 +3,7 @@ import { useI18n } from './i18n'
 import './App.css'
 import { useState } from 'react'
 import crestLogo from './assets/crest-logo.jpg'
+import bannerLogo from './assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
@@ -100,10 +101,9 @@ function App() {
       
       <header className="header" role="banner">
         <div className="header-content">
-          <div className="brand">
-            <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS crest" className="brand-logo" />
-            <span className="brand-text">{t.brand}</span>
-          </div>
+          <NavLink to="/" className="brand">
+            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" className="brand-banner-logo" />
+          </NavLink>
           <nav className="nav" role="navigation" aria-label="Primary navigation">
             <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.home}</NavLink>
             <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.about}</NavLink>

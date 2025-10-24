@@ -111,7 +111,7 @@ export default function Home() {
           
           <div className="hero-content-new">
             <div className="hero-badge">{t.home.heroBadge}</div>
-            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" className="hero-title-image" />
+            <h1 className="hero-title-new">{t.brand}</h1>
             <p className="hero-subtitle-new" dangerouslySetInnerHTML={{ __html: t.home.tagline }}>
             </p>
             <div className="hero-actions">

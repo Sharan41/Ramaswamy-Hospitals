@@ -251,11 +251,22 @@ p { margin: 0 0 1rem; }
   font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .brand:hover {
   transform: translateX(4px);
+}
+
+.brand-banner-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.brand:hover .brand-banner-logo {
+  transform: scale(1.05);
 }
 
 .brand-logo { 
@@ -1479,6 +1490,10 @@ body {
   .brand-text {
     font-size: 0.85rem;
     max-width: 120px;
+  }
+
+  .brand-banner-logo {
+    height: 40px;
   }
 
   .hamburger {
