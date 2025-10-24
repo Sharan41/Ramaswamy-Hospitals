@@ -1538,14 +1538,18 @@ body {
   .about-stats-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    min-width: 0;
   }
 
   .about-stat-card {
     padding: 20px 16px;
+    min-width: 0;
   }
 
   .about-stat-number {
     font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: visible;
   }
 
   .about-stat-label {
@@ -3171,6 +3175,7 @@ body {
   background-clip: text;
   position: relative;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .about-stat-label {
@@ -3780,15 +3785,19 @@ body {
 
   .about-stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px;
+    min-width: 0;
   }
 
   .about-stat-card {
-    padding: 16px 12px;
+    padding: 16px 8px;
+    min-width: 0;
   }
 
   .about-stat-number {
     font-size: 2.2rem;
+    white-space: nowrap;
+    overflow: visible;
   }
 
   .about-stat-label {
@@ -4695,9 +4704,9 @@ body {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(176, 188, 161, 0.95);
-  backdrop-filter: blur(8px);
-  color: var(--brand-dark);
+  background: rgba(42, 91, 108, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
   padding: 10px 24px;
   border-radius: 25px;
   font-size: 0.8rem;
@@ -4705,8 +4714,9 @@ body {
   margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(42, 91, 108, 0.25);
-  border: 1px solid rgba(42, 91, 108, 0.2);
+  box-shadow: 0 4px 20px rgba(42, 91, 108, 0.3);
+  border: 2px solid var(--brand);
+  transition: all 0.3s ease;
 }
 
 .hero-title-image {
@@ -7216,14 +7226,18 @@ body {
   .about-stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    min-width: 0;
   }
 
   .about-stat-card {
-    padding: 16px 10px;
+    padding: 16px 8px;
+    min-width: 0;
   }
 
   .about-stat-number {
     font-size: 2rem;
+    white-space: nowrap;
+    overflow: visible;
   }
 
   .about-stat-label {
