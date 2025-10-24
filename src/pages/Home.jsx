@@ -286,18 +286,29 @@ export default function Home() {
           </div>
           
           <div className="instagram-feed-container">
-            {/* Instagram Embed - Will show latest posts from the handle */}
+            {/* Instagram Preview - Mobile Friendly */}
             <div className="instagram-embed-wrapper">
-              <iframe
-                src="https://www.instagram.com/drramaswamyhospitals/embed/"
-                width="100%"
-                height="480"
-                frameBorder="0"
-                scrolling="no"
-                allowTransparency="true"
-                title="Instagram Feed"
-                style={{ border: 'none', overflow: 'hidden', borderRadius: '12px' }}
-              ></iframe>
+              <a 
+                href="https://www.instagram.com/drramaswamyhospitals/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="instagram-preview-card"
+              >
+                <div className="instagram-preview-content">
+                  <div className="instagram-preview-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                  </div>
+                  <h3>@drramaswamyhospitals</h3>
+                  <p>{t.home.instagramPreviewText || 'View our latest posts, health tips, and hospital updates on Instagram'}</p>
+                  <div className="instagram-preview-badge">
+                    <span>📸 {t.home.viewOnInstagram || 'View on Instagram'}</span>
+                  </div>
+                </div>
+              </a>
             </div>
             
             <div className="social-corner-cta">
