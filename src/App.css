@@ -6419,20 +6419,26 @@ body {
   .header-content {
     max-width: 100%;
     padding: 12px 16px;
-    gap: 20px;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .brand {
+    margin-right: 16px;
   }
 
   .brand-banner-logo {
-    height: 60px;
+    height: 58px;
   }
 
   .nav {
-    gap: 12px;
+    gap: 6px;
   }
 
   .nav a {
-    font-size: 0.85rem;
-    padding: 7px 10px;
+    font-size: 0.82rem;
+    padding: 7px 8px;
+    letter-spacing: -0.2px;
   }
 
 
@@ -6507,15 +6513,6 @@ body {
 
 /* HP Probook and similar (1366px) specific optimizations */
 @media (max-width: 1366px) {
-  .topbar {
-    position: relative;
-  }
-
-  .header {
-    top: 0 !important;
-    position: sticky;
-  }
-
   .topbar-content {
     padding: 5px 10px;
     font-size: 0.72rem;
@@ -6545,40 +6542,32 @@ body {
     padding: 10px 10px;
     gap: 8px;
     max-width: 100%;
+    justify-content: flex-start;
   }
 
   .brand {
-    margin-right: 0;
+    margin-right: 12px;
     flex-shrink: 0;
   }
 
   .nav {
-    gap: 4px;
-    margin-left: auto;
-    padding-left: 20px;
+    gap: 3px;
+    flex-shrink: 0;
   }
 
   .brand-banner-logo {
-    height: 52px;
+    height: 50px;
   }
 
   .nav a {
-    font-size: 0.76rem;
-    padding: 6px 7px;
-    letter-spacing: -0.3px;
+    font-size: 0.75rem;
+    padding: 6px 6px;
+    letter-spacing: -0.4px;
   }
 }
 
 /* Compact mode for tight screens - ensure all nav items visible */
 @media (max-width: 1280px) {
-  .topbar {
-    position: relative;
-  }
-
-  .header {
-    top: 0 !important;
-  }
-
   .topbar-cta-text {
     display: none;
   }
@@ -6619,10 +6608,11 @@ body {
     padding: 8px 8px;
     gap: 4px;
     max-width: 100%;
+    justify-content: flex-start;
   }
 
   .brand {
-    margin-right: 0;
+    margin-right: 8px;
     flex-shrink: 0;
   }
 
@@ -6630,19 +6620,17 @@ body {
     gap: 2px;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    margin-left: auto;
-    padding-left: 12px;
   }
 
   .brand-banner-logo {
-    height: 46px;
+    height: 44px;
   }
 
   .nav a {
-    font-size: 0.68rem;
-    padding: 5px 4px;
+    font-size: 0.67rem;
+    padding: 5px 3px;
     white-space: nowrap;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.6px;
   }
 }
 
