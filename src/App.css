@@ -1547,7 +1547,7 @@ body {
   }
 
   .about-stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     white-space: nowrap;
     overflow: visible;
   }
@@ -3795,7 +3795,7 @@ body {
   }
 
   .about-stat-number {
-    font-size: 2.2rem;
+    font-size: 2rem;
     white-space: nowrap;
     overflow: visible;
   }
@@ -6881,8 +6881,9 @@ body {
   }
 
   .hero-badge {
-    font-size: 0.85rem;
-    padding: 8px 16px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    letter-spacing: 0.5px;
   }
 
   .hero-title-new {
@@ -7235,7 +7236,7 @@ body {
   }
 
   .about-stat-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
     white-space: nowrap;
     overflow: visible;
   }
