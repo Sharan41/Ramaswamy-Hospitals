@@ -253,7 +253,7 @@ p { margin: 0 0 1rem; }
   text-decoration: none;
   transition: all 0.3s ease;
   flex-shrink: 1;
-  margin-right: 16px;
+  margin-right: 150px;
 }
 
 .brand:hover {
@@ -6424,7 +6424,7 @@ body {
   }
 
   .brand {
-    margin-right: 16px;
+    margin-right: 100px;
   }
 
   .brand-banner-logo {
@@ -6546,7 +6546,7 @@ body {
   }
 
   .brand {
-    margin-right: 12px;
+    margin-right: 80px;
     flex-shrink: 0;
   }
 
@@ -6612,7 +6612,7 @@ body {
   }
 
   .brand {
-    margin-right: 8px;
+    margin-right: 60px;
     flex-shrink: 0;
   }
 
