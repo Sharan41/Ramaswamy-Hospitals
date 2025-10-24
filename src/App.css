@@ -253,7 +253,6 @@ p { margin: 0 0 1rem; }
   text-decoration: none;
   transition: all 0.3s ease;
   flex-shrink: 1;
-  margin-right: 150px;
 }
 
 .brand:hover {
