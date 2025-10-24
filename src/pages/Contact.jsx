@@ -165,56 +165,56 @@ export default function Contact() {
       {/* Contact Form */}
       <div style={{ marginTop: 80 }}>
         <FadeIn>
-          <h2 className="section-heading">Send Us a Message</h2>
+          <h2 className="section-heading">{t.contact.sendUsMessage}</h2>
           <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 40px', color: '#666' }}>
-            Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible.
+            {t.contact.contactFormSubtitle}
           </p>
         </FadeIn>
         <ScaleIn>
           <form onSubmit={handleSubmit} className="contact-form-main">
             <div className="contact-form-grid">
               <div className="contact-form-group">
-                <label htmlFor="name">Full Name *</label>
+                <label htmlFor="name">{t.contact.fullName} *</label>
                 <input type="text" id="name" name="name" required />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">{t.contact.emailAddress} *</label>
                 <input type="email" id="email" name="email" required />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="phone">Phone Number</label>
+                <label htmlFor="phone">{t.contact.phoneNumber}</label>
                 <input type="tel" id="phone" name="phone" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="subject">Subject *</label>
+                <label htmlFor="subject">{t.contact.selectSubject} *</label>
                 <select id="subject" name="subject" required>
-                  <option value="">Select Subject *</option>
-                  <option value="Hospital Feedback">Hospital Feedback</option>
-                  <option value="Maintenance Feedback">Maintenance Feedback</option>
-                  <option value="Food Quality">Food Quality</option>
-                  <option value="Feedback on Staffs">Feedback on Staffs</option>
-                  <option value="Feedback on Doctors">Feedback on Doctors</option>
-                  <option value="custom">Other (Please specify below)</option>
+                  <option value="">{t.contact.selectSubject} *</option>
+                  <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
+                  <option value="Maintenance Feedback">{t.contact.maintenanceFeedback}</option>
+                  <option value="Food Quality">{t.contact.foodQuality}</option>
+                  <option value="Feedback on Staffs">{t.contact.feedbackOnStaffs}</option>
+                  <option value="Feedback on Doctors">{t.contact.feedbackOnDoctors}</option>
+                  <option value="custom">{t.contact.other}</option>
                 </select>
               </div>
             </div>
             <div className="contact-form-group">
-              <label htmlFor="custom_subject">Custom Subject (if Other selected)</label>
+              <label htmlFor="custom_subject">{t.contact.customSubjectLabel}</label>
               <input type="text" id="custom_subject" name="custom_subject" />
             </div>
             <div className="contact-form-group">
-              <label htmlFor="message">Message *</label>
+              <label htmlFor="message">{t.contact.message} *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
             <div className="contact-form-group">
-              <label htmlFor="how_did_you_know">How did you know about us?</label>
+              <label htmlFor="how_did_you_know">{t.contact.howDidYouKnow}</label>
               <input type="text" id="how_did_you_know" name="how_did_you_know" />
             </div>
             <button type="submit" className="btn btn-large" disabled={isSubmitting}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
               </svg>
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? t.contact.sending : t.contact.sendMessage}
             </button>
           </form>
         </ScaleIn>

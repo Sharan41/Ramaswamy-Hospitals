@@ -117,6 +117,8 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage
             className="lightbox-main-image"
             loading="eager"
             decoding="async"
+            width="1400"
+            height="1050"
             onLoad={() => setImageLoading(false)}
             style={{ display: imageLoading ? 'none' : 'block' }}
           />
@@ -142,7 +144,14 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage
                 onSelectImage(index)
               }}
             >
-              <img src={image.src} alt={`Thumbnail ${index + 1}`} />
+              <img 
+                src={image.src} 
+                alt={`Thumbnail ${index + 1}`}
+                width="80"
+                height="60"
+                loading="lazy"
+                decoding="async"
+              />
             </button>
           ))}
         </div>
@@ -267,11 +276,11 @@ export default function PhotoGallery({ images, title, previewCount = 6 }) {
                   alt={image.alt || `Gallery image ${index + 1}`}
                   loading={index < 3 ? "eager" : "lazy"}
                   decoding="async"
+                  width="600"
+                  height="450"
                   onLoad={() => handleImageLoad(index)}
                   style={{ 
-                    opacity: imageLoaded[index] ? 1 : 0,
-                    maxWidth: '100%',
-                    height: 'auto'
+                    opacity: imageLoaded[index] ? 1 : 0
                   }}
                 />
               ) : (

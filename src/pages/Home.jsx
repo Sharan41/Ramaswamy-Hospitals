@@ -345,28 +345,28 @@ export default function Home() {
       <FadeIn>
         <section id="feedback-form" className="home-feedback-section">
           <div className="home-feedback-card">
-            <h3>Share Your Feedback</h3>
-            <p>We'd love to hear from you. Your feedback helps us serve you better.</p>
+            <h3>{t.contact.shareYourFeedback}</h3>
+            <p>{t.contact.feedbackSubtitle}</p>
             <form onSubmit={handleFeedbackSubmit} className="feedback-form">
               <div className="form-row">
-                <input type="text" name="name" placeholder="Your Name *" required />
-                <input type="email" name="email" placeholder="Your Email *" required />
+                <input type="text" name="name" placeholder={`${t.contact.yourName} *`} required />
+                <input type="email" name="email" placeholder={`${t.contact.yourEmail} *`} required />
               </div>
-              <input type="tel" name="phone" placeholder="Phone Number" />
+              <input type="tel" name="phone" placeholder={t.contact.phoneNumber} />
               <select name="subject" required className="feedback-select">
-                <option value="">Select Subject *</option>
-                <option value="Hospital Feedback">Hospital Feedback</option>
-                <option value="Maintenance Feedback">Maintenance Feedback</option>
-                <option value="Food Quality">Food Quality</option>
-                <option value="Feedback on Staffs">Feedback on Staffs</option>
-                <option value="Feedback on Doctors">Feedback on Doctors</option>
-                <option value="custom">Other (Please specify below)</option>
+                <option value="">{t.contact.selectSubject} *</option>
+                <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
+                <option value="Maintenance Feedback">{t.contact.maintenanceFeedback}</option>
+                <option value="Food Quality">{t.contact.foodQuality}</option>
+                <option value="Feedback on Staffs">{t.contact.feedbackOnStaffs}</option>
+                <option value="Feedback on Doctors">{t.contact.feedbackOnDoctors}</option>
+                <option value="custom">{t.contact.other}</option>
               </select>
-              <input type="text" name="custom_subject" placeholder="Please specify your subject (if Other selected)" className="custom-subject-input" />
-              <textarea name="message" placeholder="Your Message *" rows="4" required></textarea>
-              <input type="text" name="how_did_you_know" placeholder="How did you know about us?" />
+              <input type="text" name="custom_subject" placeholder={t.contact.customSubject} className="custom-subject-input" />
+              <textarea name="message" placeholder={`${t.contact.yourMessage} *`} rows="4" required></textarea>
+              <input type="text" name="how_did_you_know" placeholder={t.contact.howDidYouKnow} />
               <button type="submit" className="btn btn-large" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Feedback'}
+                {isSubmitting ? t.contact.sending : t.contact.sendMessage}
               </button>
             </form>
           </div>
