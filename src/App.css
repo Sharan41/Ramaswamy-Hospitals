@@ -238,8 +238,9 @@ p { margin: 0 0 1rem; }
   display: flex; 
   gap: 24px; 
   align-items: center; 
-  justify-content: space-between; 
-  padding: 16px 32px; 
+  justify-content: space-between;
+  padding: 16px 32px;
+  flex-wrap: nowrap;
 }
 
 .brand { 
@@ -290,7 +291,7 @@ p { margin: 0 0 1rem; }
   font-size: 1.1rem;
   letter-spacing: -0.02em;
 }
-.nav { display: flex; gap: 8px; align-items: center; }
+.nav { display: flex; gap: 8px; align-items: center; flex-wrap: nowrap; flex-shrink: 0; }
 .nav a { 
   color: var(--text); 
   text-decoration: none; 
@@ -6382,54 +6383,55 @@ body {
 @media (max-width: 1400px) {
   .topbar-content {
     max-width: 100%;
-    padding: 8px 20px;
-    font-size: 0.8rem;
-    gap: 8px;
+    padding: 7px 16px;
+    font-size: 0.75rem;
+    gap: 6px;
   }
 
   .topbar-location {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .topbar-divider {
-    margin: 0 8px;
+    margin: 0 6px;
   }
 
   .topbar-cta-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .topbar-phone {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
 
   .topbar-cta {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 5px 10px;
+    font-size: 0.75rem;
   }
 
   .topbar-lang-toggle {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 5px 10px;
+    font-size: 0.75rem;
   }
 
   .header-content {
     max-width: 100%;
-    padding: 14px 20px;
+    padding: 12px 16px;
+    gap: 20px;
   }
 
   .brand-banner-logo {
-    height: 65px;
+    height: 60px;
   }
 
   .nav {
-    gap: 16px;
+    gap: 12px;
   }
 
   .nav a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.85rem;
+    padding: 7px 10px;
   }
 
   .section {
@@ -6458,53 +6460,153 @@ body {
 /* Very Small Laptops (1200px and below) */
 @media (max-width: 1200px) {
   .topbar-content {
-    padding: 8px 16px;
-    gap: 6px;
+    padding: 6px 12px;
+    gap: 4px;
   }
 
   .topbar-location {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .topbar-divider {
+    margin: 0 4px;
+  }
+
+  .topbar-icon {
+    width: 12px;
+    height: 12px;
   }
 
   .topbar-cta-text {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .topbar-phone {
-    font-size: 0.75rem;
-    padding: 5px 10px;
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
 
   .topbar-cta {
-    padding: 5px 10px;
-    font-size: 0.75rem;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    gap: 4px;
+  }
+
+  .topbar-cta svg {
+    width: 12px;
+    height: 12px;
   }
 
   .topbar-lang-toggle {
-    padding: 5px 10px;
-    font-size: 0.75rem;
+    padding: 4px 8px;
+    font-size: 0.7rem;
   }
 
   .header-content {
-    padding: 12px 16px;
+    padding: 10px 12px;
+    gap: 16px;
   }
 
   .brand-banner-logo {
-    height: 60px;
+    height: 55px;
   }
 
   .nav {
-    gap: 12px;
+    gap: 8px;
   }
 
   .nav a {
-    font-size: 0.85rem;
-    padding: 8px 10px;
+    font-size: 0.8rem;
+    padding: 6px 8px;
   }
 
   .hero-section-new {
     padding: 50px 0;
     gap: 40px;
+  }
+
+  .section {
+    padding: 60px 12px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+}
+
+/* HP Probook and similar (1366px) specific optimizations */
+@media (max-width: 1366px) {
+  .header-content {
+    padding: 10px 14px;
+    gap: 14px;
+  }
+
+  .brand-banner-logo {
+    height: 56px;
+  }
+
+  .nav {
+    gap: 6px;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+    padding: 6px 9px;
+  }
+}
+
+/* Hide text on very small laptop screens, show icons only */
+@media (max-width: 1100px) {
+  .topbar-cta-text {
+    display: none;
+  }
+
+  .topbar-cta-text-short {
+    display: inline;
+  }
+
+  .topbar-location {
+    font-size: 0.68rem;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .topbar-phone {
+    font-size: 0.68rem;
+    padding: 4px 8px;
+  }
+
+  .topbar-cta {
+    padding: 4px 8px;
+    min-width: auto;
+  }
+
+  .topbar-lang-toggle {
+    padding: 4px 8px;
+    font-size: 0.68rem;
+  }
+
+  .nav {
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .nav a {
+    font-size: 0.75rem;
+    padding: 5px 6px;
+    white-space: nowrap;
+    letter-spacing: -0.3px;
+  }
+
+  .brand-banner-logo {
+    height: 48px;
+  }
+
+  .header-content {
+    padding: 8px 10px;
+    gap: 10px;
   }
 }
 
