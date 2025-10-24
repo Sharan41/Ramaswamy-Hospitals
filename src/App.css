@@ -4554,10 +4554,10 @@ body {
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(246, 246, 244, 0.75) 0%,
-    rgba(246, 246, 244, 0.50) 40%,
-    rgba(246, 246, 244, 0.35) 60%,
-    rgba(246, 246, 244, 0.45) 100%
+    rgba(246, 246, 244, 0.60) 0%,
+    rgba(246, 246, 244, 0.35) 40%,
+    rgba(246, 246, 244, 0.25) 60%,
+    rgba(246, 246, 244, 0.30) 100%
   );
   z-index: 1;
 }
@@ -4738,21 +4738,7 @@ body {
 }
 
 .home-stat-item::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: translateX(-100%) skewX(-15deg);
-  transition: none;
-  pointer-events: none;
+  display: none;
 }
 
 .home-stat-item:hover {
@@ -6584,10 +6570,10 @@ body {
   .hero-video-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(246, 246, 244, 0.80) 0%,
-      rgba(246, 246, 244, 0.60) 40%,
-      rgba(246, 246, 244, 0.50) 70%,
-      rgba(246, 246, 244, 0.60) 100%
+      rgba(246, 246, 244, 0.65) 0%,
+      rgba(246, 246, 244, 0.40) 40%,
+      rgba(246, 246, 244, 0.30) 70%,
+      rgba(246, 246, 244, 0.45) 100%
     );
   }
 
