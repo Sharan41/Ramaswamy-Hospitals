@@ -6502,7 +6502,7 @@ body {
 
 }
 
-/* HP Probook and similar (1366px) - Full Width Layout */
+/* HP Probook and similar (1366px) - Single Row Compact */
 @media (max-width: 1366px) {
   .topbar-content {
     padding: 7px 16px;
@@ -6530,9 +6530,8 @@ body {
   }
 
   .header-content {
-    max-width: 100% !important;
-    padding: 12px 20px;
-    gap: 20px;
+    padding: 12px 16px;
+    gap: 16px;
   }
 
   .brand-banner-logo {
@@ -6540,18 +6539,16 @@ body {
   }
 
   .nav {
-    gap: 10px;
-    flex: 1;
-    justify-content: flex-end;
+    gap: 8px;
   }
 
   .nav a {
     font-size: 0.84rem;
-    padding: 8px 11px;
+    padding: 8px 10px;
   }
 }
 
-/* Very Small Laptops (1280px) - Full Width Compact */
+/* Very Small Laptops (1280px) - More Compact Single Row */
 @media (max-width: 1280px) {
   .topbar-content {
     padding: 6px 12px;
@@ -6591,9 +6588,8 @@ body {
   }
 
   .header-content {
-    max-width: 100% !important;
-    padding: 10px 16px;
-    gap: 16px;
+    padding: 10px 12px;
+    gap: 12px;
   }
 
   .brand-banner-logo {
@@ -6601,14 +6597,12 @@ body {
   }
 
   .nav {
-    gap: 8px;
-    flex: 1;
-    justify-content: flex-end;
+    gap: 6px;
   }
 
   .nav a {
     font-size: 0.8rem;
-    padding: 7px 10px;
+    padding: 7px 9px;
   }
 }
 

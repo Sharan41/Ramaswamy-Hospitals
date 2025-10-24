@@ -5,7 +5,7 @@ import CountUp from '../components/CountUp'
 import PhotoGallery from '../components/PhotoGallery'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 import directorImage from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/WhatsApp Image 2025-10-23 at 12.57.23.jpeg'
-import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
+import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg'
 
 // Import all facility images
 import hospitalExterior from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/WhatsApp Image 2025-10-23 at 18.14.30.jpeg'

@@ -1,7 +1,7 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
+import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
 import heroVideo from '../assets/WhatsApp Video 2025-10-24 at 11.10.44.mp4'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
