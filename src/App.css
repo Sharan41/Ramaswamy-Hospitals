@@ -238,7 +238,7 @@ p { margin: 0 0 1rem; }
   display: flex; 
   gap: 16px; 
   align-items: center; 
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 16px 32px;
   flex-wrap: nowrap;
 }
