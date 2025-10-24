@@ -6422,8 +6422,12 @@ body {
     justify-content: flex-start;
   }
 
+  .header-content {
+    flex-wrap: wrap;
+  }
+
   .brand {
-    margin-right: 700px;
+    flex: 0 0 auto;
   }
 
   .brand-banner-logo {
@@ -6431,16 +6435,17 @@ body {
   }
 
   .nav {
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 8px 12px;
+    margin-left: auto;
   }
 
   .nav a {
-    font-size: 0.82rem;
-    padding: 7px 8px;
-    letter-spacing: -0.2px;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    white-space: nowrap;
   }
-
-
 }
 
 /* Remove hero compression - keep original sizes */
@@ -6510,63 +6515,93 @@ body {
 
 }
 
-/* HP Probook and similar (1366px) specific optimizations */
+/* HP Probook and similar (1366px) - 2 Row Navigation */
 @media (max-width: 1366px) {
   .topbar-content {
-    padding: 5px 10px;
-    font-size: 0.72rem;
-    gap: 4px;
+    padding: 8px 16px;
+    font-size: 0.78rem;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .topbar-location {
-    font-size: 0.72rem;
+    font-size: 0.78rem;
   }
 
   .topbar-phone {
-    font-size: 0.72rem;
-    padding: 4px 8px;
+    font-size: 0.78rem;
+    padding: 5px 10px;
   }
 
   .topbar-cta {
-    padding: 4px 8px;
-    font-size: 0.72rem;
+    padding: 5px 10px;
+    font-size: 0.78rem;
   }
 
   .topbar-lang-toggle {
-    padding: 4px 8px;
-    font-size: 0.72rem;
+    padding: 5px 10px;
+    font-size: 0.78rem;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 
   .header-content {
-    padding: 10px 10px;
-    gap: 8px;
-    max-width: 100%;
-    justify-content: flex-start;
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
 
   .brand {
-    margin-right: 700px;
-    flex-shrink: 0;
-  }
-
-  .nav {
-    gap: 3px;
-    flex-shrink: 0;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 4px;
   }
 
   .brand-banner-logo {
     height: 50px;
   }
 
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 900px;
+  }
+
   .nav a {
-    font-size: 0.75rem;
-    padding: 6px 6px;
-    letter-spacing: -0.4px;
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    text-align: center;
+    border: 1px solid rgba(42, 91, 108, 0.15);
+    border-radius: 8px;
+    background: rgba(246, 246, 244, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .nav a:hover,
+  .nav a.active {
+    background: var(--brand);
+    color: white;
+    border-color: var(--brand);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(42, 91, 108, 0.2);
   }
 }
 
-/* Compact mode for tight screens - ensure all nav items visible */
+/* Very Small Laptops (1280px) - Compact 3 Column Grid */
 @media (max-width: 1280px) {
+  .topbar-content {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
   .topbar-cta-text {
     display: none;
   }
@@ -6576,60 +6611,47 @@ body {
   }
 
   .topbar-location {
-    font-size: 0.68rem;
-    max-width: 140px;
+    font-size: 0.75rem;
+    max-width: 180px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .topbar-content {
-    padding: 4px 8px;
-    gap: 3px;
-  }
-
   .topbar-phone {
-    font-size: 0.68rem;
-    padding: 3px 6px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
   }
 
   .topbar-cta {
-    padding: 3px 6px;
-    min-width: auto;
+    padding: 4px 8px;
+    font-size: 0.75rem;
   }
 
   .topbar-lang-toggle {
-    padding: 3px 6px;
-    font-size: 0.68rem;
+    padding: 4px 8px;
+    font-size: 0.75rem;
   }
 
   .header-content {
-    padding: 8px 8px;
-    gap: 4px;
-    max-width: 100%;
-    justify-content: flex-start;
-  }
-
-  .brand {
-    margin-right:700px;
-    flex-shrink: 0;
-  }
-
-  .nav {
-    gap: 2px;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    padding: 12px 12px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .brand-banner-logo {
-    height: 44px;
+    height: 46px;
+  }
+
+  .nav {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    max-width: 750px;
   }
 
   .nav a {
-    font-size: 0.67rem;
-    padding: 5px 3px;
-    white-space: nowrap;
-    letter-spacing: -0.6px;
+    font-size: 0.8rem;
+    padding: 8px 10px;
   }
 }
 
