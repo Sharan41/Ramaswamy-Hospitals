@@ -286,8 +286,22 @@ export default function Home() {
           </div>
           
           <div className="instagram-feed-container">
-            {/* Instagram Preview - Mobile Friendly */}
-            <div className="instagram-embed-wrapper">
+            {/* Instagram Widget - Desktop Only */}
+            <div className="instagram-embed-wrapper instagram-desktop-only">
+              <iframe
+                src="https://www.instagram.com/drramaswamyhospitals/embed/"
+                width="100%"
+                height="480"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency="true"
+                title="Instagram Feed"
+                style={{ border: 'none', overflow: 'hidden', borderRadius: '12px' }}
+              ></iframe>
+            </div>
+
+            {/* Instagram Preview Card - Mobile Only */}
+            <div className="instagram-embed-wrapper instagram-mobile-only">
               <a 
                 href="https://www.instagram.com/drramaswamyhospitals/" 
                 target="_blank" 
