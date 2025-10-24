@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
-import heroVideo from '../assets/WhatsApp Video 2025-10-24 at 10.54.29.mp4'
+import heroVideo from '../assets/WhatsApp Video 2025-10-24 at 11.10.44.mp4'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
@@ -13,6 +13,7 @@ export default function Home() {
   const { t } = useI18n()
   const toast = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isFullscreenVideo, setIsFullscreenVideo] = useState(false)
 
   // Handle scroll to feedback form when hash is present
   useEffect(() => {
@@ -22,6 +23,23 @@ export default function Home() {
       }, 300)
     }
   }, [])
+
+  // Handle scroll to exit fullscreen video mode
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isFullscreenVideo && window.scrollY > 100) {
+        setIsFullscreenVideo(false)
+      }
+    }
+
+    if (isFullscreenVideo) {
+      window.addEventListener('scroll', handleScroll)
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isFullscreenVideo])
 
   const handleFeedbackSubmit = async (e) => {
     e.preventDefault()
@@ -94,7 +112,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <FadeIn>
-        <section className="hero-section-new hero-parallax" role="banner">
+        <section className={`hero-section-new hero-parallax ${isFullscreenVideo ? 'fullscreen-video-mode' : ''}`} role="banner">
           {/* Video Background */}
           <div className="hero-video-background">
             <video 
@@ -106,8 +124,25 @@ export default function Home() {
             >
               <source src={heroVideo} type="video/mp4" />
             </video>
-            <div className="hero-video-overlay"></div>
+            <div className={`hero-video-overlay ${isFullscreenVideo ? 'transparent' : ''}`}></div>
           </div>
+          
+          {/* Fullscreen Video Toggle Button */}
+          <button 
+            className="fullscreen-video-toggle"
+            onClick={() => setIsFullscreenVideo(!isFullscreenVideo)}
+            aria-label={isFullscreenVideo ? "Exit fullscreen video" : "View fullscreen video"}
+          >
+            {isFullscreenVideo ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+              </svg>
+            )}
+          </button>
           
           <div className="hero-content-new">
             <div className="hero-badge">{t.home.heroBadge}</div>
