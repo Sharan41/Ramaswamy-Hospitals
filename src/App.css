@@ -6551,15 +6551,13 @@ body {
 
   .header-content {
     padding: 12px 16px;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 12px;
     align-items: center;
   }
 
   .brand {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 4px;
+    flex: 0 0 auto;
   }
 
   .brand-banner-logo {
@@ -6568,10 +6566,9 @@ body {
 
   .nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     gap: 8px;
-    width: 100%;
-    max-width: 900px;
+    margin-left: auto;
   }
 
   .nav a {
@@ -6635,8 +6632,13 @@ body {
 
   .header-content {
     padding: 12px 12px;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
+  }
+
+  .brand {
+    flex: 0 0 auto;
   }
 
   .brand-banner-logo {
@@ -6644,9 +6646,9 @@ body {
   }
 
   .nav {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     gap: 6px;
-    max-width: 750px;
+    margin-left: auto;
   }
 
   .nav a {
