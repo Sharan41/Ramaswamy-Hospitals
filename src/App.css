@@ -4553,6 +4553,18 @@ body {
   z-index: 2;
 }
 
+.hero-small-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(42, 91, 108, 0.25);
+  border: 2px solid rgba(42, 91, 108, 0.2);
+}
+
 .hero-image-new {
   position: relative;
   z-index: 2;
@@ -4655,17 +4667,7 @@ body {
 }
 
 .home-stats-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: shimmer 20s linear infinite;
-  opacity: 0.3;
-  pointer-events: none;
+  display: none;
 }
 
 @keyframes gradientShift {
@@ -4715,19 +4717,7 @@ body {
 }
 
 .home-stat-item::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: shimmer 20s linear infinite;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 0;
+  display: none;
 }
 
 .home-stat-item::after {
@@ -4754,7 +4744,7 @@ body {
 }
 
 .home-stat-item:hover::before {
-  opacity: 0.6;
+  display: none;
 }
 
 .home-stat-item:active::after {
@@ -6591,6 +6581,12 @@ body {
   .hero-image-new {
     max-width: 90%;
     margin: 0 auto;
+  }
+
+  .hero-small-logo {
+    width: 60px;
+    height: 60px;
+    padding: 6px;
   }
 
   .hero-badge {
