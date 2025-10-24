@@ -6417,34 +6417,21 @@ body {
 
   .header-content {
     max-width: 100%;
-    padding: 12px 16px;
-    gap: 12px;
-    justify-content: flex-start;
-  }
-
-  .header-content {
-    flex-wrap: wrap;
-  }
-
-  .brand {
-    flex: 0 0 auto;
+    padding: 14px 20px;
+    gap: 20px;
   }
 
   .brand-banner-logo {
-    height: 58px;
+    height: 56px;
   }
 
   .nav {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 8px 12px;
-    margin-left: auto;
+    gap: 10px;
   }
 
   .nav a {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     padding: 8px 12px;
-    white-space: nowrap;
   }
 }
 
@@ -6515,13 +6502,12 @@ body {
 
 }
 
-/* HP Probook and similar (1366px) - 2 Row Navigation */
+/* HP Probook and similar (1366px) - Single Row Compact */
 @media (max-width: 1366px) {
   .topbar-content {
-    padding: 8px 16px;
+    padding: 7px 16px;
     font-size: 0.78rem;
     gap: 8px;
-    flex-wrap: wrap;
   }
 
   .topbar-location {
@@ -6543,55 +6529,26 @@ body {
     font-size: 0.78rem;
   }
 
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-
   .header-content {
     padding: 12px 16px;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-  }
-
-  .brand {
-    flex: 0 0 auto;
+    gap: 16px;
   }
 
   .brand-banner-logo {
-    height: 50px;
+    height: 52px;
   }
 
   .nav {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
     gap: 8px;
-    margin-left: auto;
   }
 
   .nav a {
-    font-size: 0.85rem;
-    padding: 10px 12px;
-    text-align: center;
-    border: 1px solid rgba(42, 91, 108, 0.15);
-    border-radius: 8px;
-    background: rgba(246, 246, 244, 0.5);
-    transition: all 0.3s ease;
-  }
-
-  .nav a:hover,
-  .nav a.active {
-    background: var(--brand);
-    color: white;
-    border-color: var(--brand);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(42, 91, 108, 0.2);
+    font-size: 0.84rem;
+    padding: 8px 10px;
   }
 }
 
-/* Very Small Laptops (1280px) - Compact 3 Column Grid */
+/* Very Small Laptops (1280px) - More Compact Single Row */
 @media (max-width: 1280px) {
   .topbar-content {
     padding: 6px 12px;
@@ -6631,29 +6588,21 @@ body {
   }
 
   .header-content {
-    padding: 12px 12px;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .brand {
-    flex: 0 0 auto;
+    padding: 10px 12px;
+    gap: 12px;
   }
 
   .brand-banner-logo {
-    height: 46px;
+    height: 48px;
   }
 
   .nav {
-    grid-template-columns: repeat(3, auto);
     gap: 6px;
-    margin-left: auto;
   }
 
   .nav a {
     font-size: 0.8rem;
-    padding: 8px 10px;
+    padding: 7px 9px;
   }
 }
 
