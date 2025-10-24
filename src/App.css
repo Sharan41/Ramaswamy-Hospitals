@@ -4504,10 +4504,52 @@ body {
   align-items: center;
   padding: 50px 0;
   min-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video Background */
+.hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(246, 246, 244, 0.92) 0%, rgba(246, 246, 244, 0.85) 100%);
+  z-index: 1;
 }
 
 .hero-content-new {
   max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-new {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-badge {
@@ -4567,13 +4609,17 @@ body {
   max-width: 500px;
   margin-left: auto;
   margin-right: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
 }
 
 .hero-image-new img {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 40px rgba(42, 91, 108, 0.25);
 }
 
 /* Home Stats Section */
@@ -5041,50 +5087,25 @@ body {
   animation: none;
 }
 
-/* Hero Decorative Shapes */
+/* Hero Decorative Shapes - Hidden (replaced by video) */
 .hero-shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.15;
-  z-index: -1;
-  animation: pulse 4s ease-in-out infinite;
+  display: none;
 }
 
 .hero-shape-1 {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  top: -50px;
-  left: -100px;
+  display: none;
 }
 
 .hero-shape-2 {
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-light));
-  bottom: 50px;
-  right: -50px;
-  animation-delay: 2s;
+  display: none;
 }
 
 .hero-shape-3 {
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(135deg, rgba(42, 91, 108, 0.08), rgba(58, 122, 143, 0.12));
-  top: 150px;
-  right: 10%;
-  border-radius: 50%;
-  animation-delay: 1s;
+  display: none;
 }
 
 .hero-shape-4 {
-  width: 180px;
-  height: 180px;
-  background: linear-gradient(135deg, rgba(176, 188, 161, 0.1), rgba(197, 209, 183, 0.15));
-  bottom: 20%;
-  left: 15%;
-  border-radius: 50%;
-  animation-delay: 1.5s;
+  display: none;
 }
 
 @keyframes pulse {
@@ -6514,6 +6535,11 @@ body {
     grid-template-columns: 1fr;
     padding: 32px 20px;
     gap: 32px;
+    min-height: 500px;
+  }
+
+  .hero-video-overlay {
+    background: linear-gradient(135deg, rgba(246, 246, 244, 0.95) 0%, rgba(246, 246, 244, 0.90) 100%);
   }
 
   .hero-content-new {
@@ -7149,25 +7175,12 @@ body {
     height: 24px;
   }
 
-  /* Hero Shapes Responsive */
-  .hero-shape-1 {
-    width: 150px;
-    height: 150px;
-  }
-
-  .hero-shape-2 {
-    width: 100px;
-    height: 100px;
-  }
-
-  .hero-shape-3 {
-    width: 130px;
-    height: 130px;
-  }
-
+  /* Hero Shapes Responsive - Hidden */
+  .hero-shape-1,
+  .hero-shape-2,
+  .hero-shape-3,
   .hero-shape-4 {
-    width: 90px;
-    height: 90px;
+    display: none;
   }
 
   .page-shape-1 {

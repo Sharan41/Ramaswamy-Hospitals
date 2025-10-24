@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-14 at 13.15.06.jpeg'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
+import heroVideo from '../assets/WhatsApp Video 2025-10-23 at 23.05.01 (1).mp4'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
@@ -94,19 +95,19 @@ export default function Home() {
       {/* Hero Section */}
       <FadeIn>
         <section className="hero-section-new hero-parallax" role="banner">
-          {/* Multi-layered decorative shapes with parallax for depth */}
-          <ParallaxSection speed={0.2}>
-            <div className="hero-shape hero-shape-1"></div>
-          </ParallaxSection>
-          <ParallaxSection speed={0.4}>
-            <div className="hero-shape hero-shape-2"></div>
-          </ParallaxSection>
-          <ParallaxSection speed={0.6}>
-            <div className="hero-shape hero-shape-3"></div>
-          </ParallaxSection>
-          <ParallaxSection speed={0.35}>
-            <div className="hero-shape hero-shape-4"></div>
-          </ParallaxSection>
+          {/* Video Background */}
+          <div className="hero-video-background">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="hero-video"
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
+            <div className="hero-video-overlay"></div>
+          </div>
           
           <div className="hero-content-new">
             <div className="hero-badge">{t.home.heroBadge}</div>
