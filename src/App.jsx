@@ -84,8 +84,8 @@ function App() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
               </svg>
-              <span className="topbar-cta-text">Drop a Message</span>
-              <span className="topbar-cta-text-short">Message</span>
+              <span className="topbar-cta-text">Feedback</span>
+              <span className="topbar-cta-text-short">Feedback</span>
             </a>
             <button className="topbar-lang-toggle" onClick={() => setLang(lang === 'en' ? 'te' : 'en')} aria-label="Toggle language">
               <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
