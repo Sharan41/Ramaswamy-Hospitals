@@ -3019,6 +3019,73 @@ body {
   transform: scale(1.02);
 }
 
+/* Animated Hospital Building Image */
+.animated-hospital-image .hospital-building-img {
+  max-width: 450px;
+  padding: 0;
+  border-radius: 20px;
+  animation: floatAnimation 6s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 25px 60px rgba(42, 91, 108, 0.3),
+    0 12px 24px rgba(42, 91, 108, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.animated-hospital-image:hover .hospital-building-img {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 
+    0 35px 80px rgba(42, 91, 108, 0.4),
+    0 20px 40px rgba(42, 91, 108, 0.3),
+    0 0 40px rgba(176, 188, 161, 0.3);
+  animation-play-state: paused;
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Glow Effect */
+.image-glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(176, 188, 161, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.animated-hospital-image:hover .image-glow-effect {
+  opacity: 1;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
 .about-hero-image-caption {
   text-align: center;
   font-size: 1rem;
@@ -6270,6 +6337,15 @@ body {
     max-width: 280px;
   }
 
+  .animated-hospital-image .hospital-building-img {
+    max-width: 320px;
+  }
+
+  .image-glow-effect {
+    width: 320px;
+    height: 320px;
+  }
+
   /* Video Testimonial Responsive */
   .video-testimonial-container {
     grid-template-columns: 1fr;
@@ -6865,6 +6941,20 @@ body {
   .about-hero-image img {
     max-width: 250px;
     padding: 12px;
+  }
+
+  .animated-hospital-image .hospital-building-img {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .image-glow-effect {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .animated-hospital-image:hover .hospital-building-img {
+    transform: scale(1.03) translateY(-5px);
   }
 
   .about-hero-image-caption {

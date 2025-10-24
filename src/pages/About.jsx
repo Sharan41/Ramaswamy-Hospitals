@@ -133,9 +133,10 @@ export default function About() {
           </div>
         </FadeIn>
         <ScaleIn>
-          <div className="about-hero-image">
+          <div className="about-hero-image animated-hospital-image">
             <div className="about-hero-image-pattern"></div>
-            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" />
+            <div className="image-glow-effect"></div>
+            <img src={hospitalExterior} alt="Dr. RAMASWAMY HOSPITALS - Main Building" className="hospital-building-img" />
             <div className="about-hero-image-caption">{t.about.heroCaption}</div>
           </div>
         </ScaleIn>
