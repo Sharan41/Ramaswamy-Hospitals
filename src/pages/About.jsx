@@ -228,7 +228,7 @@ export default function About() {
       <PhotoGallery 
         images={galleryImages} 
         title={t.about.photoGallery}
-        previewCount={8}
+        previewCount={6}
       />
     </section>
   )

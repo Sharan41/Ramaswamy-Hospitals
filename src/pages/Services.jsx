@@ -57,15 +57,16 @@ export default function Services() {
     <section className="section">
       {/* Hero Section with Background Image */}
       <FadeIn>
-        <div 
-          className="services-hero services-hero-with-bg"
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${servicesHeroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <div className="services-hero services-hero-with-bg enhanced-hero-image">
+          <div className="hero-image-backdrop"></div>
+          <img 
+            src={servicesHeroImage} 
+            alt="Medical Services" 
+            className="hero-background-image"
+            loading="eager"
+            decoding="async"
+          />
+          <div className="hero-overlay-gradient"></div>
           <div className="services-hero-content">
             <h1>{t.services.title}</h1>
             <p className="services-subtitle">

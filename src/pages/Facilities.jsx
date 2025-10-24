@@ -225,15 +225,16 @@ export default function Facilities() {
     <section className="section">
       {/* Hero Section with Background Image */}
       <FadeIn>
-        <div 
-          className="facilities-hero facilities-hero-with-bg"
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${facilitiesHeroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <div className="facilities-hero facilities-hero-with-bg enhanced-hero-image">
+          <div className="hero-image-backdrop"></div>
+          <img 
+            src={facilitiesHeroImage} 
+            alt="Hospital Facilities" 
+            className="hero-background-image"
+            loading="eager"
+            decoding="async"
+          />
+          <div className="hero-overlay-gradient"></div>
           <div className="facilities-hero-content">
             <h1>{t.facilities.title}</h1>
             <p className="facilities-subtitle">
@@ -283,7 +284,7 @@ export default function Facilities() {
       <PhotoGallery 
         images={galleryImages} 
         title="Our Facility Gallery"
-        previewCount={12}
+        previewCount={6}
       />
 
       {/* Visit CTA */}

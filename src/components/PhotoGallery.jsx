@@ -152,11 +152,34 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage
   )
 }
 
-export default function PhotoGallery({ images, title, previewCount = 8 }) {
+export default function PhotoGallery({ images, title, previewCount = 6 }) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imageLoaded, setImageLoaded] = useState({})
+  const [visibleImages, setVisibleImages] = useState(new Set([0, 1, 2]))
   const scrollPositionRef = useRef(0)
+  const observerRef = useRef(null)
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index)
+            setVisibleImages((prev) => new Set([...prev, index]))
+          }
+        })
+      },
+      { rootMargin: '50px', threshold: 0.1 }
+    )
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+      }
+    }
+  }, [])
 
   useEffect(() => {
     if (isLightboxOpen) {
@@ -227,18 +250,33 @@ export default function PhotoGallery({ images, title, previewCount = 8 }) {
             key={index}
             className="photo-gallery-item-modern"
             onClick={() => openLightbox(index)}
+            data-index={index}
+            ref={(el) => {
+              if (el && observerRef.current && index > 2) {
+                observerRef.current.observe(el)
+              }
+            }}
           >
             <div className="photo-gallery-image-wrapper">
               {!imageLoaded[index] && (
                 <div className="photo-gallery-skeleton"></div>
               )}
-              <img
-                src={image.src}
-                alt={image.alt || `Gallery image ${index + 1}`}
-                loading="lazy"
-                onLoad={() => handleImageLoad(index)}
-                style={{ opacity: imageLoaded[index] ? 1 : 0 }}
-              />
+              {visibleImages.has(index) ? (
+                <img
+                  src={image.src}
+                  alt={image.alt || `Gallery image ${index + 1}`}
+                  loading={index < 3 ? "eager" : "lazy"}
+                  decoding="async"
+                  onLoad={() => handleImageLoad(index)}
+                  style={{ 
+                    opacity: imageLoaded[index] ? 1 : 0,
+                    maxWidth: '100%',
+                    height: 'auto'
+                  }}
+                />
+              ) : (
+                <div className="photo-gallery-skeleton"></div>
+              )}
               <div className="photo-gallery-overlay">
                 <div className="photo-gallery-zoom-icon">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
