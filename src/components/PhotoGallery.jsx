@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { FadeIn, StaggerContainer } from './AnimatedSection'
+import { useI18n } from '../i18n'
 import '../styles/photoGallery.css'
 
 function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage }) {
@@ -162,6 +163,7 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage
 }
 
 export default function PhotoGallery({ images, title, previewCount = 6 }) {
+  const { t } = useI18n()
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imageLoaded, setImageLoaded] = useState({})
@@ -307,7 +309,7 @@ export default function PhotoGallery({ images, title, previewCount = 6 }) {
             className="btn btn-outline-large"
             onClick={() => openLightbox(0)}
           >
-            View All {images.length} Photos
+            {t.gallery.viewAll} {images.length} {t.gallery.photos}
           </button>
         </div>
       )}

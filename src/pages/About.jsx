@@ -52,10 +52,10 @@ export default function About() {
   const { t } = useI18n()
   
   const stats = [
-    { number: 50000, suffix: "+", label: "Successful Surgeries", duration: 2800 },
-    { number: 25, suffix: "+", label: "Years of Care", duration: 2000 },
-    { number: 85000, suffix: "+", label: "Patients Cured", duration: 2800 },
-    { number: 24, suffix: "/7", label: "Emergency Care", duration: 1500 }
+    { number: 50000, suffix: "+", label: t.about.stat1Label, duration: 2800 },
+    { number: 25, suffix: "+", label: t.about.stat2Label, duration: 2000 },
+    { number: 85000, suffix: "+", label: t.about.stat3Label, duration: 2800 },
+    { number: 24, suffix: "/7", label: t.about.stat4Label, duration: 1500 }
   ]
 
   const galleryImages = [

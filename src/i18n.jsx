@@ -106,6 +106,10 @@ export const translations = {
       directorName: 'Mr. Manchikanti Venkata Sowrav',
       directorTitle: 'Director',
       directorBio: 'Our Director believes that a hospital is not just about treatment — it\'s about the people who are cured. With a strong sense of care and responsibility, he makes sure every patient who walks in feels supported and every staff member feels valued. His focus has always been to continue the hospital\'s legacy built on <strong>trust, ethics, and compassion</strong>. For him, <strong>true success does not lie in numbers, but it lies in the smiles of patients who leave healthier and happier.</strong>',
+      stat1Label: 'Successful Surgeries',
+      stat2Label: 'Years of Care',
+      stat3Label: 'Patients Cured',
+      stat4Label: 'Emergency Care',
       facilities: 'Our Facilities',
       stateOfArt: 'State-of-the-Art Equipment',
       stateOfArtDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris quam. Proin nec turpis eget dolor tempus semper eu id turpis. Mauris non ligula suscipit.',
@@ -387,9 +391,14 @@ export const translations = {
       facility21Desc: 'Minimally invasive laparoscopic surgery',
       facility22Title: 'Cell Counter',
       facility22Desc: 'Automated cell counting technology',
+      galleryTitle: 'Our Facility Gallery',
       visitUs: 'Visit Our Facilities',
       visitUsText: 'Experience our world-class medical facilities firsthand. We welcome you to visit and see how we provide exceptional healthcare.',
       getDirections: 'Get Directions'
+    },
+    gallery: {
+      viewAll: 'View All',
+      photos: 'Photos'
     }
   },
   te: {
@@ -499,6 +508,10 @@ export const translations = {
       directorName: 'Mr. మాంచికంటి వెంకట సౌరవ్',
       directorTitle: 'డైరెక్టర్',
       directorBio: 'మా డైరెక్టర్ ఒక ఆసుపత్రి కేవలం చికిత్స గురించి మాత్రమే కాదు — ఇది నయమైన వ్యక్తుల గురించి అని నమ్ముతారు. బలమైన శ్రద్ధ మరియు బాధ్యత భావంతో, అతను లోపలికి వచ్చే ప్రతి రోగి మద్దతు పొందినట్లు మరియు ప్రతి సిబ్బంది సభ్యుడు విలువైనదిగా భావించేలా చూసుకుంటారు. <strong>నమ్మకం, నైతికత మరియు కరుణ</strong>పై నిర్మించిన ఆసుపత్రి వారసత్వాన్ని కొనసాగించడమే అతని దృష్టి. అతనికి, <strong>నిజమైన విజయం సంఖ్యలలో కాదు, కానీ ఆరోగ్యంగా మరియు సంతోషంగా వెళ్ళే రోగుల చిరునవ్వులలో ఉంటుంది.</strong>',
+      stat1Label: 'విజయవంతమైన శస్త్రచికిత్సలు',
+      stat2Label: 'సంరక్షణ సంవత్సరాలు',
+      stat3Label: 'నయమైన రోగులు',
+      stat4Label: 'అత్యవసర సంరక్షణ',
       facilities: 'మా సౌకర్యాలు',
       stateOfArt: 'అత్యాధునిక పరికరాలు',
       stateOfArtDesc: 'మా ఆసుపత్రిలో అత్యాధునిక వైద్య పరికరాలు మరియు సాంకేతికత అందుబాటులో ఉన్నాయి. ఇది ఖచ్చితమైన రోగ నిర్ధారణ మరియు చికిత్సకు సహాయపడుతుంది.',
@@ -780,9 +793,14 @@ export const translations = {
       facility21Desc: 'కనిష్ట ఇన్వాసివ్ లాపరోస్కోపిక్ సర్జరీ',
       facility22Title: 'సెల్ కౌంటర్',
       facility22Desc: 'ఆటోమేటెడ్ సెల్ కౌంటింగ్ సాంకేతికత',
+      galleryTitle: 'మా సౌకర్యాల గ్యాలరీ',
       visitUs: 'మా సౌకర్యాలను సందర్శించండి',
       visitUsText: 'మా ప్రపంచ-స్థాయి వైద్య సౌకర్యాలను ప్రత్యక్షంగా అనుభవించండి. మేము అసాధారణమైన ఆరోగ్య సంరక్షణను ఎలా అందిస్తామో చూడటానికి మేము మిమ్మల్ని స్వాగతిస్తున్నాము.',
       getDirections: 'దిశలు పొందండి'
+    },
+    gallery: {
+      viewAll: 'అన్నీ చూడండి',
+      photos: 'ఫోటోలు'
     }
   },
 }

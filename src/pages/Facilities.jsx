@@ -283,7 +283,7 @@ export default function Facilities() {
       {/* Photo Gallery */}
       <PhotoGallery 
         images={galleryImages} 
-        title="Our Facility Gallery"
+        title={t.facilities.galleryTitle}
         previewCount={6}
       />
 
