@@ -146,7 +146,7 @@ export default function Doctors() {
           <h2>{t.doctors.ctaTitle}</h2>
           <p>{t.doctors.ctaText}</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="mailto:ramaswamyhospitals@gmail.com" className="btn btn-large">Email Resume</a>
+            <a href="mailto:ramaswamyhospitals@gmail.com" className="btn btn-large">{t.doctors.emailResume}</a>
             <a href="tel:+917824055789" className="btn btn-large">{t.doctors.callNow}</a>
           </div>
         </div>
