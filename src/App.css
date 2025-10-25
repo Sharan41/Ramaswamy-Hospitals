@@ -3707,6 +3707,80 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Hiring Banner Section */
+.hiring-banner-section {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #088395 0%, #05606E 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(8, 131, 149, 0.3);
+}
+
+.hiring-banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.hiring-banner-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.hiring-banner-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hiring-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.hiring-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hiring-contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hiring-contact-item svg {
+  color: white;
+  flex-shrink: 0;
+}
+
+.hiring-email,
+.hiring-phone {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hiring-email:hover,
+.hiring-phone:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .testimonial-carousel-container {
@@ -7593,6 +7667,32 @@ body {
   .doctors-cta p {
     font-size: 1rem;
     line-height: 1.7;
+  }
+
+  /* Hiring Banner Mobile */
+  .hiring-banner-section {
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+
+  .hiring-banner-title {
+    font-size: 1.8rem;
+  }
+
+  .hiring-banner-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hiring-contact-item {
+    padding: 12px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hiring-email,
+  .hiring-phone {
+    font-size: 1rem;
   }
 
   /* Facilities Page - Match Services/Testimonials Design */
