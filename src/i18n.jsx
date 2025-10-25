@@ -13,12 +13,12 @@ export const translations = {
       menu: 'Menu',
     },
     topbar: {
-      location: '📍 Vishanalayam Street, Kavali, Nellore',
-      emergency: '🚨 Emergency',
+      location: 'Vishanalayam Street, Kavali, Nellore',
+      emergency: 'Emergency',
       feedback: 'Feedback'
     },
     emergencyBar: {
-      text: '🚨 Emergency?',
+      text: 'Emergency?',
       callNow: 'Call Now: +91 99127 57854',
       or: 'or',
       whatsapp: 'WhatsApp Us',
@@ -405,12 +405,12 @@ export const translations = {
       menu: 'మెనూ',
     },
     topbar: {
-      location: '📍 విషణాలయం వీధి, కావలి, నెల్లూరు',
-      emergency: '🚨 ఎమర్జెన్సీ',
+      location: 'విషణాలయం వీధి, కావలి, నెల్లూరు',
+      emergency: 'ఎమర్జెన్సీ',
       feedback: 'అభిప్రాయం'
     },
     emergencyBar: {
-      text: '🚨 ఎమర్జెన్సీ?',
+      text: 'ఎమర్జెన్సీ?',
       callNow: 'ఇప్పుడే కాల్ చేయండి: +91 99127 57854',
       or: 'లేదా',
       whatsapp: 'వాట్సాప్ చేయండి',
