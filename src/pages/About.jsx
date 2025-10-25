@@ -200,10 +200,10 @@ export default function About() {
         <ScaleIn>
           <div className="leader-spotlight">
             <div className="leader-spotlight-avatar">
-              <img src={leaderImage} alt="Dr. Manchikanti Ramaswamy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+              <img src={leaderImage} alt={t.about.founderName} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
             </div>
             <div className="leader-spotlight-info">
-              <h3>Dr. Manchikanti Ramaswamy</h3>
+              <h3>{t.about.founderName}</h3>
               <div className="leader-spotlight-title">{t.about.founderTitle}</div>
               <p dangerouslySetInnerHTML={{ __html: t.about.founderBio }}></p>
             </div>

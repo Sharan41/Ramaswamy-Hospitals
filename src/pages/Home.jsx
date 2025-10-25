@@ -194,7 +194,7 @@ export default function Home() {
               <img src={leaderImage} alt="Dr. Ramaswamy" />
             </div>
             <div className="home-leader-content">
-              <h3>Dr. Manchikanti Ramaswamy</h3>
+              <h3>{t.about.founderName}</h3>
               <p className="home-leader-title">{t.about.founderTitle}</p>
               <p className="home-leader-bio" dangerouslySetInnerHTML={{ __html: t.about.founderBio }}></p>
             </div>
