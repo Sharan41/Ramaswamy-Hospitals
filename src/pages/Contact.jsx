@@ -178,12 +178,12 @@ export default function Contact() {
                 <input type="text" id="name" name="name" required />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="email">{t.contact.emailAddress} *</label>
-                <input type="email" id="email" name="email" required />
+                <label htmlFor="email">{t.contact.emailAddress}</label>
+                <input type="email" id="email" name="email" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="phone">{t.contact.phoneNumber}</label>
-                <input type="tel" id="phone" name="phone" />
+                <label htmlFor="phone">{t.contact.phoneNumber} *</label>
+                <input type="tel" id="phone" name="phone" required />
               </div>
               <div className="contact-form-group">
                 <label htmlFor="subject">{t.contact.selectSubject} *</label>

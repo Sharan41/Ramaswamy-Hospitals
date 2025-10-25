@@ -375,9 +375,9 @@ export default function Home() {
             <form onSubmit={handleFeedbackSubmit} className="feedback-form">
               <div className="form-row">
                 <input type="text" name="name" placeholder={`${t.contact.yourName} *`} required />
-                <input type="email" name="email" placeholder={`${t.contact.yourEmail} *`} required />
+                <input type="email" name="email" placeholder={t.contact.yourEmail} />
               </div>
-              <input type="tel" name="phone" placeholder={t.contact.phoneNumber} />
+              <input type="tel" name="phone" placeholder={`${t.contact.phoneNumber} *`} required />
               <select name="subject" required className="feedback-select">
                 <option value="">{t.contact.selectSubject} *</option>
                 <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>

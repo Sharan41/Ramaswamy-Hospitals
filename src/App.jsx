@@ -27,7 +27,7 @@ function App() {
   })()
   
   if (typeof document !== 'undefined') {
-    document.title = `${routeTitle} · ${t.brand}`
+    document.title = t.brand
   }
   
   return (
