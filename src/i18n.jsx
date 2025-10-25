@@ -14,7 +14,8 @@ export const translations = {
     },
     topbar: {
       location: '📍 Vishanalayam Street, Kavali, Nellore',
-      emergency: '🚨 Emergency'
+      emergency: '🚨 Emergency',
+      feedback: 'Feedback'
     },
     emergencyBar: {
       text: '🚨 Emergency?',
@@ -405,7 +406,8 @@ export const translations = {
     },
     topbar: {
       location: '📍 విషణాలయం వీధి, కావలి, నెల్లూరు',
-      emergency: '🚨 ఎమర్జెన్సీ'
+      emergency: '🚨 ఎమర్జెన్సీ',
+      feedback: 'అభిప్రాయం'
     },
     emergencyBar: {
       text: '🚨 ఎమర్జెన్సీ?',
