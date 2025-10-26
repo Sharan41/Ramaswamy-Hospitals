@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    brand: 'Dr.RAMASWAMY HOSPITALS',
+    brand: 'Dr.Ramaswamy Hospitals',
     nav: {
       home: 'Home',
       about: 'About',
@@ -127,7 +127,7 @@ export const translations = {
       value3Desc: 'We continuously invest in advanced medical technology and stay updated with the latest healthcare innovations.',
       value4Title: 'Integrity',
       value4Desc: 'We maintain transparency and honesty in all our interactions, building trust with patients and their families.',
-      heroCaption: 'Dr.RAMASWAMY HOSPITALS - Serving the community since 1999'
+      heroCaption: 'Dr.Ramaswamy Hospitals - Serving the community since 1999'
     },
     services: {
       title: 'Our Services',
@@ -169,13 +169,13 @@ export const translations = {
       videoTitle: 'Patient Testimonial Video',
       videoSubtitle: 'Click to watch patient experiences',
       realStories: 'Real Stories, Real Care',
-      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.RAMASWAMY HOSPITALS.',
+      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.Ramaswamy Hospitals.',
       feature1: 'Real patient experiences',
       feature2: 'Authentic testimonials',
       feature3: 'Healthcare success stories',
       whatPatientsSay: 'What Our Patients Say',
       patient1Name: 'Rajesh Kumar',
-      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.RAMASWAMY HOSPITALS.',
+      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.Ramaswamy Hospitals.',
       patient1Location: 'Kavali',
       patient2Name: 'Lakshmi Devi',
       patient2Quote: 'The doctors here are highly skilled and took the time to explain everything. Excellent hospital with modern facilities.',

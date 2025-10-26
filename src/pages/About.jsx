@@ -134,7 +134,7 @@ export default function About() {
           <div className="about-hero-image animated-hospital-image">
             <div className="about-hero-image-pattern"></div>
             <div className="image-glow-effect"></div>
-            <img src={hospitalExterior} alt="Dr. RAMASWAMY HOSPITALS - Main Building" className="hospital-building-img" />
+            <img src={hospitalExterior} alt="Dr.Ramaswamy Hospitals - Main Building" className="hospital-building-img" />
             <div className="about-hero-image-caption">{t.about.heroCaption}</div>
           </div>
         </ScaleIn>

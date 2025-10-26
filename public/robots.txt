@@ -1,0 +1,12 @@
+# robots.txt for Dr.Ramaswamy Hospitals
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ramaswamy-hospitals.onrender.com/sitemap.xml
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
+
+# Crawl-delay: 1
+

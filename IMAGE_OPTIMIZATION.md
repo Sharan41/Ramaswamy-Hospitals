@@ -275,3 +275,4 @@ For implementation assistance or questions, please refer to:
 - React Documentation: https://react.dev/
 - Google's Image Optimization Guide: https://developers.google.com/speed/docs/insights/OptimizeImages
 
+
