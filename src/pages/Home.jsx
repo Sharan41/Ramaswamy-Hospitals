@@ -374,23 +374,44 @@ export default function Home() {
             <p>{t.contact.feedbackSubtitle}</p>
             <form onSubmit={handleFeedbackSubmit} className="feedback-form">
               <div className="form-row">
-                <input type="text" name="name" placeholder={`${t.contact.yourName} *`} required />
-                <input type="email" name="email" placeholder={t.contact.yourEmail} />
+                <div className="form-group">
+                  <label htmlFor="feedback-name" className="form-label">{t.contact.yourName} *</label>
+                  <input type="text" id="feedback-name" name="name" placeholder={t.contact.yourName} required aria-required="true" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="feedback-email" className="form-label">{t.contact.yourEmail}</label>
+                  <input type="email" id="feedback-email" name="email" placeholder={t.contact.yourEmail} />
+                </div>
               </div>
-              <input type="tel" name="phone" placeholder={`${t.contact.phoneNumber} *`} required />
-              <select name="subject" required className="feedback-select">
-                <option value="">{t.contact.selectSubject} *</option>
-                <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
-                <option value="Maintenance Feedback">{t.contact.maintenanceFeedback}</option>
-                <option value="Food Quality">{t.contact.foodQuality}</option>
-                <option value="Feedback on Staffs">{t.contact.feedbackOnStaffs}</option>
-                <option value="Feedback on Doctors">{t.contact.feedbackOnDoctors}</option>
-                <option value="custom">{t.contact.other}</option>
-              </select>
-              <input type="text" name="custom_subject" placeholder={t.contact.customSubject} className="custom-subject-input" />
-              <textarea name="message" placeholder={`${t.contact.yourMessage} *`} rows="4" required></textarea>
-              <input type="text" name="how_did_you_know" placeholder={t.contact.howDidYouKnow} />
-              <button type="submit" className="btn btn-large" disabled={isSubmitting}>
+              <div className="form-group">
+                <label htmlFor="feedback-phone" className="form-label">{t.contact.phoneNumber} *</label>
+                <input type="tel" id="feedback-phone" name="phone" placeholder={t.contact.phoneNumber} required aria-required="true" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="feedback-subject" className="form-label">{t.contact.selectSubject} *</label>
+                <select id="feedback-subject" name="subject" required className="feedback-select" aria-required="true">
+                  <option value="">{t.contact.selectSubject} *</option>
+                  <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
+                  <option value="Maintenance Feedback">{t.contact.maintenanceFeedback}</option>
+                  <option value="Food Quality">{t.contact.foodQuality}</option>
+                  <option value="Feedback on Staffs">{t.contact.feedbackOnStaffs}</option>
+                  <option value="Feedback on Doctors">{t.contact.feedbackOnDoctors}</option>
+                  <option value="custom">{t.contact.other}</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="feedback-custom-subject" className="form-label">{t.contact.customSubject}</label>
+                <input type="text" id="feedback-custom-subject" name="custom_subject" placeholder={t.contact.customSubject} className="custom-subject-input" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="feedback-message" className="form-label">{t.contact.yourMessage} *</label>
+                <textarea id="feedback-message" name="message" placeholder={t.contact.yourMessage} rows="4" required aria-required="true"></textarea>
+              </div>
+              <div className="form-group">
+                <label htmlFor="feedback-source" className="form-label">{t.contact.howDidYouKnow}</label>
+                <input type="text" id="feedback-source" name="how_did_you_know" placeholder={t.contact.howDidYouKnow} />
+              </div>
+              <button type="submit" className="btn btn-large" disabled={isSubmitting} aria-busy={isSubmitting}>
                 {isSubmitting ? t.contact.sending : t.contact.sendMessage}
               </button>
             </form>

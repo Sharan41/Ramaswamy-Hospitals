@@ -174,20 +174,20 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="contact-form-main">
             <div className="contact-form-grid">
               <div className="contact-form-group">
-                <label htmlFor="name">{t.contact.fullName} *</label>
-                <input type="text" id="name" name="name" required />
+                <label htmlFor="contact-name" className="contact-form-label">{t.contact.fullName} *</label>
+                <input type="text" id="contact-name" name="name" placeholder={t.contact.fullName} required aria-required="true" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="email">{t.contact.emailAddress}</label>
-                <input type="email" id="email" name="email" />
+                <label htmlFor="contact-email" className="contact-form-label">{t.contact.emailAddress}</label>
+                <input type="email" id="contact-email" name="email" placeholder={t.contact.emailAddress} />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="phone">{t.contact.phoneNumber} *</label>
-                <input type="tel" id="phone" name="phone" required />
+                <label htmlFor="contact-phone" className="contact-form-label">{t.contact.phoneNumber} *</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder={t.contact.phoneNumber} required aria-required="true" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="subject">{t.contact.selectSubject} *</label>
-                <select id="subject" name="subject" required>
+                <label htmlFor="contact-subject" className="contact-form-label">{t.contact.selectSubject} *</label>
+                <select id="contact-subject" name="subject" required aria-required="true">
                   <option value="">{t.contact.selectSubject} *</option>
                   <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
                   <option value="Maintenance Feedback">{t.contact.maintenanceFeedback}</option>
@@ -199,18 +199,18 @@ export default function Contact() {
               </div>
             </div>
             <div className="contact-form-group">
-              <label htmlFor="custom_subject">{t.contact.customSubjectLabel}</label>
-              <input type="text" id="custom_subject" name="custom_subject" />
+              <label htmlFor="contact-custom-subject" className="contact-form-label">{t.contact.customSubjectLabel}</label>
+              <input type="text" id="contact-custom-subject" name="custom_subject" placeholder={t.contact.customSubjectLabel} />
             </div>
             <div className="contact-form-group">
-              <label htmlFor="message">{t.contact.message} *</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
+              <label htmlFor="contact-message" className="contact-form-label">{t.contact.message} *</label>
+              <textarea id="contact-message" name="message" placeholder={t.contact.message} rows="6" required aria-required="true"></textarea>
             </div>
             <div className="contact-form-group">
-              <label htmlFor="how_did_you_know">{t.contact.howDidYouKnow}</label>
-              <input type="text" id="how_did_you_know" name="how_did_you_know" />
+              <label htmlFor="contact-source" className="contact-form-label">{t.contact.howDidYouKnow}</label>
+              <input type="text" id="contact-source" name="how_did_you_know" placeholder={t.contact.howDidYouKnow} />
             </div>
-            <button type="submit" className="btn btn-large" disabled={isSubmitting}>
+            <button type="submit" className="btn btn-large" disabled={isSubmitting} aria-busy={isSubmitting}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
               </svg>
