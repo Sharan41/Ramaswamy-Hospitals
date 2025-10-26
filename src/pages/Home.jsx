@@ -103,7 +103,7 @@ export default function Home() {
               loop 
               muted 
               playsInline
-              preload="metadata"
+              preload="auto"
               className="hero-video"
               onLoadedData={() => setVideoLoaded(true)}
               onCanPlay={() => setVideoLoaded(true)}
