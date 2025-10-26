@@ -140,9 +140,12 @@ export default function Contact() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.364682218248!2d79.9951669!3d14.916762299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7bf0315d787b%3A0xfaf1df2ed7d74779!2sKandukuri%20Hospitals!5e0!3m2!1sen!2sin!4v1761138643381!5m2!1sen!2sin" 
               className="contact-map-iframe"
               title="Dr. Ramaswamy Hospitals Location"
+              width="100%"
+              height="500"
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0 }}
             ></iframe>
             <div className="contact-map-overlay">
               <a 

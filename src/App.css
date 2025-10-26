@@ -899,6 +899,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 50%;
   margin: 0 auto 16px;
   animation: spin 0.8s linear infinite;
+  will-change: transform;
 }
 
 @keyframes spin {
@@ -4766,6 +4767,7 @@ body {
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  will-change: transform;
 }
 
 .hero-video-overlay {
@@ -7193,9 +7195,9 @@ body {
   /* Home Page Mobile Improvements */
   .hero-section-new {
     grid-template-columns: 1fr;
-    padding: 30px 16px;
-    gap: 24px;
-    min-height: 92vh;
+    padding: 40px 20px;
+    gap: 28px;
+    min-height: 90vh;
   }
 
   .hero-video-overlay {
@@ -7227,22 +7229,22 @@ body {
   }
 
   .hero-badge {
-    font-size: 0.65rem;
-    padding: 5px 10px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
     letter-spacing: 0.5px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   .hero-title-new {
     font-size: 1.85rem;
     line-height: 1.2;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .hero-subtitle-new {
     font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.65;
+    margin-bottom: 28px;
     font-weight: 600;
     text-shadow: 
       2px 2px 8px rgba(255, 255, 255, 1),
@@ -7260,9 +7262,10 @@ body {
 
   .hero-actions {
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
     width: 100%;
     align-items: center;
+    margin-top: 8px;
   }
 
   .hero-actions .btn {
