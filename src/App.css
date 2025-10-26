@@ -5889,7 +5889,7 @@ body {
 }
 
 .feedback-form .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .feedback-form input,
@@ -5956,15 +5956,7 @@ body {
 }
 
 .contact-form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contact-form-group label {
-  font-weight: 600;
-  color: var(--brand);
-  font-size: 0.95rem;
+  margin-bottom: 0;
 }
 
 .contact-form-main input,

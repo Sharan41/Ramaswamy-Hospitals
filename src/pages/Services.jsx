@@ -2,7 +2,7 @@ import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
-import servicesHeroImage from '../assets/WhatsApp Image 2025-10-23 at 18.07.55.jpeg?format=webp&w=1200'
+import servicesHeroImage from '../assets/WhatsApp Image 2025-10-23 at 18.07.55.jpeg?format=webp&w=1200&quality=80'
 
 export default function Services() {
   const { t } = useI18n()
