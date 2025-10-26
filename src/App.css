@@ -36,6 +36,19 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   cursor: pointer;
 }
 
+/* Visually hidden but accessible to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .app { min-height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
 
 /* ===== TOPBAR REDESIGN ===== */
@@ -5876,16 +5889,7 @@ body {
 }
 
 .feedback-form .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.feedback-form .form-label {
-  font-weight: 600;
-  color: var(--brand);
-  font-size: 0.95rem;
-  display: block;
+  margin-bottom: 1rem;
 }
 
 .feedback-form input,

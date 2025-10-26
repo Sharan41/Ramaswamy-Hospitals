@@ -174,19 +174,19 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="contact-form-main">
             <div className="contact-form-grid">
               <div className="contact-form-group">
-                <label htmlFor="contact-name" className="contact-form-label">{t.contact.fullName} *</label>
+                <label htmlFor="contact-name" className="visually-hidden">{t.contact.fullName} *</label>
                 <input type="text" id="contact-name" name="name" placeholder={t.contact.fullName} required aria-required="true" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="contact-email" className="contact-form-label">{t.contact.emailAddress}</label>
+                <label htmlFor="contact-email" className="visually-hidden">{t.contact.emailAddress}</label>
                 <input type="email" id="contact-email" name="email" placeholder={t.contact.emailAddress} />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="contact-phone" className="contact-form-label">{t.contact.phoneNumber} *</label>
+                <label htmlFor="contact-phone" className="visually-hidden">{t.contact.phoneNumber} *</label>
                 <input type="tel" id="contact-phone" name="phone" placeholder={t.contact.phoneNumber} required aria-required="true" />
               </div>
               <div className="contact-form-group">
-                <label htmlFor="contact-subject" className="contact-form-label">{t.contact.selectSubject} *</label>
+                <label htmlFor="contact-subject" className="visually-hidden">{t.contact.selectSubject} *</label>
                 <select id="contact-subject" name="subject" required aria-required="true">
                   <option value="">{t.contact.selectSubject} *</option>
                   <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
@@ -199,15 +199,15 @@ export default function Contact() {
               </div>
             </div>
             <div className="contact-form-group">
-              <label htmlFor="contact-custom-subject" className="contact-form-label">{t.contact.customSubjectLabel}</label>
+              <label htmlFor="contact-custom-subject" className="visually-hidden">{t.contact.customSubjectLabel}</label>
               <input type="text" id="contact-custom-subject" name="custom_subject" placeholder={t.contact.customSubjectLabel} />
             </div>
             <div className="contact-form-group">
-              <label htmlFor="contact-message" className="contact-form-label">{t.contact.message} *</label>
+              <label htmlFor="contact-message" className="visually-hidden">{t.contact.message} *</label>
               <textarea id="contact-message" name="message" placeholder={t.contact.message} rows="6" required aria-required="true"></textarea>
             </div>
             <div className="contact-form-group">
-              <label htmlFor="contact-source" className="contact-form-label">{t.contact.howDidYouKnow}</label>
+              <label htmlFor="contact-source" className="visually-hidden">{t.contact.howDidYouKnow}</label>
               <input type="text" id="contact-source" name="how_did_you_know" placeholder={t.contact.howDidYouKnow} />
             </div>
             <button type="submit" className="btn btn-large" disabled={isSubmitting} aria-busy={isSubmitting}>

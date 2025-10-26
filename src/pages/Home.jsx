@@ -1,8 +1,8 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg'
-import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg'
+import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg?format=webp&w=450'
+import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg?format=webp&w=400'
 import heroVideo from '../assets/WhatsApp Video 2025-10-24 at 11.10.44.mp4'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
@@ -375,20 +375,20 @@ export default function Home() {
             <form onSubmit={handleFeedbackSubmit} className="feedback-form">
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="feedback-name" className="form-label">{t.contact.yourName} *</label>
+                  <label htmlFor="feedback-name" className="visually-hidden">{t.contact.yourName} *</label>
                   <input type="text" id="feedback-name" name="name" placeholder={t.contact.yourName} required aria-required="true" />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="feedback-email" className="form-label">{t.contact.yourEmail}</label>
+                  <label htmlFor="feedback-email" className="visually-hidden">{t.contact.yourEmail}</label>
                   <input type="email" id="feedback-email" name="email" placeholder={t.contact.yourEmail} />
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="feedback-phone" className="form-label">{t.contact.phoneNumber} *</label>
+                <label htmlFor="feedback-phone" className="visually-hidden">{t.contact.phoneNumber} *</label>
                 <input type="tel" id="feedback-phone" name="phone" placeholder={t.contact.phoneNumber} required aria-required="true" />
               </div>
               <div className="form-group">
-                <label htmlFor="feedback-subject" className="form-label">{t.contact.selectSubject} *</label>
+                <label htmlFor="feedback-subject" className="visually-hidden">{t.contact.selectSubject} *</label>
                 <select id="feedback-subject" name="subject" required className="feedback-select" aria-required="true">
                   <option value="">{t.contact.selectSubject} *</option>
                   <option value="Hospital Feedback">{t.contact.hospitalFeedback}</option>
@@ -400,15 +400,15 @@ export default function Home() {
                 </select>
               </div>
               <div className="form-group">
-                <label htmlFor="feedback-custom-subject" className="form-label">{t.contact.customSubject}</label>
+                <label htmlFor="feedback-custom-subject" className="visually-hidden">{t.contact.customSubject}</label>
                 <input type="text" id="feedback-custom-subject" name="custom_subject" placeholder={t.contact.customSubject} className="custom-subject-input" />
               </div>
               <div className="form-group">
-                <label htmlFor="feedback-message" className="form-label">{t.contact.yourMessage} *</label>
+                <label htmlFor="feedback-message" className="visually-hidden">{t.contact.yourMessage} *</label>
                 <textarea id="feedback-message" name="message" placeholder={t.contact.yourMessage} rows="4" required aria-required="true"></textarea>
               </div>
               <div className="form-group">
-                <label htmlFor="feedback-source" className="form-label">{t.contact.howDidYouKnow}</label>
+                <label htmlFor="feedback-source" className="visually-hidden">{t.contact.howDidYouKnow}</label>
                 <input type="text" id="feedback-source" name="how_did_you_know" placeholder={t.contact.howDidYouKnow} />
               </div>
               <button type="submit" className="btn btn-large" disabled={isSubmitting} aria-busy={isSubmitting}>
