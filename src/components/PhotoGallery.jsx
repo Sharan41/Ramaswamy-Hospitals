@@ -123,6 +123,55 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage
     }
   }, [isDragging, dragStart, zoom])
 
+  // Touch gesture handlers for mobile
+  const [touchStart, setTouchStart] = useState({ x: 0, y: 0, distance: 0 })
+  const [initialZoom, setInitialZoom] = useState(1)
+
+  const getTouchDistance = (touch1, touch2) => {
+    const dx = touch1.clientX - touch2.clientX
+    const dy = touch1.clientY - touch2.clientY
+    return Math.sqrt(dx * dx + dy * dy)
+  }
+
+  const handleTouchStart = (e) => {
+    if (e.touches.length === 2) {
+      // Pinch gesture
+      const distance = getTouchDistance(e.touches[0], e.touches[1])
+      setTouchStart({ x: 0, y: 0, distance })
+      setInitialZoom(zoom)
+    } else if (e.touches.length === 1 && zoom > 1) {
+      // Pan gesture
+      setIsDragging(true)
+      setDragStart({
+        x: e.touches[0].clientX - pan.x,
+        y: e.touches[0].clientY - pan.y
+      })
+    }
+  }
+
+  const handleTouchMove = (e) => {
+    if (e.touches.length === 2) {
+      // Pinch zoom
+      const distance = getTouchDistance(e.touches[0], e.touches[1])
+      const scale = distance / touchStart.distance
+      const newZoom = Math.max(1, Math.min(3, initialZoom * scale))
+      setZoom(newZoom)
+      if (newZoom === 1) {
+        setPan({ x: 0, y: 0 })
+      }
+    } else if (e.touches.length === 1 && isDragging && zoom > 1) {
+      // Pan
+      setPan({
+        x: e.touches[0].clientX - dragStart.x,
+        y: e.touches[0].clientY - dragStart.y
+      })
+    }
+  }
+
+  const handleTouchEnd = () => {
+    setIsDragging(false)
+  }
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose()
@@ -244,9 +293,13 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev, onSelectImage
           ref={imageContainerRef}
           className="lightbox-image-container"
           onMouseDown={handleMouseDown}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
           style={{ 
             cursor: zoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
-            overflow: zoom > 1 ? 'hidden' : 'visible'
+            overflow: zoom > 1 ? 'hidden' : 'visible',
+            touchAction: zoom > 1 ? 'none' : 'auto'
           }}
         >
           {imageLoading && (

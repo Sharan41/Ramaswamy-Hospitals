@@ -46,7 +46,6 @@ import facility34 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/IMG_55
 import facility35 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/IMG_5510.jpg?format=webp&w=800&quality=75'
 import facility36 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/IMG_5512.jpg?format=webp&w=800&quality=75'
 import facility37 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/IMG_5513.jpg?format=webp&w=800&quality=75'
-import facility38 from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/IMG_5521.jpeg?format=webp&w=800&quality=75'
 
 export default function About() {
   const { t } = useI18n()
@@ -96,8 +95,7 @@ export default function About() {
     { src: facility34, alt: "Medical Services", caption: "Comprehensive Medical Services" },
     { src: facility35, alt: "Treatment Center", caption: "Advanced Treatment Center" },
     { src: facility36, alt: "Hospital Wing", caption: "Spacious Hospital Wings" },
-    { src: facility37, alt: "Medical Infrastructure", caption: "Modern Medical Infrastructure" },
-    { src: facility38, alt: "Hospital View", caption: "Dr. Ramaswamy Hospitals" }
+    { src: facility37, alt: "Medical Infrastructure", caption: "Modern Medical Infrastructure" }
   ]
 
   const values = [
@@ -228,7 +226,7 @@ export default function About() {
       <PhotoGallery 
         images={galleryImages} 
         title={t.about.photoGallery}
-        previewCount={6}
+        previewCount={8}
       />
     </section>
   )
