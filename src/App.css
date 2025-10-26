@@ -899,7 +899,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 50%;
   margin: 0 auto 16px;
   animation: spin 0.8s linear infinite;
-  will-change: transform;
 }
 
 @keyframes spin {
@@ -4767,7 +4766,6 @@ body {
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  will-change: transform;
 }
 
 .hero-video-overlay {
@@ -7118,20 +7116,13 @@ body {
 
   /* Contact Map Mobile */
   .contact-map-container {
-    position: relative;
-    width: 100%;
-    min-height: 300px;
     border-radius: 16px;
     margin: 24px 16px 0;
     border-width: 2px;
-    overflow: hidden;
   }
 
   .contact-map-iframe {
-    height: 300px;
-    min-height: 300px;
-    width: 100%;
-    border: none;
+    height: 350px;
   }
 
   .contact-map-overlay {
@@ -7196,7 +7187,7 @@ body {
   .hero-section-new {
     grid-template-columns: 1fr;
     padding: 40px 20px;
-    gap: 28px;
+    gap: 32px;
     min-height: 90vh;
   }
 
@@ -7988,8 +7979,8 @@ body {
 
   .btn-outline-large,
   .btn-large {
-    padding: 12px 28px;
-    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .facilities-highlights-container {

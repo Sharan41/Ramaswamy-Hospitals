@@ -46,7 +46,7 @@ function App() {
       <div className="topbar">
         <div className="topbar-content">
           <div className="topbar-left">
-            <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="topbar-logo" width="32" height="32" loading="eager" />
+            <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="topbar-logo" />
             <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-address" aria-label="Get directions to hospital">
               <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -102,7 +102,7 @@ function App() {
       <header className="header" role="banner">
         <div className="header-content">
           <NavLink to="/" className="brand">
-            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" className="brand-banner-logo" width="320" height="80" loading="eager" />
+            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" className="brand-banner-logo" />
           </NavLink>
           <nav className="nav" role="navigation" aria-label="Primary navigation">
             <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.home}</NavLink>
