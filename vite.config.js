@@ -6,7 +6,10 @@ import { imagetools } from 'vite-imagetools'
 export default defineConfig({
   plugins: [
     react(),
-    imagetools()
+    imagetools({
+      include: '**/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP,avif,AVIF}?*',
+      exclude: '',
+    })
   ],
   build: {
     rollupOptions: {
