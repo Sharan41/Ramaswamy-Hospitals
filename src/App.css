@@ -7262,10 +7262,13 @@ body {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    align-items: center;
   }
 
   .hero-actions .btn {
-    width: 100%;
+    width: auto;
+    min-width: 200px;
+    max-width: 280px;
     justify-content: center;
     padding: 12px 24px;
     font-size: 0.95rem;
@@ -7982,8 +7985,6 @@ body {
 
   .btn-outline-large,
   .btn-large {
-    width: 100%;
-    justify-content: center;
     padding: 12px 28px;
     font-size: 0.95rem;
   }
