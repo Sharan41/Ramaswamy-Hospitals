@@ -31,6 +31,11 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 p { margin: 0 0 1rem; }
 
+/* Ensure all clickable elements have pointer cursor */
+a, button, select, [role="button"], [type="button"], [type="submit"], [type="reset"] {
+  cursor: pointer;
+}
+
 .app { min-height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
 
 /* ===== TOPBAR REDESIGN ===== */
@@ -85,6 +90,7 @@ p { margin: 0 0 1rem; }
   font-size: 0.8rem;
   transition: all 0.3s ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .topbar-emergency {
@@ -170,6 +176,7 @@ p { margin: 0 0 1rem; }
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .topbar-link:hover {
@@ -253,6 +260,7 @@ p { margin: 0 0 1rem; }
   text-decoration: none;
   transition: all 0.3s ease;
   flex-shrink: 1;
+  cursor: pointer;
 }
 
 .brand:hover {
@@ -344,6 +352,7 @@ p { margin: 0 0 1rem; }
   transition: all 0.2s ease;
   margin-bottom: 4px;
   border-left: 3px solid transparent;
+  cursor: pointer;
 }
 .dropdown .menu a:last-child {
   margin-bottom: 0;
@@ -367,6 +376,7 @@ p { margin: 0 0 1rem; }
   font-weight: 700;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
+  cursor: pointer;
 }
 .cta:hover { background: var(--accent-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
 
@@ -398,6 +408,7 @@ p { margin: 0 0 1rem; }
   position: relative;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 
 .btn::before {
@@ -437,7 +448,7 @@ p { margin: 0 0 1rem; }
   color: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow-lg);
 }
-.footer a { color: var(--accent-light); text-decoration: none; font-weight: 500; }
+.footer a { color: var(--accent-light); text-decoration: none; font-weight: 500; cursor: pointer; }
 .footer a:hover { color: var(--white); text-decoration: underline; }
 .footer .links { display: flex; gap: 20px; }
 
@@ -760,6 +771,7 @@ p { margin: 0 0 1rem; }
   z-index: 100;
   border-radius: 0 0 8px 0;
   font-weight: 600;
+  cursor: pointer;
 }
 .skip-link:focus {
   top: 0;
@@ -798,6 +810,7 @@ p { margin: 0 0 1rem; }
   box-shadow: var(--shadow-sm);
   border: none;
   position: relative;
+  cursor: pointer;
 }
 
 .quick-action-btn.secondary {
@@ -1742,6 +1755,7 @@ body {
   color: var(--brand);
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 .breadcrumbs a:hover {
@@ -1846,6 +1860,7 @@ body {
   transition: all 0.2s ease;
   border-left: 4px solid transparent;
   border-bottom: 1px solid rgba(42, 91, 108, 0.08);
+  cursor: pointer;
 }
 
 .mobile-menu a:hover { 
@@ -4845,6 +4860,7 @@ body {
   color: var(--brand);
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(42, 91, 108, 0.2);
+  cursor: pointer;
 }
 
 .btn-outline-large:hover {
@@ -5251,6 +5267,7 @@ body {
   transition: all 0.3s ease;
   animation: whatsappPulse 2s infinite, whatsappEntrance 0.6s ease-out;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .floating-whatsapp::before {
@@ -5872,6 +5889,10 @@ body {
   background: white;
 }
 
+.feedback-form select {
+  cursor: pointer;
+}
+
 .feedback-form input:focus,
 .feedback-form textarea:focus,
 .feedback-form select:focus {
@@ -5896,6 +5917,7 @@ body {
 .feedback-form button {
   width: 100%;
   margin-top: 8px;
+  cursor: pointer;
 }
 
 /* Contact Form Main */
@@ -5942,6 +5964,10 @@ body {
   background: white;
 }
 
+.contact-form-main select {
+  cursor: pointer;
+}
+
 .contact-form-main input:focus,
 .contact-form-main textarea:focus,
 .contact-form-main select:focus {
@@ -5964,6 +5990,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .home-cta-content {
