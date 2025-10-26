@@ -13,7 +13,7 @@ export default function LoadingScreen() {
         </div>
         
         {/* Hospital Name */}
-        <h1 className="loading-title">Dr.Ramaswamy Hospitals</h1>
+        <h1 className="loading-title">Dr.RAMASWAMY HOSPITALS</h1>
         
         {/* Tagline */}
         <p className="loading-tagline">Your Health, Our Mission</p>

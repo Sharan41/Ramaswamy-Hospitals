@@ -127,7 +127,7 @@ export const translations = {
       value3Desc: 'We continuously invest in advanced medical technology and stay updated with the latest healthcare innovations.',
       value4Title: 'Integrity',
       value4Desc: 'We maintain transparency and honesty in all our interactions, building trust with patients and their families.',
-      heroCaption: 'Dr.Ramaswamy Hospitals - Serving the community since 1999'
+      heroCaption: 'Dr.RAMASWAMY HOSPITALS - Serving the community since 1999'
     },
     services: {
       title: 'Our Services',
