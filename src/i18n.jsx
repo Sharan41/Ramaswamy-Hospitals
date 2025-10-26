@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    brand: 'Dr.Ramaswamy Hospitals',
+    brand: 'Dr.RAMASWAMY HOSPITALS',
     nav: {
       home: 'Home',
       about: 'About',
@@ -169,13 +169,13 @@ export const translations = {
       videoTitle: 'Patient Testimonial Video',
       videoSubtitle: 'Click to watch patient experiences',
       realStories: 'Real Stories, Real Care',
-      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.Ramaswamy Hospitals.',
+      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.RAMASWAMY HOSPITALS.',
       feature1: 'Real patient experiences',
       feature2: 'Authentic testimonials',
       feature3: 'Healthcare success stories',
       whatPatientsSay: 'What Our Patients Say',
       patient1Name: 'Rajesh Kumar',
-      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.Ramaswamy Hospitals.',
+      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.RAMASWAMY HOSPITALS.',
       patient1Location: 'Kavali',
       patient2Name: 'Lakshmi Devi',
       patient2Quote: 'The doctors here are highly skilled and took the time to explain everything. Excellent hospital with modern facilities.',
