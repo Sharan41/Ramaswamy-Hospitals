@@ -103,9 +103,12 @@ export default function Home() {
               loop 
               muted 
               playsInline
+              preload="metadata"
               className="hero-video"
               onLoadedData={() => setVideoLoaded(true)}
               onCanPlay={() => setVideoLoaded(true)}
+              width="1920"
+              height="1080"
             >
               <source src={heroVideo} type="video/mp4" />
             </video>

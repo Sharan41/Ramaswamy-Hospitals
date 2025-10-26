@@ -74,6 +74,10 @@ export default function Doctors() {
                   <img 
                     src={doctor.image} 
                     alt={doctor.name}
+                    width="200"
+                    height="200"
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       width: '100%',
                       height: '100%',
