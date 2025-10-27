@@ -799,10 +799,10 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   right: 0;
   background: var(--white);
   border-top: 1px solid rgba(42, 91, 108, 0.1);
-  padding: 12px 16px;
+  padding: 8px 8px;
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
   z-index: 50;
-  gap: 12px;
+  gap: 6px;
   justify-content: space-around;
 }
 
@@ -810,34 +810,27 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 8px 16px;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 6px;
   background: var(--brand);
   color: var(--white);
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 10px;
   font-weight: 600;
-  font-size: 0.85rem;
-  min-width: 100px;
+  font-size: 0.7rem;
+  min-width: 60px;
+  flex: 1;
+  max-width: 80px;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
   border: none;
-  position: relative;
   cursor: pointer;
+  position: relative;
 }
 
-.quick-action-btn.secondary {
-  background: #25D366;
-  animation: whatsappGlow 2s ease-in-out infinite;
-}
-
-@keyframes whatsappGlow {
-  0%, 100% {
-    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
-  }
-  50% {
-    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5);
-  }
+.quick-action-btn svg {
+  flex-shrink: 0;
 }
 
 .quick-action-btn:active {
@@ -848,15 +841,6 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   background: var(--brand-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-}
-
-.quick-action-btn.secondary {
-  background: var(--accent);
-  color: var(--text);
-}
-
-.quick-action-btn.secondary:hover {
-  background: var(--accent-light);
 }
 
 .quick-action-icon {
@@ -1977,6 +1961,27 @@ body {
   /* Improve card spacing on mobile */
   .card, .service-card, .testimonial-card, .achievement-card {
     margin-bottom: 16px;
+  }
+}
+
+/* Extra small screens - adjust quick actions bar for 5 buttons */
+@media (max-width: 380px) {
+  .quick-action-btn {
+    font-size: 0.65rem;
+    padding: 6px 4px;
+    min-width: 50px;
+    max-width: 70px;
+    gap: 2px;
+  }
+  
+  .quick-action-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .quick-actions-bar {
+    padding: 6px 4px;
+    gap: 4px;
   }
 }
 

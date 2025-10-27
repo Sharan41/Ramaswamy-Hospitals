@@ -33,7 +33,8 @@ export const translations = {
     quickActions: {
       call: 'Call',
       whatsapp: 'WhatsApp',
-      directions: 'Directions'
+      directions: 'Directions',
+      feedback: 'Feedback'
     },
     footer: {
       maps: 'Google Maps',
@@ -435,7 +436,8 @@ export const translations = {
     quickActions: {
       call: 'కాల్ చేయండి',
       whatsapp: 'వాట్సాప్',
-      directions: 'దిశలు'
+      directions: 'దిశలు',
+      feedback: 'అభిప్రాయం'
     },
     footer: {
       maps: 'గూగుల్ మ్యాప్స్',
