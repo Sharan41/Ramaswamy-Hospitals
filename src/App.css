@@ -13,6 +13,7 @@
   --shadow-sm: 0 2px 8px rgba(42, 91, 108, 0.08);
   --shadow-md: 0 4px 16px rgba(42, 91, 108, 0.12);
   --shadow-lg: 0 8px 32px rgba(42, 91, 108, 0.16);
+  --topbar-height: 50px;  /* Dynamic topbar height */
 }
 
 * { box-sizing: border-box; }
@@ -59,6 +60,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   background: linear-gradient(135deg, var(--brand-dark), var(--brand));
   color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
 }
 
 .topbar-content {
@@ -242,8 +244,9 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 
 /* ===== HEADER REDESIGN ===== */
 .header { 
+  position: -webkit-sticky;
   position: sticky; 
-  top: 48px;
+  top: var(--topbar-height, 50px);
   z-index: 999; 
   width: 100%;
   background: rgba(255,255,255,0.98); 
