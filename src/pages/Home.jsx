@@ -1,6 +1,6 @@
 import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg?format=webp&w=450&quality=80'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg?format=webp&w=400&quality=80'
 import heroVideo from '../assets/WhatsApp Video 2025-10-24 at 11.10.44.mp4'
@@ -14,6 +14,29 @@ export default function Home() {
   const toast = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
+  const videoRef = useRef(null)
+
+  // Force video to play on mount
+  useEffect(() => {
+    const video = videoRef.current
+    if (video) {
+      // Reset and play video
+      video.load()
+      const playPromise = video.play()
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Video is playing
+            setVideoLoaded(true)
+          })
+          .catch((error) => {
+            // Auto-play was prevented, try to play on user interaction
+            console.log('Video autoplay prevented:', error)
+          })
+      }
+    }
+  }, [])
 
   // Handle scroll to feedback form when hash is present
   useEffect(() => {
@@ -122,11 +145,13 @@ export default function Home() {
           {/* Video Background */}
           <div className={`hero-video-background ${videoLoaded ? 'video-loaded' : ''}`}>
             <video 
+              ref={videoRef}
               autoPlay 
               loop 
               muted 
               playsInline
               className="hero-video"
+              preload="auto"
               onLoadedData={() => setVideoLoaded(true)}
               onCanPlay={() => setVideoLoaded(true)}
             >
