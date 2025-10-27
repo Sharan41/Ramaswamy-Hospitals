@@ -4675,40 +4675,46 @@ body {
 /* Responsive Design for Services and Contact */
 @media (max-width: 768px) {
   .service-highlights-container {
-    padding: 32px 20px;
+    padding: 24px 16px;
     touch-action: pan-y;
     will-change: auto;
+    margin: 32px 0;
   }
 
   .service-highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .service-highlight-item {
     touch-action: pan-y;
-    padding: 16px;
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.7);
   }
   
   .service-highlight-item:hover {
     transform: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: none;
   }
   
   .service-highlight-number {
-    width: 48px;
-    height: 48px;
-    font-size: 1.1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+    margin: 0 auto 12px;
   }
 
   .service-highlight-item h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    margin: 0 0 6px 0;
   }
 
   .service-highlight-item p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -8151,40 +8157,46 @@ body {
   }
 
   .facilities-highlights-container {
-    padding: 32px 20px;
+    padding: 24px 16px;
     touch-action: pan-y;
     will-change: auto;
+    margin: 32px 0;
   }
 
   .facilities-highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .facility-highlight-item {
     touch-action: pan-y;
-    padding: 16px;
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.7);
   }
   
   .facility-highlight-item:hover {
     transform: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: none;
   }
   
   .facility-highlight-badge {
-    width: 48px;
-    height: 48px;
-    font-size: 1.1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+    margin: 0 auto 12px;
   }
 
   .facility-highlight-item h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    margin: 0 0 6px 0;
   }
 
   .facility-highlight-item p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     word-wrap: break-word;
     overflow-wrap: break-word;

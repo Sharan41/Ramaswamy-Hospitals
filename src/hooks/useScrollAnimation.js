@@ -11,6 +11,13 @@ export function useScrollAnimation(options = {}) {
     const element = ref.current
     if (!element) return
     
+    // Detect mobile/tablet devices
+    const isMobile = window.innerWidth <= 768
+    
+    // On mobile, trigger animations much earlier and with lower threshold
+    const threshold = options.threshold || (isMobile ? 0.05 : 0.1)
+    const rootMargin = options.rootMargin || (isMobile ? '0px 0px 100px 0px' : '0px 0px -50px 0px')
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,8 +31,8 @@ export function useScrollAnimation(options = {}) {
         })
       },
       {
-        threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px 0px -100px 0px'
+        threshold: threshold,
+        rootMargin: rootMargin
       }
     )
     
