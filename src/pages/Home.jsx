@@ -19,20 +19,25 @@ export default function Home() {
   useEffect(() => {
     const handleHashScroll = () => {
       if (window.location.hash === '#feedback-form') {
-        // First scroll to top instantly to ensure video loads
-        window.scrollTo({ top: 0, behavior: 'instant' })
-        // Then scroll to feedback form smoothly after a short delay
+        // Wait a bit for page to fully load first
         setTimeout(() => {
-          const element = document.getElementById('feedback-form')
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' })
-          }
-        }, 500)
+          // Ensure we're at top to load all content including video
+          window.scrollTo({ top: 0, behavior: 'instant' })
+          // Then scroll to feedback form
+          setTimeout(() => {
+            const element = document.getElementById('feedback-form')
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+          }, 300)
+        }, 100)
       }
     }
 
-    // Handle on mount
-    handleHashScroll()
+    // Handle on mount - only if hash is present
+    if (window.location.hash === '#feedback-form') {
+      handleHashScroll()
+    }
 
     // Handle on hash change
     window.addEventListener('hashchange', handleHashScroll)

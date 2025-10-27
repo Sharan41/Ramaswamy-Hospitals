@@ -16,7 +16,7 @@ export function useScrollAnimation(options = {}) {
     
     // On mobile, trigger animations much earlier and with lower threshold
     const threshold = options.threshold || (isMobile ? 0.05 : 0.1)
-    const rootMargin = options.rootMargin || (isMobile ? '0px 0px 100px 0px' : '0px 0px -50px 0px')
+    const rootMargin = options.rootMargin || (isMobile ? '0px 0px 100px 0px' : '0px 0px 50px 0px')
     
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,6 +37,21 @@ export function useScrollAnimation(options = {}) {
     )
     
     observer.observe(element)
+    
+    // Check immediately if element is already in viewport (for hero sections)
+    // This ensures elements visible on page load animate immediately
+    const rect = element.getBoundingClientRect()
+    const isInViewport = (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+    
+    if (isInViewport) {
+      // Element is already visible, trigger animation immediately
+      element.classList.add('animate-in')
+    }
     
     return () => observer.disconnect()
   }, [options.threshold, options.rootMargin, options.once])
