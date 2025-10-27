@@ -801,35 +801,100 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 2px solid rgba(42, 91, 108, 0.15);
-  padding: 10px 8px 12px;
+  padding: 8px 6px 10px;
   box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12), 0 -2px 6px rgba(0, 0, 0, 0.08);
   z-index: 1000;
-  gap: 8px;
+  gap: 6px;
   justify-content: space-around;
+  align-items: center;
+  transition: padding 0.3s ease;
 }
 
+.quick-actions-bar.expanded {
+  padding: 10px 8px 12px;
+}
+
+/* Toggle button for expand/collapse */
+.quick-action-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: rgba(42, 91, 108, 0.1);
+  color: var(--brand);
+  border: 1.5px solid rgba(42, 91, 108, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.quick-action-toggle:hover {
+  background: rgba(42, 91, 108, 0.15);
+  border-color: rgba(42, 91, 108, 0.4);
+  transform: translateY(-2px);
+}
+
+.quick-action-toggle:active {
+  transform: translateY(0);
+}
+
+.quick-action-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.quick-actions-bar.expanded .quick-action-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Action buttons - default collapsed (icon only) */
 .quick-action-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 10px 8px;
+  gap: 2px;
+  padding: 10px 6px;
   background: linear-gradient(135deg, var(--brand), var(--brand-light));
   color: var(--white);
   text-decoration: none;
   border-radius: 12px;
   font-weight: 600;
-  font-size: 0.7rem;
-  min-width: 62px;
+  font-size: 0.65rem;
+  min-width: 48px;
   flex: 1;
-  max-width: 78px;
+  max-width: 56px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(42, 91, 108, 0.2), 0 1px 3px rgba(42, 91, 108, 0.15);
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+
+/* Expanded state - show labels */
+.quick-actions-bar.expanded .quick-action-btn {
+  gap: 4px;
+  padding: 10px 8px;
+  min-width: 62px;
+  max-width: 78px;
+}
+
+/* Hide labels by default (collapsed) */
+.quick-action-btn .action-label {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Show labels when expanded */
+.quick-actions-bar.expanded .quick-action-btn .action-label {
+  max-height: 20px;
+  opacity: 1;
 }
 
 .quick-action-btn::before {
@@ -2025,27 +2090,57 @@ body {
 /* Extra small screens - adjust quick actions bar for 5 buttons */
 @media (max-width: 380px) {
   .quick-action-btn {
+    font-size: 0.6rem;
+    padding: 8px 4px;
+    min-width: 44px;
+    max-width: 52px;
+    gap: 2px;
+  }
+  
+  .quick-actions-bar.expanded .quick-action-btn {
     font-size: 0.65rem;
-    padding: 8px 5px;
-    min-width: 52px;
+    padding: 9px 6px;
+    min-width: 56px;
     max-width: 68px;
-    gap: 3px;
   }
   
   .quick-action-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
   
   .quick-actions-bar {
-    padding: 8px 6px 10px;
+    padding: 7px 4px 9px;
+    gap: 4px;
+  }
+  
+  .quick-actions-bar.expanded {
+    padding: 9px 6px 11px;
     gap: 5px;
+  }
+  
+  .quick-action-toggle {
+    min-width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+  
+  .quick-action-toggle svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
 /* Medium mobile screens - optimize spacing */
 @media (min-width: 381px) and (max-width: 500px) {
   .quick-action-btn {
+    font-size: 0.65rem;
+    padding: 9px 5px;
+    min-width: 50px;
+    max-width: 58px;
+  }
+  
+  .quick-actions-bar.expanded .quick-action-btn {
     font-size: 0.72rem;
     padding: 10px 7px;
     min-width: 64px;
@@ -2053,6 +2148,10 @@ body {
   }
   
   .quick-actions-bar {
+    gap: 5px;
+  }
+  
+  .quick-actions-bar.expanded {
     gap: 7px;
   }
 }

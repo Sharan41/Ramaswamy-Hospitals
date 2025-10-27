@@ -33,7 +33,7 @@ export const translations = {
     quickActions: {
       call: 'Call',
       whatsapp: 'WhatsApp',
-      directions: 'Directions',
+      location: 'Location',
       feedback: 'Feedback'
     },
     footer: {
@@ -436,7 +436,7 @@ export const translations = {
     quickActions: {
       call: 'కాల్ చేయండి',
       whatsapp: 'వాట్సాప్',
-      directions: 'దిశలు',
+      location: 'స్థానం',
       feedback: 'అభిప్రాయం'
     },
     footer: {
