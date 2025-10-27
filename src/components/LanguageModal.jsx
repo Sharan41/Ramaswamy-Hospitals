@@ -70,9 +70,9 @@ export default function LanguageModal({ onSelectLanguage }) {
           </div>
           
           <p style={{ marginTop: 24, fontSize: '0.9rem', color: 'var(--muted)', textAlign: 'center' }}>
-            You can change language anytime using the toggle button in the header
+            You can change language anytime by selecting the 🌐 option
             <br />
-            మీరు ఎప్పుడైనా హెడర్‌లోని టోగుల్ బటన్ ఉపయోగించి భాషను మార్చవచ్చు
+            మీరు ఎప్పుడైనా 🌐 ఎంపికను ఎంచుకోవడం ద్వారా భాషను మార్చవచ్చు
           </p>
         </div>
       </div>
