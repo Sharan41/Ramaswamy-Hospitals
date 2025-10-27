@@ -17,10 +17,28 @@ export default function Home() {
 
   // Handle scroll to feedback form when hash is present
   useEffect(() => {
-    if (window.location.hash === '#feedback-form') {
-      setTimeout(() => {
-        document.getElementById('feedback-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      }, 300)
+    const handleHashScroll = () => {
+      if (window.location.hash === '#feedback-form') {
+        // First scroll to top instantly to ensure video loads
+        window.scrollTo({ top: 0, behavior: 'instant' })
+        // Then scroll to feedback form smoothly after a short delay
+        setTimeout(() => {
+          const element = document.getElementById('feedback-form')
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          }
+        }, 500)
+      }
+    }
+
+    // Handle on mount
+    handleHashScroll()
+
+    // Handle on hash change
+    window.addEventListener('hashchange', handleHashScroll)
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashScroll)
     }
   }, [])
 

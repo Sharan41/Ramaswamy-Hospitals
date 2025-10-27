@@ -1,4 +1,4 @@
-import { Outlet, NavLink, useLocation } from 'react-router-dom'
+import { Outlet, NavLink, Link, useLocation } from 'react-router-dom'
 import { useI18n } from './i18n'
 import './App.css'
 import { useState } from 'react'
@@ -71,13 +71,19 @@ function App() {
               {t.emergencyBar.whatsapp}
             </a>
             <span className="topbar-divider">or</span>
-            <a 
-              href="/#feedback-form" 
+            <Link 
+              to="/#feedback-form" 
               className="topbar-cta topbar-feedback"
               onClick={(e) => {
-                if (window.location.pathname === '/') {
+                if (pathname === '/') {
                   e.preventDefault()
-                  document.getElementById('feedback-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                  const element = document.getElementById('feedback-form')
+                  if (element) {
+                    window.scrollTo({ top: 0, behavior: 'instant' })
+                    setTimeout(() => {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                    }, 100)
+                  }
                 }
               }}
             >
@@ -86,7 +92,7 @@ function App() {
               </svg>
               <span className="topbar-cta-text">{t.topbar.feedback}</span>
               <span className="topbar-cta-text-short">{t.topbar.feedback}</span>
-            </a>
+            </Link>
             <button className="topbar-lang-toggle" onClick={() => setLang(lang === 'en' ? 'te' : 'en')} aria-label="Toggle language">
               <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10"/>
@@ -161,13 +167,19 @@ function App() {
           </svg>
           <span>{t.quickActions.directions}</span>
         </a>
-        <a 
-          href="/#feedback-form" 
+        <Link
+          to="/#feedback-form"
           className="quick-action-btn"
           onClick={(e) => {
-            if (window.location.pathname === '/') {
+            if (pathname === '/') {
               e.preventDefault()
-              document.getElementById('feedback-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+              const element = document.getElementById('feedback-form')
+              if (element) {
+                window.scrollTo({ top: 0, behavior: 'instant' })
+                setTimeout(() => {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                }, 100)
+              }
             }
           }}
           aria-label="Share feedback"
@@ -176,7 +188,7 @@ function App() {
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
           <span>{t.quickActions.feedback}</span>
-        </a>
+        </Link>
         <button className="quick-action-btn" onClick={() => setLang(lang === 'en' ? 'te' : 'en')} aria-label="Toggle language">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="12" cy="12" r="10"/>
