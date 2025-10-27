@@ -1,7 +1,7 @@
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom'
 import { useI18n } from './i18n'
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import crestLogo from './assets/crest-logo.jpg'
 import bannerLogo from './assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg'
 import ScrollToTop from './components/ScrollToTop.jsx'
@@ -14,7 +14,9 @@ function App() {
   const { t, lang, setLang } = useI18n()
   const { pathname } = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [quickActionsExpanded, setQuickActionsExpanded] = useState(false)
+  const [quickActionsExpanded, setQuickActionsExpanded] = useState(true)
+  const lastScrollY = useRef(0)
+  const scrollTimeout = useRef(null)
   
   const routeTitle = (() => {
     if (pathname === '/') return t.nav.home
@@ -30,6 +32,43 @@ function App() {
   if (typeof document !== 'undefined') {
     document.title = 'Dr.Ramaswamy Hospitals | ' + routeTitle
   }
+  
+  // Auto-hide labels on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      // Clear existing timeout
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current)
+      }
+      
+      // Hide labels while scrolling down
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setQuickActionsExpanded(false)
+      }
+      // Show labels while scrolling up
+      else if (currentScrollY < lastScrollY.current) {
+        setQuickActionsExpanded(true)
+      }
+      
+      // Show labels after user stops scrolling (800ms delay)
+      scrollTimeout.current = setTimeout(() => {
+        setQuickActionsExpanded(true)
+      }, 800)
+      
+      lastScrollY.current = currentScrollY
+    }
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current)
+      }
+    }
+  }, [])
   
   return (
     <div className={`app ${mobileOpen ? 'mobile-open' : ''}`}>
@@ -149,21 +188,6 @@ function App() {
       </main>
       
       <div className={`quick-actions-bar ${quickActionsExpanded ? 'expanded' : ''}`} role="toolbar" aria-label="Quick actions">
-        <button 
-          className="quick-action-toggle" 
-          onClick={() => setQuickActionsExpanded(!quickActionsExpanded)}
-          aria-label={quickActionsExpanded ? 'Hide labels' : 'Show labels'}
-          title={quickActionsExpanded ? 'Hide labels' : 'Show labels'}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {quickActionsExpanded ? (
-              <path d="M19 9l-7 7-7-7"/>
-            ) : (
-              <path d="M5 15l7-7 7 7"/>
-            )}
-          </svg>
-        </button>
-        
         <a href="tel:+919912757854" className="quick-action-btn" aria-label="Call hospital">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
