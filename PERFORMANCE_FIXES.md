@@ -254,3 +254,4 @@ We already have width/height in PhotoGallery, but need to add to more images thr
 If you need assistance with any of these optimizations, let me know which ones you'd like me to help implement!
 
 
+
