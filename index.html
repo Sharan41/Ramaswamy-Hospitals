@@ -40,10 +40,12 @@
     <!-- Additional Tags -->
     <meta name="google-site-verification" content="APakslzOCtWClf8hdCQXLR4YSh5qniwLM2aY0pfxhQY" />
     
-    <!-- Favicon - Google Standards Compliant -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Favicon - Google Search Optimized (PNG first for better indexing) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-96x96.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     
     <!-- Web App Manifest -->
@@ -59,16 +61,27 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Hospital",
+      "@type": ["Hospital", "MedicalOrganization", "LocalBusiness"],
       "@id": "https://www.ramaswamyhospitals.com/#hospital",
       "name": "Dr.Ramaswamy Hospitals",
-      "alternateName": "Ramaswamy Hospitals",
+      "alternateName": ["Ramaswamy Hospitals", "Dr Ramaswamy Hospital Kavali"],
       "url": "https://www.ramaswamyhospitals.com",
-      "logo": "https://www.ramaswamyhospitals.com/crest-logo.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ramaswamyhospitals.com/crest-logo.jpg",
+        "width": 512,
+        "height": 512
+      },
       "image": [
-        "https://www.ramaswamyhospitals.com/crest-logo.jpg"
+        {
+          "@type": "ImageObject",
+          "url": "https://www.ramaswamyhospitals.com/crest-logo.jpg",
+          "width": 512,
+          "height": 512
+        }
       ],
       "description": "Dr.Ramaswamy Hospitals - Kavali's first Multi-specialty hospital with 25+ years of trusted healthcare service. 24/7 emergency care, advanced ICU, dialysis, orthopedics, nephrology & more.",
+      "slogan": "Trusted Healthcare Since 1999",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Vishanalayam Street",
@@ -82,8 +95,24 @@
         "latitude": "14.916762299999998",
         "longitude": "79.9951669"
       },
-      "telephone": "+91-9912757854",
+      "telephone": ["+91-9912757854", "+91-7824055789"],
       "email": "ramaswamyhospitals@gmail.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-9912757854",
+          "contactType": "Emergency",
+          "availableLanguage": ["English", "Telugu", "Hindi"],
+          "areaServed": "IN"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7824055789",
+          "contactType": "Customer Service",
+          "availableLanguage": ["English", "Telugu", "Hindi"],
+          "areaServed": "IN"
+        }
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -100,35 +129,79 @@
       ],
       "priceRange": "₹₹",
       "medicalSpecialty": [
-        "Orthopedics",
-        "Nephrology",
-        "General Medicine",
-        "General Surgery",
-        "Urology",
-        "Neurology"
-      ],
-      "availableService": [
         {
-          "@type": "MedicalProcedure",
-          "name": "24/7 Emergency Care"
+          "@type": "MedicalSpecialty",
+          "name": "Orthopedics",
+          "url": "https://www.ramaswamyhospitals.com/services#orthopedics"
         },
         {
-          "@type": "MedicalProcedure",
-          "name": "Dialysis Services"
+          "@type": "MedicalSpecialty",
+          "name": "Nephrology",
+          "url": "https://www.ramaswamyhospitals.com/services#nephrology"
         },
         {
-          "@type": "MedicalProcedure",
-          "name": "ICU Care"
+          "@type": "MedicalSpecialty",
+          "name": "General Medicine",
+          "url": "https://www.ramaswamyhospitals.com/services#general-medicine"
         },
         {
-          "@type": "MedicalProcedure",
-          "name": "Orthopedic Surgery"
+          "@type": "MedicalSpecialty",
+          "name": "General Surgery",
+          "url": "https://www.ramaswamyhospitals.com/services#general-surgery"
         },
         {
-          "@type": "MedicalProcedure",
-          "name": "General Surgery"
+          "@type": "MedicalSpecialty",
+          "name": "Urology",
+          "url": "https://www.ramaswamyhospitals.com/services#urology"
+        },
+        {
+          "@type": "MedicalSpecialty",
+          "name": "Neurology",
+          "url": "https://www.ramaswamyhospitals.com/services#neurology"
         }
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Medical Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "24/7 Emergency Care"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Dialysis Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "ICU & Critical Care"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Orthopedic Surgery"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "General Surgery"
+            }
+          }
+        ]
+      },
+      "numberOfBeds": 50,
       "founder": {
         "@type": "Person",
         "name": "Dr. Manchikanti Ramaswamy",
@@ -225,6 +298,56 @@
         },
         "query-input": "required name=search_term_string"
       }
+    }
+    </script>
+
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Dr.Ramaswamy Hospitals located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr.Ramaswamy Hospitals is located at Vishanalayam Street, Kavali, Nellore District, Andhra Pradesh - 524201. We are Kavali's first multi-specialty hospital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Dr.Ramaswamy Hospitals provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide comprehensive medical services including 24/7 Emergency Care, ICU & Critical Care, Dialysis Services, Orthopedic Surgery, General Surgery, Nephrology, Urology, Neurology, and General Medicine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Dr.Ramaswamy Hospitals open 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our emergency services and critical care units operate 24/7. Regular OPD services are available Monday to Saturday (9 AM - 8 PM) and Sunday (9 AM - 2 PM)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Dr.Ramaswamy Hospitals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact us at +91-9912757854 for emergency services or +91-7824055789 for general inquiries. You can also email us at ramaswamyhospitals@gmail.com or visit our website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Dr.Ramaswamy Hospitals have dialysis facilities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have state-of-the-art dialysis facilities with experienced nephrologists and trained staff providing quality kidney care."
+          }
+        }
+      ]
     }
     </script>
     
