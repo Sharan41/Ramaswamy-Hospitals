@@ -42,7 +42,7 @@ export const translations = {
       copyright: 'All rights reserved.'
     },
     home: {
-      tagline: '<strong>First Super Speciality Hospital</strong> in Kavali. Providing compassionate, quality healthcare to our community for over<br><strong>25 years</strong>.',
+      tagline: '<strong>First Super Speciality Hospital</strong> in Kavali. Providing compassionate, quality healthcare to our community for over&nbsp;<strong>25&nbsp;years</strong>.',
       heroBadge: 'Trusted Healthcare Since 1999',
       exploreServices: 'Explore Services',
       callEmergency: 'Emergency Call',
@@ -529,7 +529,7 @@ export const translations = {
       copyright: 'అన్ని హక్కులు సంరక్షించబడ్డాయి.'
     },
     home: {
-      tagline: 'కావలిలో <strong>మొదటి సూపర్ స్పెషాలిటీ హాస్పిటల్</strong>. మా సమాజానికి దయతో కూడిన, నాణ్యమైన ఆరోగ్య సంరక్షణ అందిస్తున్నాము<br><strong>25 సంవత్సరాలకు</strong> పైగా.',
+      tagline: 'కావలిలో <strong>మొదటి సూపర్ స్పెషాలిటీ హాస్పిటల్</strong>. మా సమాజానికి దయతో కూడిన, నాణ్యమైన ఆరోగ్య సంరక్షణ అందిస్తున్నాము&nbsp;<strong>25&nbsp;సంవత్సరాలకు</strong>&nbsp;పైగా.',
       heroBadge: '1999 నుండి నమ్మదగిన ఆరోగ్య సంరక్షణ',
       exploreServices: 'సేవలను అన్వేషించండి',
       callEmergency: 'ఎమర్జెన్సీ కాల్',
