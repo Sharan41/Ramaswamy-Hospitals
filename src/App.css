@@ -9606,6 +9606,8 @@ body {
 .home-sneak-peek-section {
   padding: 80px 24px;
   background: var(--bg);
+  scroll-behavior: smooth;
+  will-change: transform;
 }
 
 .sneak-peek-card {
@@ -9620,7 +9622,7 @@ body {
   padding: 60px;
   box-shadow: var(--shadow-lg);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .sneak-peek-card.reverse {
@@ -9786,6 +9788,7 @@ body {
 .achievements-visual {
   background: linear-gradient(135deg, var(--brand-dark), var(--brand));
   border-radius: 20px;
+  overflow: hidden;
   padding: 50px 45px;
   position: relative;
 }
@@ -9795,6 +9798,7 @@ body {
   border-radius: 20px;
   padding: 50px 45px;
   position: relative;
+  overflow: hidden;
 }
 
 /* Testimonials Specific Section Styling */
@@ -9942,6 +9946,7 @@ body {
   position: relative;
   width: 100%;
   height: 460px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10516,11 +10521,11 @@ body {
   }
   
   .sneak-peek-visual {
-    overflow: hidden;
+    overflow: visible;
   }
   
   .home-sneak-peek-section {
-    overflow: hidden;
+    overflow: visible;
   }
   
   /* Hide carousel dots on mobile - plain automatic */
