@@ -6,8 +6,8 @@ import { useState } from 'react'
 
 export default function Achievements() {
   const { t } = useI18n()
-  const [flippedCards, setFlippedCards] = useState(new Set())
-  const [animatingCards, setAnimatingCards] = useState(new Set())
+  const [flippedCards, setFlippedCards] = useState({})
+  const [animatingCard, setAnimatingCard] = useState(null)
   
   // Major Statistics
   const stats = [
@@ -142,33 +142,25 @@ export default function Achievements() {
     // Prevent event bubbling
     if (event) {
       event.stopPropagation()
+      event.preventDefault()
     }
     
-    // Prevent rapid clicks on the same card during animation
-    if (animatingCards.has(cardId)) return
+    // Prevent clicking on card that's currently animating
+    if (animatingCard === cardId) return
     
     // Mark this card as animating
-    setAnimatingCards(prev => new Set([...prev, cardId]))
+    setAnimatingCard(cardId)
     
     // Toggle the flipped state
-    setFlippedCards(prevFlipped => {
-      const newFlipped = new Set(prevFlipped)
-      if (newFlipped.has(cardId)) {
-        newFlipped.delete(cardId)
-      } else {
-        newFlipped.add(cardId)
-      }
-      return newFlipped
-    })
+    setFlippedCards(prev => ({
+      ...prev,
+      [cardId]: !prev[cardId]
+    }))
     
-    // Remove from animating set after transition completes (600ms)
+    // Reset animation lock after transition completes
     setTimeout(() => {
-      setAnimatingCards(prev => {
-        const newSet = new Set(prev)
-        newSet.delete(cardId)
-        return newSet
-      })
-    }, 650)
+      setAnimatingCard(null)
+    }, 700)
   }
 
   return (
@@ -216,18 +208,18 @@ export default function Achievements() {
             {achievements.map((achievement, index) => (
               <FadeIn key={achievement.id} delay={index * 50}>
                 <div 
-                  className={`achievement-card-modern ${flippedCards.has(achievement.id) ? 'flipped' : ''}`}
+                  className={`achievement-card-modern ${flippedCards[achievement.id] ? 'flipped' : ''}`}
                   onClick={(e) => handleCardClick(achievement.id, e)}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault()
-                      handleCardClick(achievement.id)
+                      handleCardClick(achievement.id, e)
                     }
                   }}
-                  aria-label={`${t.achievements[`${achievement.key}Title`]} - ${flippedCards.has(achievement.id) ? 'Click to return' : 'Click to flip'}`}
-                  aria-pressed={flippedCards.has(achievement.id)}
+                  aria-label={`${t.achievements[`${achievement.key}Title`]} - ${flippedCards[achievement.id] ? 'Click to return' : 'Click to flip'}`}
+                  aria-pressed={flippedCards[achievement.id] ? 'true' : 'false'}
                 >
                   <div className="achievement-card-inner">
                     {/* Front of card */}
