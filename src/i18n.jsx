@@ -87,7 +87,30 @@ export const translations = {
       emergencyCareCard: 'Emergency Care',
       emergencyCareCardDesc: '24/7 availability',
       ourFacilitiesCard: 'Our Facilities',
-      ourFacilitiesCardDesc: 'Modern medical equipment'
+      ourFacilitiesCardDesc: 'Modern medical equipment',
+      achievementsBadge: 'Milestones',
+      achievementsTitle: 'Pioneering Medical Excellence',
+      achievementsDesc: 'Discover our groundbreaking achievements in orthopedic care and surgical innovation that have transformed healthcare in Kavali.',
+      achievementsMilestones: 'Major Milestones',
+      achievementsYears: 'Years of Excellence',
+      achievementsSurgeries: 'Monthly Surgeries',
+      achievementsCTA: 'View All Achievements',
+      testimonialsBadge: 'Patient Stories',
+      testimonialsTitle: 'Trusted by Thousands',
+      testimonialsDesc: 'Read authentic experiences from patients who have received world-class care at our hospital.',
+      testimonialsPreviewQuote: 'Excellent care and professional staff. The doctors are highly skilled and compassionate.',
+      testimonialsPreviewName: 'Rajesh Kumar',
+      testimonialsPreviewLocation: 'Kavali',
+      testimonial1Quote: 'Excellent care and treatment. The doctors and staff were very professional and caring.',
+      testimonial1Name: 'Rajesh Kumar',
+      testimonial1Location: 'Kavali',
+      testimonial2Quote: 'Outstanding medical facility with state-of-the-art equipment. Highly recommend for orthopedic treatments.',
+      testimonial2Name: 'Priya Sharma',
+      testimonial2Location: 'Atmakur',
+      testimonial3Quote: 'Life-changing surgery experience. The post-operative care was exceptional and recovery was smooth.',
+      testimonial3Name: 'Anitha Reddy',
+      testimonial3Location: 'Kavali',
+      testimonialsCTA: 'Read More Reviews'
     },
     about: {
       title: 'About Us',
@@ -194,36 +217,98 @@ export const translations = {
       patient6Location: 'Kavali'
     },
     achievements: {
-      title: 'Achievements & Milestones',
-      subtitle: 'We take pride in our continuous commitment to excellence in healthcare.',
-      keyMilestones: 'Key Milestones',
-      certifications: 'Certifications & Accreditations',
-      isoCertified: 'ISO Certified',
-      isoCertifiedDesc: 'Our hospital is ISO certified, ensuring the highest standards of quality and patient safety in all our healthcare services.',
-      tpaPartner: 'Attached with major TPAs',
-      tpaPartnerDesc: 'We are partnered with major Third Party Administrators (TPAs) to provide seamless cashless treatment options for our patients.',
-      infosysPartner: 'Corporate Medical Partner for Infosys',
-      infosysPartnerDesc: 'Proud to be the trusted corporate medical partner for Infosys, providing comprehensive healthcare services to their employees and families.',
-      covidCare: 'COVID-19 Care Excellence',
-      covidCareDesc: 'Donec eu libero sit amet quam egestas semper. Provided exceptional care during the pandemic while ensuring safety protocols.',
-      emergency2020: 'Expanded Emergency Department',
-      emergency2020Desc: 'Nulla facilisi donec hendrerit orci sed velit dictum. Upgraded emergency facilities to provide faster and more comprehensive care.',
-      community2019: 'Community Health Initiative Launch',
-      community2019Desc: 'Maecenas vel lectus vel nulla facilisis ornare. Started free health camps and awareness programs for the local community.',
-      yearsExcellence: '25+ Years of Excellence',
-      yearsExcellenceText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Since our establishment, we have been dedicated to providing exceptional healthcare services to our community. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      cert1Name: 'ISO 9001:2015',
-      cert1Desc: 'Certified Healthcare Facility',
-      cert2Name: 'NABH',
-      cert2Desc: 'Accreditation (Example)',
-      cert3Name: 'Green Hospital',
-      cert3Desc: 'Initiative Participant',
-      cert4Name: 'ACLS Certified',
-      cert4Desc: 'Advanced Cardiac Life Support Team',
-      cert5Name: 'Infection Control',
-      cert5Desc: 'Excellence Recognition',
-      cert6Name: 'Patient Safety',
-      cert6Desc: 'Compliance Award'
+      // Hero Section
+      heroBadge: 'Pioneering Orthopedic Excellence',
+      heroTitle: 'Groundbreaking Achievements in Orthopedic Care',
+      heroSubtitle: 'Leading Kavali\'s healthcare revolution with multiple firsts in advanced orthopedic procedures and comprehensive trauma care',
+      
+      // Stats Section
+      majorMilestones: 'Major Milestones',
+      patientsServed: 'Patients Served',
+      surgicalVolume: 'Surgeries Monthly',
+      yearsExperience: 'Years of Excellence',
+      
+      // Grid Section
+      sectionBadge: 'Our Achievements',
+      gridTitle: 'Setting New Standards in Orthopedic Medicine',
+      gridDescription: 'From being the first MSMCH-qualified orthopedic center to performing complex joint replacements and trauma care, our achievements reflect our commitment to bringing world-class orthopedic care to Kavali.',
+      
+      // Categories
+      categoryFirst: 'Regional First',
+      categorySpecialized: 'Specialized Care',
+      categoryOperational: 'Operational Excellence',
+      categoryCare: 'Patient-Centered Care',
+      categoryAdvanced: 'Advanced Procedures',
+      
+      // Achievement 1: MSMCH
+      msmchTitle: 'First MSMCH Ortho in Kavali',
+      msmchDesc: 'Dr. Ramaswamy Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.',
+      
+      // Achievement 2: THR 2005
+      thr2005Title: 'First Total Hip Replacement (THR) in Kavali - 2005',
+      thr2005Desc: 'In 2005, our hospital achieved a historic milestone by performing the first-ever Total Hip Replacement surgery in Kavali. This complex procedure restored mobility and reduced chronic pain for patients suffering from severe hip arthritis, fractures, and degenerative conditions. Since then, our orthopaedic team has successfully completed numerous hip replacement surgeries with excellent long-term outcomes.',
+      
+      // Achievement 3: Golden Knee
+      goldenKneeTitle: 'First Total Knee Replacement (TKR) - Golden Knee in Kavali',
+      goldenKneeDesc: 'We proudly performed Kavali\'s first Total Knee Replacement, also known as the Golden Knee Replacement, using advanced implant materials designed for durability and longevity. This procedure has transformed the lives of countless patients with end-stage arthritis, helping them return to pain-free, active living with natural joint movement and stability.',
+      
+      // Achievement 4: Shoulder Replacement
+      shoulderReplacementTitle: 'First Shoulder Replacement in Kavali',
+      shoulderReplacementDesc: 'Our team accomplished another breakthrough by performing the first Shoulder Replacement surgery in Kavali. This procedure helps patients suffering from severe shoulder arthritis, fractures, or rotator cuff injuries regain motion and comfort, restoring confidence and quality of life.',
+      
+      // Achievement 5: Reverse Shoulder
+      reverseShoulderTitle: 'First Reverse Shoulder Replacement in Kavali',
+      reverseShoulderDesc: 'Continuing our tradition of medical excellence, we were the first to introduce Reverse Shoulder Replacement surgery in Kavali. This highly specialized procedure benefits patients who have lost shoulder function due to irreparable rotator cuff tears or complex fractures, offering them renewed mobility and strength.',
+      
+      // Achievement 6: Tumour Procedures
+      tumourProceduresTitle: 'Comprehensive Tumour Procedures',
+      tumourProceduresDesc: 'Our orthopaedic oncology division handles a wide spectrum of bone tumour surgeries, including tumour excision, limb-sparing procedures, and reconstruction. These complex cases are managed with precision and care, ensuring not just tumour removal but also preservation of limb function and appearance, thereby improving overall quality of life.',
+      
+      // Achievement 7: Revision TKR and THR
+      revisionTkrThrTitle: 'Revision TKR and THR Expertise',
+      revisionTkrThrDesc: 'We specialize in Revision Knee and Hip Replacements — complex surgeries that correct or improve previous joint replacements. Our expertise in handling failed, infected, or worn-out implants has given many patients a second chance at pain-free movement with enhanced implant stability and longevity.',
+      
+      // Achievement 8: Spine Surgeries
+      spineSurgeriesTitle: 'Advanced Spine Surgeries',
+      spineSurgeriesDesc: 'Our hospital is equipped to perform a full range of spinal surgeries, including laminectomy, discectomy, spinal fusion, post-stabilization, and cervical spine operations. We treat degenerative disc disease, herniated discs, trauma, and spinal deformities with precision. Post-surgery rehabilitation ensures patients regain mobility and stability safely and effectively.',
+      
+      // Achievement 9: Polytrauma
+      polytraumaTitle: 'Expert Polytrauma Management',
+      polytraumaDesc: 'We are recognized for our expertise in managing polytrauma cases, where patients present with multiple life-threatening injuries. Our multidisciplinary trauma team, including orthopaedic surgeons, critical care specialists, and anaesthetists, ensures rapid stabilization, timely surgery, and comprehensive rehabilitation for the best outcomes.',
+      
+      // Achievement 10: Pelvic Fixation
+      pelvicFixationTitle: 'Advanced Pelvic Fracture Fixation',
+      pelvicFixationDesc: 'Pelvic fractures are complex and often life-threatening. Our specialists are trained in advanced pelvic fracture fixation techniques, restoring stability to the pelvic ring while minimizing complications. These procedures are performed with utmost care using modern instrumentation and imaging guidance.',
+      
+      // Achievement 11: Surgical Volume
+      surgicalVolumeTitle: 'High Surgical Volume - 130 to 150 Surgeries Monthly',
+      surgicalVolumeDesc: 'With an average of 130–150 surgeries every month, Dr. Ramaswamy Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community, as well as the consistency, skill, and dedication of our surgical and nursing teams.',
+      
+      // Achievement 12: Paediatric Trauma
+      paediatricTraumaTitle: 'Specialized Paediatric Trauma Care',
+      paediatricTraumaDesc: 'Our orthopaedic department caters to all types of paediatric fractures and trauma cases, from simple fractures to complex growth plate injuries. With specialized techniques and equipment suited for children, we ensure gentle, safe, and effective treatment to promote healthy bone healing and growth.',
+      
+      // Achievement 13: Geriatric Trauma
+      geriatricTraumaTitle: 'Comprehensive Geriatric Trauma Care',
+      geriatricTraumaDesc: 'Elderly patients require special attention in trauma management due to fragile bones and associated medical conditions. Our team offers comprehensive geriatric fracture care, including early mobilization, minimally invasive surgeries, and rehabilitation programs focused on restoring independence and reducing recovery time.',
+      
+      // Achievement 14: Soft Tissue
+      softTissueTitle: 'Advanced Soft Tissue Reconstruction Procedures',
+      softTissueDesc: 'We offer advanced soft tissue reconstruction surgeries to restore form and function following trauma, infection, or tumour removal. Using modern reconstructive techniques, including skin grafts and flap surgeries, we help patients regain both physical recovery and aesthetic outcomes.',
+      
+      // Achievement 15: Tendon Transfer
+      tendonTransferTitle: 'Specialized Tendon Transfer Surgeries',
+      tendonTransferDesc: 'Our surgeons perform tendon transfer procedures for patients who have lost muscle function due to nerve injuries, paralysis, or congenital conditions. These surgeries are meticulously planned to restore limb movement, improve strength, and enhance the patient\'s ability to perform daily activities independently.',
+      
+      // Achievement 16: Revision Surgeries
+      revisionSurgeriesTitle: 'Comprehensive Revision Surgeries',
+      revisionSurgeriesDesc: 'Our expertise extends to revision surgeries across all orthopaedic sub-specialties — including fracture fixations, joint replacements, and spinal operations. Each revision case is carefully evaluated to ensure optimal surgical planning, infection control, and structural correction for lasting recovery.',
+      
+      // CTA Section
+      ctaTitle: 'Experience World-Class Orthopedic Care',
+      ctaDescription: 'Join thousands of patients who have trusted us with their orthopedic health. Our pioneering achievements and expert team are ready to provide you with the best care possible.',
+      ctaButton: 'Book Consultation',
+      ctaButtonSecondary: 'View Services'
     },
     contact: {
       title: 'Contact & Location',
@@ -489,7 +574,30 @@ export const translations = {
       emergencyCareCard: 'అత్యవసర సంరక్షణ',
       emergencyCareCardDesc: '24/7 అందుబాటు',
       ourFacilitiesCard: 'మా సౌకర్యాలు',
-      ourFacilitiesCardDesc: 'ఆధునిక వైద్య పరికరాలు'
+      ourFacilitiesCardDesc: 'ఆధునిక వైద్య పరికరాలు',
+      achievementsBadge: 'మైలురాళ్లు',
+      achievementsTitle: 'వైద్య శ్రేష్ఠతలో అగ్రగామి',
+      achievementsDesc: 'కావలిలో ఆరోగ్య సంరక్షణను మార్చిన ఆర్థోపెడిక్ సంరక్షణ మరియు శస్త్రచికిత్స ఆవిష్కరణలో మా అద్భుత విజయాలను కనుగొనండి.',
+      achievementsMilestones: 'ప్రధాన మైలురాళ్లు',
+      achievementsYears: 'సంవత్సరాల శ్రేష్ఠత',
+      achievementsSurgeries: 'నెలవారీ శస్త్రచికిత్సలు',
+      achievementsCTA: 'అన్ని విజయాలను చూడండి',
+      testimonialsBadge: 'రోగుల కథలు',
+      testimonialsTitle: 'వేలాది మంది విశ్వసించారు',
+      testimonialsDesc: 'మా ఆసుపత్రిలో ప్రపంచ-స్థాయి సంరక్షణ పొందిన రోగుల నుండి ప్రామాణిక అనుభవాలను చదవండి.',
+      testimonialsPreviewQuote: 'అద్భుతమైన సంరక్షణ మరియు వృత్తిపరమైన సిబ్బంది. వైద్యులు అత్యంత నైపుణ్యం మరియు కరుణతో ఉన్నారు.',
+      testimonialsPreviewName: 'రాజేష్ కుమార్',
+      testimonialsPreviewLocation: 'కావలి',
+      testimonial1Quote: 'అద్భుతమైన సంరక్షణ మరియు చికిత్స. వైద్యులు మరియు సిబ్బంది చాలా వృత్తిపరంగా మరియు శ్రద్ధగా ఉన్నారు.',
+      testimonial1Name: 'రాజేష్ కుమార్',
+      testimonial1Location: 'కావలి',
+      testimonial2Quote: 'అత్యాధునిక పరికరాలతో అద్భుతమైన వైద్య సౌకర్యం. ఆర్థోపెడిక్ చికిత్సల కోసం చాలా సిఫార్సు చేస్తున్నాను.',
+      testimonial2Name: 'ప్రియా శర్మ',
+      testimonial2Location: 'ఆత్మకూరు',
+      testimonial3Quote: 'జీవితాన్ని మార్చే శస్త్రచికిత్స అనుభవం. శస్త్రచికిత్స తర్వాత సంరక్షణ అసాధారణమైనది మరియు కోలుకోవడం సజావుగా జరిగింది.',
+      testimonial3Name: 'అనిత రెడ్డి',
+      testimonial3Location: 'కావలి',
+      testimonialsCTA: 'మరిన్ని సమీక్షలు చదవండి'
     },
     about: {
       title: 'మా గురించి',
@@ -596,36 +704,98 @@ export const translations = {
       patient6Location: 'కావలి'
     },
     achievements: {
-      title: 'విజయాలు మరియు మైలురాళ్లు',
-      subtitle: 'ఆరోగ్య సంరక్షణలో శ్రేష్ఠత కోసం మా నిరంతర నిబద్ధతపై మేము గర్వపడుతున్నాము.',
-      keyMilestones: 'ముఖ్య మైలురాళ్లు',
-      certifications: 'ధృవపత్రాలు మరియు గుర్తింపులు',
-      isoCertified: 'ISO సర్టిఫైడ్',
-      isoCertifiedDesc: 'మా ఆసుపత్రి ISO సర్టిఫైడ్, మా అన్ని ఆరోగ్య సేవలలో అత్యధిక నాణ్యత మరియు రోగి భద్రత ప్రమాణాలను నిర్ధారిస్తుంది.',
-      tpaPartner: 'ప్రధాన TPAలతో అనుబంధం',
-      tpaPartnerDesc: 'మా రోగులకు సజావుగా క్యాష్‌లెస్ చికిత్స ఎంపికలను అందించడానికి మేము ప్రధాన థర్డ్ పార్టీ అడ్మినిస్ట్రేటర్లు (TPAs)తో భాగస్వామ్యం కలిగి ఉన్నాము.',
-      infosysPartner: 'ఇన్ఫోసిస్ కార్పొరేట్ మెడికల్ భాగస్వామి',
-      infosysPartnerDesc: 'ఇన్ఫోసిస్‌కు విశ్వసనీయ కార్పొరేట్ వైద్య భాగస్వామిగా ఉండటం గర్వంగా ఉంది, వారి ఉద్యోగులు మరియు కుటుంబాలకు సమగ్ర ఆరోగ్య సేవలను అందిస్తోంది.',
-      covidCare: 'COVID-19 సంరక్షణ శ్రేష్ఠత',
-      covidCareDesc: 'మహమ్మారి సమయంలో భద్రతా ప్రోటోకాల్స్‌ను నిర్ధారిస్తూ అసాధారణమైన సంరక్షణ అందించాము.',
-      emergency2020: 'అత్యవసర విభాగం విస్తరణ',
-      emergency2020Desc: 'వేగంగా మరియు మరింత సమగ్ర సంరక్షణ అందించడానికి అత్యవసర సౌకర్యాలను నవీకరించాము.',
-      community2019: 'కమ్యూనిటీ ఆరోగ్య కార్యక్రమం ప్రారంభం',
-      community2019Desc: 'స్థానిక సమాజం కోసం ఉచిత ఆరోగ్య శిబిరాలు మరియు అవగాహన కార్యక్రమాలను ప్రారంభించాము.',
-      yearsExcellence: '25+ సంవత్సరాల శ్రేష్ఠత',
-      yearsExcellenceText: 'మా స్థాపన నుండి, మేము మా సమాజానికి అసాధారణమైన ఆరోగ్య సంరక్షణ సేవలను అందించడంలో అంకితం చేయబడ్డాము. నాణ్యత, భద్రత మరియు రోగి శ్రేయస్సు మా ప్రధాన లక్ష్యాలు.',
-      cert1Name: 'ISO 9001:2015',
-      cert1Desc: 'ధృవీకరించబడిన ఆరోగ్య సంరక్షణ సౌకర్యం',
-      cert2Name: 'NABH',
-      cert2Desc: 'అక్రిడిటేషన్ (ఉదాహరణ)',
-      cert3Name: 'గ్రీన్ హాస్పిటల్',
-      cert3Desc: 'చొరవ పాల్గొనేవారు',
-      cert4Name: 'ACLS ధృవీకరణ',
-      cert4Desc: 'అధునాతన కార్డియాక్ లైఫ్ సపోర్ట్ టీం',
-      cert5Name: 'ఇన్ఫెక్షన్ కంట్రోల్',
-      cert5Desc: 'శ్రేష్ఠత గుర్తింపు',
-      cert6Name: 'రోగి భద్రత',
-      cert6Desc: 'అనుగుణత పురస్కారం'
+      // Hero Section
+      heroBadge: 'ఆర్థోపెడిక్ శ్రేష్ఠతలో అగ్రగామి',
+      heroTitle: 'ఆర్థోపెడిక్ సంరక్షణలో అద్భుత విజయాలు',
+      heroSubtitle: 'అత్యాధునిక ఆర్థోపెడిక్ ప్రక్రియలు మరియు సమగ్ర ట్రామా సంరక్షణలో అనేక మొదటి సాధనలతో కావలి ఆరోగ్య విప్లవానికి నాయకత్వం',
+      
+      // Stats Section
+      majorMilestones: 'ప్రధాన మైలురాళ్లు',
+      patientsServed: 'సేవించిన రోగులు',
+      surgicalVolume: 'నెలవారీ శస్త్రచికిత్సలు',
+      yearsExperience: 'సంవత్సరాల శ్రేష్ఠత',
+      
+      // Grid Section
+      sectionBadge: 'మా విజయాలు',
+      gridTitle: 'ఆర్థోపెడిక్ మెడిసిన్‌లో కొత్త ప్రమాణాలను నిర్ణయిస్తోంది',
+      gridDescription: 'మొదటి MSMCH-అర్హత కలిగిన ఆర్థోపెడిక్ కేంద్రం నుండి సంక్లిష్ట జాయింట్ రీప్లేస్‌మెంట్లు మరియు ట్రామా సంరక్షణ వరకు, మా విజయాలు కావలికి ప్రపంచ-స్థాయి ఆర్థోపెడిక్ సంరక్షణను తీసుకురావడానికి మా నిబద్ధతను ప్రతిబింబిస్తాయి.',
+      
+      // Categories
+      categoryFirst: 'ప్రాంతీయ మొదటిది',
+      categorySpecialized: 'ప్రత్యేక సంరక్షణ',
+      categoryOperational: 'కార్యాచరణ శ్రేష్ఠత',
+      categoryCare: 'రోగి-కేంద్రీకృత సంరక్షణ',
+      categoryAdvanced: 'అధునాతన ప్రక్రియలు',
+      
+      // Achievement 1: MSMCH
+      msmchTitle: 'కావలిలో మొదటి MSMCH ఆర్థో',
+      msmchDesc: 'MSMCH-అర్హత కలిగిన ఆర్థోపెడిక్ సర్జన్‌ను కలిగి ఉన్న కావలిలోని మొదటి ఆసుపత్రిగా డా. రామస్వామి హాస్పిటల్స్ గొప్ప గర్వం అనుభవిస్తోంది. ఈ సాధన ఆధునిక ఆర్థోపెడిక్ సంరక్షణ యొక్క కొత్త యుగాన్ని తెచ్చిపెట్టింది, సాక్ష్య-ఆధారిత చికిత్సలు, ఆధునిక శస్త్రచికిత్స పద్ధతులు మరియు ఈ ప్రాంతానికి రోగి నిర్వహణ యొక్క ఉన్నత ప్రమాణాలను పరిచయం చేసింది.',
+      
+      // Achievement 2: THR 2005
+      thr2005Title: 'కావలిలో మొదటి టోటల్ హిప్ రీప్లేస్‌మెంట్ (THR) - 2005',
+      thr2005Desc: '2005లో, కావలిలో మొట్టమొదటి టోటల్ హిప్ రీప్లేస్‌మెంట్ శస్త్రచికిత్సను ప్రదర్శించడం ద్వారా మా ఆసుపత్రి చారిత్రాత్మక మైలురాయిని సాధించింది. ఈ సంక్లిష్ట ప్రక్రియ తీవ్రమైన హిప్ ఆర్థరైటిస్, పగుళ్లు మరియు క్షీణత పరిస్థితులతో బాధపడుతున్న రోగులకు చలనశీలతను పునరుద్ధరించింది మరియు దీర్ఘకాలిక నొప్పిని తగ్గించింది. అప్పటి నుండి, మా ఆర్థోపెడిక్ బృందం అద్భుతమైన దీర్ఘకాలిక ఫలితాలతో అనేక హిప్ రీప్లేస్‌మెంట్ శస్త్రచికిత్సలను విజయవంతంగా పూర్తి చేసింది.',
+      
+      // Achievement 3: Golden Knee
+      goldenKneeTitle: 'కావలిలో మొదటి టోటల్ నీ రీప్లేస్‌మెంట్ (TKR) - గోల్డెన్ నీ',
+      goldenKneeDesc: 'మేము గర్వంగా కావలి యొక్క మొదటి టోటల్ నీ రీప్లేస్‌మెంట్‌ను ప్రదర్శించాము, దీనిని గోల్డెన్ నీ రీప్లేస్‌మెంట్ అని కూడా పిలుస్తారు, దీర్ఘకాలికత మరియు స్థిరత్వం కోసం రూపొందించిన అధునాతన ఇంప్లాంట్ పదార్థాలను ఉపయోగించాము. ఈ ప్రక్రియ అంతిమ దశ ఆర్థరైటిస్‌తో అసంఖ్యాక రోగుల జీవితాలను మార్చివేసింది, సహజ ఉమ్మడి కదలిక మరియు స్థిరత్వంతో నొప్పి-రహిత, చురుకుగా జీవించడానికి వారికి సహాయపడింది.',
+      
+      // Achievement 4: Shoulder Replacement
+      shoulderReplacementTitle: 'కావలిలో మొదటి షోల్డర్ రీప్లేస్‌మెంట్',
+      shoulderReplacementDesc: 'కావలిలో మొదటి షోల్డర్ రీప్లేస్‌మెంట్ శస్త్రచికిత్సను ప్రదర్శించడం ద్వారా మా బృందం మరొక పురోగతిని సాధించింది. ఈ ప్రక్రియ తీవ్రమైన షోల్డర్ ఆర్థరైటిస్, పగుళ్లు లేదా రోటేటర్ కఫ్ గాయాలతో బాధపడుతున్న రోగులకు చలనం మరియు సౌకర్యాన్ని తిరిగి పొందడంలో సహాయపడుతుంది, విశ్వాసం మరియు జీవన నాణ్యతను పునరుద్ధరిస్తుంది.',
+      
+      // Achievement 5: Reverse Shoulder
+      reverseShoulderTitle: 'కావలిలో మొదటి రివర్స్ షోల్డర్ రీప్లేస్‌మెంట్',
+      reverseShoulderDesc: 'వైద్య శ్రేష్ఠత యొక్క మా సంప్రదాయాన్ని కొనసాగిస్తూ, కావలిలో రివర్స్ షోల్డర్ రీప్లేస్‌మెంట్ శస్త్రచికిత్సను పరిచయం చేసిన మొదటి వారం మేము. ఈ అత్యంత ప్రత్యేకమైన ప్రక్రియ సరి చేయలేని రోటేటర్ కఫ్ కన్నీళ్లు లేదా సంక్లిష్ట పగుళ్ల కారణంగా షోల్డర్ పనితీరును కోల్పోయిన రోగులకు ప్రయోజనం చేకూరుస్తుంది, వారికి పునరుద్ధరించబడిన చలనశీలత మరియు బలాన్ని అందిస్తుంది.',
+      
+      // Achievement 6: Tumour Procedures
+      tumourProceduresTitle: 'సమగ్ర ట్యూమర్ ప్రక్రియలు',
+      tumourProceduresDesc: 'మా ఆర్థోపెడిక్ ఆంకాలజీ విభాగం ట్యూమర్ ఎక్సిషన్, లింబ్-స్పేరింగ్ ప్రక్రియలు మరియు పునర్నిర్మాణంతో సహా ఎముక ట్యూమర్ శస్త్రచికిత్సల విస్తృత వర్ణపటాన్ని నిర్వహిస్తుంది. ఈ సంక్లిష్ట కేసులు ఖచ్చితత్వం మరియు శ్రద్ధతో నిర్వహించబడతాయి, కేవలం ట్యూమర్ తొలగింపే కాకుండా లింబ్ ఫంక్షన్ మరియు ప్రదర్శన యొక్క సంరక్షణను కూడా నిర్ధారిస్తాయి, తద్వారా మొత్తం జీవన నాణ్యతను మెరుగుపరుస్తుంది.',
+      
+      // Achievement 7: Revision TKR and THR
+      revisionTkrThrTitle: 'రివిజన్ TKR మరియు THR నైపుణ్యం',
+      revisionTkrThrDesc: 'మేము రివిజన్ నీ మరియు హిప్ రీప్లేస్‌మెంట్లలో ప్రత్యేకత కలిగి ఉన్నాము - మునుపటి ఉమ్మడి పునఃస్థాపనలను సరిదిద్దే లేదా మెరుగుపరిచే సంక్లిష్ట శస్త్రచికిత్సలు. విఫలమైన, సంక్రమితమైన లేదా అరిగిపోయిన ఇంప్లాంట్లను నిర్వహించడంలో మా నైపుణ్యం మెరుగైన ఇంప్లాంట్ స్థిరత్వం మరియు దీర్ఘాయువుతో నొప్పి-రహిత కదలికలో అనేక రోగులకు రెండవ అవకాశాన్ని అందించింది.',
+      
+      // Achievement 8: Spine Surgeries
+      spineSurgeriesTitle: 'అధునాతన వెన్నెముక శస్త్రచికిత్సలు',
+      spineSurgeriesDesc: 'మా ఆసుపత్రి లామినెక్టమీ, డిస్కెక్టమీ, స్పైనల్ ఫ్యూజన్, పోస్ట్-స్టెబిలైజేషన్ మరియు సెర్వికల్ వెన్నెముక కార్యకలాపాలతో సహా వెన్నెముక శస్త్రచికిత్సల పూర్తి శ్రేణిని ప్రదర్శించడానికి అమర్చబడి ఉంది. మేము క్షీణత డిస్క్ వ్యాధి, హెర్నియేటెడ్ డిస్క్‌లు, ట్రామా మరియు వెన్నెముక వైకల్యాలను ఖచ్చితత్వంతో చికిత్స చేస్తాము. శస్త్రచికిత్స తర్వాత పునరావాసం రోగులు సురక్షితంగా మరియు సమర్థవంతంగా చలనశీలత మరియు స్థిరత్వాన్ని తిరిగి పొందేలా నిర్ధారిస్తుంది.',
+      
+      // Achievement 9: Polytrauma
+      polytraumaTitle: 'నిపుణుల పాలీట్రామా నిర్వహణ',
+      polytraumaDesc: 'రోగులు బహుళ ప్రాణాంతక గాయాలతో ఉన్న పాలీట్రామా కేసులను నిర్వహించడంలో మా నైపుణ్యం కోసం మేము గుర్తింపు పొందాము. ఆర్థోపెడిక్ సర్జన్లు, క్రిటికల్ కేర్ స్పెషలిస్ట్‌లు మరియు అనస్థీషియాలజిస్ట్‌లతో సహా మా మల్టీడిసిప్లినరీ ట్రామా బృందం, ఉత్తమ ఫలితాల కోసం వేగవంతమైన స్థిరీకరణ, సకాలంలో శస్త్రచికిత్స మరియు సమగ్ర పునరావాసాన్ని నిర్ధారిస్తుంది.',
+      
+      // Achievement 10: Pelvic Fixation
+      pelvicFixationTitle: 'అధునాతన పెల్విక్ ఫ్రాక్చర్ ఫిక్సేషన్',
+      pelvicFixationDesc: 'పెల్విక్ పగుళ్లు సంక్లిష్టమైనవి మరియు తరచుగా ప్రాణాంతకమైనవి. మా నిపుణులు అధునాతన పెల్విక్ ఫ్రాక్చర్ ఫిక్సేషన్ పద్ధతులలో శిక్షణ పొందారు, సమస్యలను తగ్గించేటప్పుడు పెల్విక్ రింగ్‌కు స్థిరత్వాన్ని పునరుద్ధరిస్తారు. ఈ ప్రక్రియలు ఆధునిక ఇన్‌స్ట్రుమెంటేషన్ మరియు ఇమేజింగ్ మార్గదర్శకత్వాన్ని ఉపయోగించి అత్యంత శ్రద్ధతో నిర్వహించబడతాయి.',
+      
+      // Achievement 11: Surgical Volume
+      surgicalVolumeTitle: 'అధిక శస్త్రచికిత్స పరిమాణం - నెలవారీ 130 నుండి 150 శస్త్రచికిత్సలు',
+      surgicalVolumeDesc: 'ప్రతి నెలా సగటున 130-150 శస్త్రచికిత్సలతో, డా. రామస్వామి హాస్పిటల్స్ ఈ ప్రాంతంలోని అత్యంత చురుకైన శస్త్రచికిత్స కేంద్రాలలో ఒకటి. ఈ అధిక శస్త్రచికిత్స భారం రోగులు మరియు సమాజం మమ్మల్ని విశ్వసించడాన్ని ప్రతిబింబిస్తుంది, అలాగే మా శస్త్రచికిత్స మరియు నర్సింగ్ బృందాల స్థిరత్వం, నైపుణ్యం మరియు అంకితభావాన్ని ప్రతిబింబిస్తుంది.',
+      
+      // Achievement 12: Paediatric Trauma
+      paediatricTraumaTitle: 'ప్రత్యేక పీడియాట్రిక్ ట్రామా కేర్',
+      paediatricTraumaDesc: 'మా ఆర్థోపెడిక్ విభాగం సాధారణ పగుళ్ల నుండి సంక్లిష్ట గ్రోత్ ప్లేట్ గాయాల వరకు అన్ని రకాల పీడియాట్రిక్ పగుళ్లు మరియు ట్రామా కేసులను అందిస్తుంది. పిల్లలకు అనువైన ప్రత్యేక పద్ధతులు మరియు పరికరాలతో, మేము ఆరోగ్యకరమైన ఎముక నివారణ మరియు పెరుగుదలను ప్రోత్సహించడానికి సున్నితమైన, సురక్షితమైన మరియు సమర్థవంతమైన చికిత్సను నిర్ధారిస్తాము.',
+      
+      // Achievement 13: Geriatric Trauma
+      geriatricTraumaTitle: 'సమగ్ర జెరియాట్రిక్ ట్రామా కేర్',
+      geriatricTraumaDesc: 'పెళుసైన ఎముకలు మరియు సంబంధిత వైద్య పరిస్థితుల కారణంగా వృద్ధులకు ట్రామా నిర్వహణలో ప్రత్యేక శ్రద్ధ అవసరం. మా బృందం ప్రారంభ మొబిలైజేషన్, కనిష్టంగా ఇన్వాసివ్ శస్త్రచికిత్సలు మరియు స్వతంత్రతను పునరుద్ధరించడం మరియు రికవరీ సమయాన్ని తగ్గించడంపై దృష్టి సారించే పునరావాస కార్యక్రమాలతో సహా సమగ్ర జెరియాట్రిక్ ఫ్రాక్చర్ కేర్‌ను అందిస్తుంది.',
+      
+      // Achievement 14: Soft Tissue
+      softTissueTitle: 'అధునాతన సాఫ్ట్ టిష్యూ పునర్నిర్మాణ ప్రక్రియలు',
+      softTissueDesc: 'ట్రామా, ఇన్ఫెక్షన్ లేదా ట్యూమర్ తొలగింపు తర్వాత రూపం మరియు పనితీరును పునరుద్ధరించడానికి మేము అధునాతన సాఫ్ట్ టిష్యూ పునర్నిర్మాణ శస్త్రచికిత్సలను అందిస్తాము. స్కిన్ గ్రాఫ్ట్స్ మరియు ఫ్లాప్ శస్త్రచికిత్సలతో సహా ఆధునిక పునర్నిర్మాణ పద్ధతులను ఉపయోగించి, మేము రోగులకు శారీరక రికవరీ మరియు సౌందర్య ఫలితాలను తిరిగి పొందడంలో సహాయపడతాము.',
+      
+      // Achievement 15: Tendon Transfer
+      tendonTransferTitle: 'ప్రత్యేక టెండన్ ట్రాన్స్‌ఫర్ శస్త్రచికిత్సలు',
+      tendonTransferDesc: 'మా సర్జన్లు నరాల గాయాలు, పక్షవాతం లేదా పుట్టుకతో వచ్చే పరిస్థితుల కారణంగా కండరాల పనితీరును కోల్పోయిన రోగుల కోసం టెండన్ బదిలీ ప్రక్రియలను నిర్వహిస్తారు. ఈ శస్త్రచికిత్సలు లింబ్ కదలికను పునరుద్ధరించడానికి, బలాన్ని మెరుగుపరచడానికి మరియు స్వతంత్రంగా రోజువారీ కార్యకలాపాలను నిర్వహించే రోగి సామర్థ్యాన్ని మెరుగుపరచడానికి జాగ్రత్తగా ప్రణాళిక చేయబడ్డాయి.',
+      
+      // Achievement 16: Revision Surgeries
+      revisionSurgeriesTitle: 'సమగ్ర రివిజన్ శస్త్రచికిత్సలు',
+      revisionSurgeriesDesc: 'మా నైపుణ్యం అన్ని ఆర్థోపెడిక్ ఉప-ప్రత్యేకతలలో రివిజన్ శస్త్రచికిత్సలకు విస్తరించింది - ఫ్రాక్చర్ ఫిక్సేషన్‌లు, జాయింట్ రీప్లేస్‌మెంట్లు మరియు వెన్నెముక కార్యకలాపాలతో సహా. ప్రతి రివిజన్ కేసు శాశ్వత రికవరీ కోసం సరైన శస్త్రచికిత్స ప్రణాళిక, ఇన్ఫెక్షన్ నియంత్రణ మరియు నిర్మాణాత్మక దిద్దుబాటును నిర్ధారించడానికి జాగ్రత్తగా మూల్యాంకనం చేయబడుతుంది.',
+      
+      // CTA Section
+      ctaTitle: 'ప్రపంచ-స్థాయి ఆర్థోపెడిక్ కేర్‌ను అనుభవించండి',
+      ctaDescription: 'తమ ఆర్థోపెడిక్ ఆరోగ్యాన్ని మమ్మల్ని విశ్వసించిన వేలాది మంది రోగులతో చేరండి. మా అగ్రగామి విజయాలు మరియు నిపుణుల బృందం మీకు సాధ్యమైనంత ఉత్తమ సంరక్షణను అందించడానికి సిద్ధంగా ఉన్నాయి.',
+      ctaButton: 'కన్సల్టేషన్ బుక్ చేయండి',
+      ctaButtonSecondary: 'సేవలను చూడండి'
     },
     contact: {
       title: 'సంప్రదింపు మరియు స్థానం',

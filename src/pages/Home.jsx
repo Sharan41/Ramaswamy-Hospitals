@@ -15,6 +15,76 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef(null)
+  const [achievementIndex, setAchievementIndex] = useState(0)
+  const [testimonialIndex, setTestimonialIndex] = useState(0)
+  
+  // Achievement carousel data - Using full descriptions from achievements page
+  const achievementCards = [
+    { 
+      title: t.achievements?.msmchTitle || 'First MSMCH Ortho in Kavali',
+      description: t.achievements?.msmchDesc || 'Dr. Ramaswamy Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.'
+    },
+    { 
+      title: t.achievements?.thr2005Title || 'First Total Hip Replacement (THR) in Kavali - 2005',
+      description: t.achievements?.thr2005Desc || 'In 2005, our hospital achieved a historic milestone by performing the first-ever Total Hip Replacement surgery in Kavali. This complex procedure restored mobility and reduced chronic pain for patients suffering from severe hip arthritis, fractures, and degenerative conditions.'
+    },
+    { 
+      title: t.achievements?.goldenKneeTitle || 'First Total Knee Replacement (TKR) - Golden Knee in Kavali',
+      description: t.achievements?.goldenKneeDesc || 'We proudly performed Kavali\'s first Total Knee Replacement, also known as the Golden Knee Replacement, using advanced implant materials designed for durability and longevity. This procedure has transformed the lives of countless patients with end-stage arthritis.'
+    },
+    { 
+      title: t.achievements?.shoulderReplacementTitle || 'First Shoulder Replacement in Kavali',
+      description: t.achievements?.shoulderReplacementDesc || 'Our team accomplished another breakthrough by performing the first Shoulder Replacement surgery in Kavali. This procedure helps patients suffering from severe shoulder arthritis, fractures, or rotator cuff injuries regain motion and comfort.'
+    },
+    { 
+      title: t.achievements?.surgicalVolumeTitle || 'High Surgical Volume - 130 to 150 Surgeries Monthly',
+      description: t.achievements?.surgicalVolumeDesc || 'With an average of 130–150 surgeries every month, Dr. Ramaswamy Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community.'
+    },
+    { 
+      title: t.achievements?.tumourProceduresTitle || 'Comprehensive Tumour Procedures',
+      description: t.achievements?.tumourProceduresDesc || 'Our orthopaedic oncology division handles a wide spectrum of bone tumour surgeries, including tumour excision, limb-sparing procedures, and reconstruction, ensuring preservation of limb function and appearance.'
+    }
+  ]
+  
+  // Testimonial carousel data
+  const testimonialCards = [
+    { 
+      name: t.home?.testimonial1Name || 'Rajesh Kumar',
+      location: t.home?.testimonial1Location || 'Kavali',
+      rating: 5,
+      quote: t.home?.testimonial1Quote || 'Excellent care and treatment. The doctors and staff were very professional and caring.'
+    },
+    { 
+      name: t.home?.testimonial2Name || 'Priya Sharma',
+      location: t.home?.testimonial2Location || 'Atmakur',
+      rating: 5,
+      quote: t.home?.testimonial2Quote || 'Outstanding medical facility with state-of-the-art equipment. Highly recommend for orthopedic treatments.'
+    },
+    { 
+      name: t.home?.testimonial3Name || 'Anitha Reddy',
+      location: t.home?.testimonial3Location || 'Kavali',
+      rating: 5,
+      quote: t.home?.testimonial3Quote || 'Life-changing surgery experience. The post-operative care was exceptional and recovery was smooth.'
+    }
+  ]
+  
+  // Auto-rotate achievement cards (increased duration for longer descriptions)
+  useEffect(() => {
+    const achievementTimer = setInterval(() => {
+      setAchievementIndex((prev) => (prev + 1) % achievementCards.length)
+    }, 5000)
+    
+    return () => clearInterval(achievementTimer)
+  }, [])
+  
+  // Auto-rotate testimonial cards
+  useEffect(() => {
+    const testimonialTimer = setInterval(() => {
+      setTestimonialIndex((prev) => (prev + 1) % testimonialCards.length)
+    }, 3500)
+    
+    return () => clearInterval(testimonialTimer)
+  }, [])
 
   // Force video to play on mount
   useEffect(() => {
@@ -315,6 +385,125 @@ export default function Home() {
               <p>{t.home.ourFacilitiesCardDesc}</p>
             </Link>
           </StaggerContainer>
+        </section>
+      </FadeIn>
+
+      {/* Achievements Sneak Peek */}
+      <FadeIn>
+        <section className="home-sneak-peek-section achievements-preview">
+          <div className="sneak-peek-card">
+            <div className="sneak-peek-content">
+              <div className="sneak-peek-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                {t.home.achievementsBadge}
+              </div>
+              <h2>{t.home.achievementsTitle}</h2>
+              <p>{t.home.achievementsDesc}</p>
+              <div className="sneak-peek-stats">
+                <div className="peek-stat">
+                  <div className="peek-stat-number">16+</div>
+                  <div className="peek-stat-label">{t.home.achievementsMilestones}</div>
+                </div>
+                <div className="peek-stat">
+                  <div className="peek-stat-number">25+</div>
+                  <div className="peek-stat-label">{t.home.achievementsYears}</div>
+                </div>
+                <div className="peek-stat">
+                  <div className="peek-stat-number">150+</div>
+                  <div className="peek-stat-label">{t.home.achievementsSurgeries}</div>
+                </div>
+              </div>
+              <Link to="/achievements" className="sneak-peek-cta" onClick={() => window.scrollTo(0, 0)}>
+                {t.home.achievementsCTA}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            </div>
+            <div className="sneak-peek-visual achievements-visual">
+              <div className="carousel-container">
+                {achievementCards.map((card, index) => (
+                  <div 
+                    key={index}
+                    className={`carousel-card achievement-card ${index === achievementIndex ? 'active' : ''}`}
+                  >
+                    <h3 className="carousel-card-title">{card.title}</h3>
+                    <p className="carousel-card-desc">{card.description}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="carousel-dots">
+                {achievementCards.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`dot ${index === achievementIndex ? 'active' : ''}`}
+                    onClick={() => setAchievementIndex(index)}
+                    aria-label={`Go to achievement ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      {/* Testimonials Sneak Peek */}
+      <FadeIn>
+        <section className="home-sneak-peek-section testimonials-preview">
+          <div className="sneak-peek-card reverse">
+            <div className="sneak-peek-visual testimonials-visual">
+              <div className="carousel-container">
+                {testimonialCards.map((card, index) => (
+                  <div 
+                    key={index}
+                    className={`carousel-card testimonial-card ${index === testimonialIndex ? 'active' : ''}`}
+                  >
+                    <div className="carousel-rating-badge">
+                      {[...Array(card.rating)].map((_, i) => (
+                        <svg key={i} className="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="carousel-card-quote">"{card.quote}"</p>
+                    <div className="carousel-card-author">
+                      <h3 className="carousel-card-name">{card.name}</h3>
+                      <p className="carousel-card-location">{card.location}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="carousel-dots">
+                {testimonialCards.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`dot ${index === testimonialIndex ? 'active' : ''}`}
+                    onClick={() => setTestimonialIndex(index)}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="sneak-peek-content">
+              <div className="sneak-peek-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                {t.home.testimonialsBadge}
+              </div>
+              <h2>{t.home.testimonialsTitle}</h2>
+              <p>{t.home.testimonialsDesc}</p>
+              <Link to="/testimonials" className="sneak-peek-cta" onClick={() => window.scrollTo(0, 0)}>
+                {t.home.testimonialsCTA}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+            </div>
+          </div>
         </section>
       </FadeIn>
 

@@ -33,9 +33,9 @@ export default function CountUp({ end, duration = 2000, suffix = '', prefix = ''
       const now = Date.now()
       const progress = Math.min((now - startTime) / duration, 1)
       
-      // Easing function for smooth animation
-      const easeOutQuad = progress * (2 - progress)
-      const currentCount = Math.floor(easeOutQuad * endValue)
+      // Smooth easing function (ease-out-cubic for natural deceleration)
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3)
+      const currentCount = Math.floor(easeOutCubic * endValue)
 
       setCount(currentCount)
 

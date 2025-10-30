@@ -22,6 +22,7 @@ function App() {
     if (pathname.startsWith('/doctors')) return t.nav.doctors
     if (pathname.startsWith('/facilities')) return t.nav.facilities
     if (pathname.startsWith('/testimonials')) return t.nav.testimonials
+    if (pathname.startsWith('/achievements')) return t.nav.achievements
     if (pathname.startsWith('/contact')) return t.nav.contact
     return 'Not Found'
   })()
@@ -117,6 +118,7 @@ function App() {
             <NavLink to="/doctors" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.doctors}</NavLink>
             <NavLink to="/facilities" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.facilities}</NavLink>
             <NavLink to="/testimonials" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.testimonials}</NavLink>
+            <NavLink to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.contact}</NavLink>
           </nav>
           <button className="hamburger" onClick={() => setMobileOpen(v => !v)} aria-label="Open menu" aria-expanded={mobileOpen}>
@@ -136,6 +138,7 @@ function App() {
           <NavLink onClick={() => setMobileOpen(false)} to="/doctors" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.doctors}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/facilities" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.facilities}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/testimonials" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.testimonials}</NavLink>
+          <NavLink onClick={() => setMobileOpen(false)} to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/contact" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.contact}</NavLink>
         </div>
       )}
