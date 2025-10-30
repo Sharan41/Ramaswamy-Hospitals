@@ -9139,6 +9139,9 @@ body {
   /* Back card tablet styling */
   .achievement-card-back {
     padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .achievement-back-content {
@@ -9147,11 +9150,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   
   .achievement-back-title {
     text-align: center;
     margin-bottom: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .achievement-description {
@@ -9232,7 +9239,7 @@ body {
   }
 
   .achievement-card-modern {
-    height: 360px !important;
+    height: 400px !important;
     cursor: pointer;
   }
   
@@ -9317,7 +9324,11 @@ body {
   
   /* Back card mobile styling */
   .achievement-card-back {
-    padding: 24px 20px;
+    padding: 28px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
   }
   
   .achievement-back-content {
@@ -9326,26 +9337,36 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  
-  .achievement-back-title {
-    font-size: 1.05rem;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  
-  .achievement-description {
-    font-size: 0.85rem;
-    line-height: 1.55;
-    text-align: center;
+    justify-content: flex-start;
+    width: 100%;
     max-width: 100%;
   }
   
+  .achievement-back-title {
+    font-size: 0.98rem;
+    margin-bottom: 14px;
+    text-align: center;
+    line-height: 1.45;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  
+  .achievement-description {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  
   .achievement-back-icon {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 12px;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 14px;
+    flex-shrink: 0;
   }
   
   /* Smooth transition on mobile */
