@@ -207,11 +207,16 @@ function App() {
       </div>
       
       <footer className="footer" role="contentinfo">
-        <div>© {new Date().getFullYear()} {t.brand}</div>
-        <div className="links">
-          <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
-          <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
-          <a href="https://www.instagram.com/drramaswamyhospitals/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
+        <div className="footer-main">
+          <div>© {new Date().getFullYear()} {t.brand}</div>
+          <div className="links">
+            <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
+            <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
+            <a href="https://www.instagram.com/drramaswamyhospitals/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
+          </div>
+        </div>
+        <div className="footer-credit">
+          Created by <a href="https://www.linkedin.com/in/sai-sharan-vishnu/" target="_blank" rel="noreferrer" aria-label="Developer LinkedIn">Sai Sharan V</a>
         </div>
       </footer>
     </div>
