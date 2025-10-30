@@ -9961,12 +9961,31 @@ body {
 /* Achievement Card Specific Styles */
 .carousel-card.achievement-card {
   max-height: 100%;
-  overflow: visible;
-  justify-content: center;
+  overflow-y: auto;
+  justify-content: flex-start;
   padding: 36px 32px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom scrollbar for achievement cards */
+.carousel-card.achievement-card::-webkit-scrollbar {
+  width: 4px;
+}
+
+.carousel-card.achievement-card::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.carousel-card.achievement-card::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.carousel-card.achievement-card::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .carousel-card.achievement-card.active {
@@ -10179,6 +10198,38 @@ body {
 }
 
 /* Responsive Carousel */
+/* Smaller laptops (1024px - 1366px) */
+@media (min-width: 969px) and (max-width: 1366px) {
+  .carousel-container {
+    height: 480px;
+  }
+
+  .carousel-card {
+    padding: 32px 28px;
+  }
+
+  .carousel-card-title {
+    font-size: 1.15rem;
+    margin: 0 0 14px;
+    line-height: 1.4;
+  }
+
+  .carousel-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+  
+  .carousel-card.achievement-card {
+    padding: 34px 30px;
+    justify-content: flex-start;
+    max-height: 96%;
+  }
+  
+  .achievements-visual {
+    padding: 50px 42px;
+  }
+}
+
 @media (max-width: 968px) {
   .carousel-container {
     height: 420px;
@@ -10344,21 +10395,22 @@ body {
 
 @media (max-width: 480px) {
   .carousel-container {
-    height: 360px;
+    height: 420px;
   }
 
   .carousel-card {
-    padding: 24px 18px;
+    padding: 28px 20px;
   }
 
   .carousel-card-title {
-    font-size: 0.96rem;
-    margin: 0 0 8px;
+    font-size: 0.94rem;
+    margin: 0 0 10px;
+    line-height: 1.4;
   }
 
   .carousel-card-desc {
     font-size: 0.8rem;
-    line-height: 1.55;
+    line-height: 1.6;
   }
   
   .achievements-visual {
@@ -10413,7 +10465,10 @@ body {
   }
 
   .carousel-card.achievement-card {
-    padding: 26px 18px;
+    padding: 28px 20px 32px 20px;
+    justify-content: flex-start;
+    overflow-y: auto;
+    max-height: 95%;
   }
   
   /* Ensure proper overflow handling on mobile */
@@ -10453,17 +10508,22 @@ body {
   /* Better achievement card sizing on mobile */
   .carousel-card.achievement-card {
     max-height: 92%;
-    padding: 22px 16px;
+    padding: 26px 18px 30px 18px;
+    justify-content: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .carousel-card-title {
-    font-size: 0.92rem !important;
-    margin: 0 0 8px !important;
+    font-size: 0.9rem !important;
+    margin: 0 0 10px !important;
+    line-height: 1.4 !important;
   }
   
   .carousel-card-desc {
     font-size: 0.78rem !important;
-    line-height: 1.5 !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0 !important;
   }
 }
 
