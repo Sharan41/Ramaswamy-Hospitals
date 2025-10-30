@@ -8664,14 +8664,18 @@ body {
   perspective: 1000px;
   height: 400px;
   position: relative;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .achievement-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  pointer-events: none;
 }
 
 .achievement-card-modern:hover .achievement-card-inner {
@@ -8704,6 +8708,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: box-shadow 0.3s ease;
+  pointer-events: auto;
 }
 
 .achievement-card-modern:hover .achievement-card-front,
@@ -9214,7 +9219,13 @@ body {
   /* Add tap indicator - subtle shadow on press */
   .achievement-card-modern:active {
     transform: scale(0.98);
-    transition: transform 0.1s ease;
+    transition: transform 0.15s ease;
+  }
+  
+  /* Prevent text selection on tap */
+  .achievement-card-modern * {
+    user-select: none;
+    -webkit-user-select: none;
   }
   
   /* Add visual hint for tappable cards */
