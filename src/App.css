@@ -8873,6 +8873,163 @@ body {
   filter: brightness(1.2) contrast(1.2);
 }
 
+/* View X-Ray Button on Back of Card */
+.view-xray-button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--brand) 0%, #1e4d5c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(42, 91, 108, 0.2);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1000 !important;
+  pointer-events: auto !important;
+}
+
+.view-xray-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2a5b6c 0%, #1e4d5c 100%);
+  box-shadow: 0 6px 20px rgba(42, 91, 108, 0.4);
+}
+
+.view-xray-button:active {
+  transform: translateY(0);
+}
+
+.view-xray-button svg {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* X-Ray Lightbox Overlay */
+.xray-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Lightbox Close Button */
+.xray-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10002;
+  backdrop-filter: blur(10px);
+}
+
+.xray-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: rotate(90deg);
+}
+
+/* Lightbox Zoom Button */
+.xray-lightbox-zoom {
+  position: absolute;
+  top: 20px;
+  right: 85px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10002;
+  backdrop-filter: blur(10px);
+}
+
+.xray-lightbox-zoom:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* Lightbox Content */
+.xray-lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.xray-lightbox-content.zoomed {
+  max-width: 150vw;
+  max-height: 150vh;
+  cursor: move;
+}
+
+/* Lightbox Image */
+.xray-lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.15) contrast(1.2);
+}
+
+.xray-lightbox-content.zoomed .xray-lightbox-image {
+  max-width: none;
+  max-height: none;
+  width: 150%;
+  height: auto;
+  cursor: move;
+}
+
 .achievement-content {
   padding: 24px;
   flex: 1;
@@ -8912,23 +9069,32 @@ body {
   align-items: center;
   justify-content: center;
   padding: 32px;
+  position: relative;
+  z-index: 10;
 }
 
 .achievement-back-content {
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  pointer-events: auto;
+}
+
+.achievement-back-content * {
+  pointer-events: auto;
 }
 
 .achievement-back-icon {
-  margin-bottom: 20px;
-  opacity: 0.9;
+  display: none; /* Hidden as requested */
 }
 
 .achievement-back-title {
   font-size: 1.3rem;
   font-weight: 700;
   color: white;
-  margin: 0 0 16px;
+  margin: 0;
   line-height: 1.3;
 }
 
@@ -8937,6 +9103,7 @@ body {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
+  flex: 1;
 }
 
 /* CTA Section */
@@ -9389,6 +9556,42 @@ body {
   .achievement-title {
     font-size: 1rem;
     line-height: 1.3;
+  }
+
+  /* Mobile Lightbox Adjustments */
+  .xray-lightbox-close,
+  .xray-lightbox-zoom {
+    width: 44px;
+    height: 44px;
+    top: 10px;
+  }
+
+  .xray-lightbox-close {
+    right: 10px;
+  }
+
+  .xray-lightbox-zoom {
+    right: 65px;
+  }
+
+  .xray-lightbox-overlay {
+    padding: 10px;
+  }
+
+  .xray-lightbox-image {
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  .view-xray-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    max-width: 180px;
+    margin-top: 12px;
+  }
+  
+  .achievement-back-icon {
+    display: none !important;
   }
   
   .achievement-category {
