@@ -4,6 +4,17 @@ import { Award } from 'lucide-react'
 import CountUp from '../components/CountUp'
 import { useState } from 'react'
 
+// X-ray images import - add your optimized X-rays here
+// Example: import tkrXray from '../assets/achievements-xrays/tkr-knee-replacement.jpg'
+const xrayImages = {
+  // Map achievement IDs to their X-ray images
+  // 1: msmchXray,
+  // 2: thrXray,
+  // 3: goldenKneeXray,
+  // 4: shoulderXray,
+  // ... add more as images become available
+}
+
 export default function Achievements() {
   const { t } = useI18n()
   const [flippedCards, setFlippedCards] = useState({})
@@ -227,12 +238,23 @@ export default function Achievements() {
                       <div className="achievement-number-badge">
                         <span>{String(achievement.id).padStart(2, '0')}</span>
                       </div>
-                      <div className="achievement-image-placeholder">
-                        <div className="image-placeholder-icon">
-                          <Award size={48} strokeWidth={1.5} />
+                      {xrayImages[achievement.id] ? (
+                        <div className="achievement-image-container">
+                          <img 
+                            src={xrayImages[achievement.id]} 
+                            alt={t.achievements[`${achievement.key}Title`]}
+                            className="achievement-xray-image"
+                            loading="lazy"
+                          />
                         </div>
-                        <span className="image-placeholder-text">Image</span>
-                      </div>
+                      ) : (
+                        <div className="achievement-image-placeholder">
+                          <div className="image-placeholder-icon">
+                            <Award size={48} strokeWidth={1.5} />
+                          </div>
+                          <span className="image-placeholder-text">X-Ray</span>
+                        </div>
+                      )}
                       <div className="achievement-content">
                         <span className="achievement-category">{achievement.category}</span>
                         <h3 className="achievement-title">
