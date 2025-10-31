@@ -9619,11 +9619,12 @@ body {
   
   /* Back card mobile styling */
   .achievement-card-back {
-    padding: 28px 18px;
+    padding: 20px 16px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .achievement-back-content {
@@ -9635,13 +9636,14 @@ body {
     justify-content: flex-start;
     width: 100%;
     max-width: 100%;
+    gap: 10px;
   }
   
   .achievement-back-title {
-    font-size: 0.98rem;
-    margin-bottom: 14px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
     text-align: center;
-    line-height: 1.45;
+    line-height: 1.4;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -9650,11 +9652,32 @@ body {
   }
   
   .achievement-description {
-    font-size: 0.82rem;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    line-height: 1.55;
     text-align: center;
     max-width: 100%;
     padding: 0 4px;
+    margin: 0;
+  }
+  
+  /* Smooth scrolling for back card */
+  .achievement-card-back {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .achievement-card-back::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .achievement-card-back::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .achievement-card-back::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
   }
   
   .achievement-back-icon {
