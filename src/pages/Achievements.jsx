@@ -2,8 +2,7 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { Award } from 'lucide-react'
 import CountUp from '../components/CountUp'
-import { useState, useEffect } from 'react'
-import { createPortal } from 'react-dom'
+import { useState } from 'react'
 
 // X-ray images import
 import tkrXray from '../assets/TKR.Total knee replacement.jpeg'
@@ -24,8 +23,6 @@ export default function Achievements() {
   const { t } = useI18n()
   const [flippedCards, setFlippedCards] = useState({})
   const [animatingCard, setAnimatingCard] = useState(null)
-  const [lightboxImage, setLightboxImage] = useState(null)
-  const [lightboxZoom, setLightboxZoom] = useState(false)
   
   // Major Statistics
   const stats = [
@@ -188,36 +185,6 @@ export default function Achievements() {
     }, 700)
   }
 
-  // Handle lightbox open/close
-  const openLightbox = (image, event) => {
-    if (event) {
-      event.stopPropagation()
-      event.preventDefault()
-    }
-    console.log('Opening lightbox with image:', image)
-    setLightboxImage(image)
-    setLightboxZoom(false)
-    document.body.style.overflow = 'hidden'
-  }
-
-  const closeLightbox = () => {
-    console.log('Closing lightbox')
-    setLightboxImage(null)
-    setLightboxZoom(false)
-    document.body.style.overflow = ''
-  }
-
-  const toggleZoom = () => {
-    setLightboxZoom(prev => !prev)
-  }
-  
-  // Debug: Log when lightboxImage changes
-  useEffect(() => {
-    console.log('Lightbox image state:', lightboxImage)
-    console.log('Available X-ray images:', xrayImages)
-    console.log('Image for achievement 3:', xrayImages[3])
-    console.log('Image for achievement 4:', xrayImages[4])
-  }, [lightboxImage])
 
   return (
     <div className="achievements-modern-page">
@@ -310,45 +277,13 @@ export default function Achievements() {
                     
                     {/* Back of card - shows on hover */}
                     <div className="achievement-card-back">
-                      <div 
-                        className="achievement-back-content"
-                        onClick={(e) => {
-                          // Stop propagation to prevent card flip on back content clicks
-                          e.stopPropagation()
-                        }}
-                      >
+                      <div className="achievement-back-content">
                         <h3 className="achievement-back-title">
                           {t.achievements[`${achievement.key}Title`]}
                         </h3>
                         <p className="achievement-description">
                           {t.achievements[`${achievement.key}Desc`]}
                         </p>
-                        {xrayImages[achievement.id] && (
-                          <button 
-                            className="view-xray-button"
-                            onMouseDown={(e) => {
-                              console.log('🔵 Button MOUSE DOWN')
-                              e.stopPropagation()
-                            }}
-                            onClick={(e) => {
-                              console.log('🟢 Button CLICKED for achievement:', achievement.id)
-                              console.log('🟢 Image path:', xrayImages[achievement.id])
-                              console.log('🟢 Event target:', e.target)
-                              e.stopPropagation()
-                              e.preventDefault()
-                              openLightbox(xrayImages[achievement.id], e)
-                            }}
-                            aria-label={t.achievements.viewImage}
-                            type="button"
-                            style={{ position: 'relative', zIndex: 10000 }}
-                          >
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ pointerEvents: 'none' }}>
-                              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                              <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                            {t.achievements.viewImage}
-                          </button>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -386,63 +321,6 @@ export default function Achievements() {
         </div>
       </section>
 
-      {/* X-Ray Lightbox Modal - Rendered via Portal */}
-      {lightboxImage && createPortal(
-        <div 
-          className="xray-lightbox-overlay" 
-          onClick={closeLightbox}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 99999,
-            display: 'flex',
-            backgroundColor: 'rgba(0, 0, 0, 0.95)'
-          }}
-        >
-          <button 
-            className="xray-lightbox-close" 
-            onClick={closeLightbox}
-            aria-label="Close lightbox"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
-          <button 
-            className="xray-lightbox-zoom" 
-            onClick={(e) => {
-              e.stopPropagation()
-              toggleZoom()
-            }}
-            aria-label={lightboxZoom ? "Zoom out" : "Zoom in"}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
-              {lightboxZoom ? (
-                <line x1="8" y1="11" x2="14" y2="11"/>
-              ) : (
-                <>
-                  <line x1="11" y1="8" x2="11" y2="14"/>
-                  <line x1="8" y1="11" x2="14" y2="11"/>
-                </>
-              )}
-            </svg>
-          </button>
-          <div 
-            className={`xray-lightbox-content ${lightboxZoom ? 'zoomed' : ''}`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img 
-              src={lightboxImage} 
-              alt="X-Ray" 
-              className="xray-lightbox-image"
-            />
-          </div>
-        </div>,
-        document.body
-      )}
     </div>
   )
 }
