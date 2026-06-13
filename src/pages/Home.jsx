@@ -680,6 +680,14 @@ export default function Home() {
                 <input type="tel" id="feedback-phone" name="phone" placeholder={t.contact.phoneNumber} required aria-required="true" />
               </div>
               <div className="form-group">
+                <label htmlFor="feedback-branch" className="visually-hidden">{t.contact.selectBranch} *</label>
+                <select id="feedback-branch" name="branch" required className="feedback-select" aria-required="true">
+                  <option value="">{t.contact.selectBranch} *</option>
+                  <option value="Kavali">{t.contact.branchKavali}</option>
+                  <option value="Nellore">{t.contact.branchNellore}</option>
+                </select>
+              </div>
+              <div className="form-group">
                 <label htmlFor="feedback-subject" className="visually-hidden">{t.contact.selectSubject} *</label>
                 <select id="feedback-subject" name="subject" required className="feedback-select" aria-required="true">
                   <option value="">{t.contact.selectSubject} *</option>
