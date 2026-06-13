@@ -382,6 +382,8 @@ function App() {
             <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
             <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
             <a href="https://www.instagram.com/drramaswamyhospitals_kavali/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
+            <a href="https://www.facebook.com/profile.php?id=61581134933537" target="_blank" rel="noreferrer" aria-label="Follow us on Facebook">{t.footer.facebook}</a>
+            <a href="https://www.youtube.com/@Dr.RamaswamyHospitals" target="_blank" rel="noreferrer" aria-label="Subscribe on YouTube">{t.footer.youtube}</a>
           </div>
         </div>
         <div className="footer-credit">

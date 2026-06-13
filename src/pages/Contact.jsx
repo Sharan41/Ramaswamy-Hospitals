@@ -47,6 +47,18 @@ export default function Contact() {
       url: "https://www.instagram.com/drramaswamyhospitals_kavali/"
     },
     { 
+      name: t.contact.facebook, 
+      desc: t.contact.facebookText,
+      icon: "FB",
+      url: "https://www.facebook.com/profile.php?id=61581134933537"
+    },
+    { 
+      name: t.contact.youtube, 
+      desc: t.contact.youtubeText,
+      icon: "YT",
+      url: "https://www.youtube.com/@Dr.RamaswamyHospitals"
+    },
+    { 
       name: t.contact.linktree, 
       desc: t.contact.linktreeText,
       icon: "LT",
