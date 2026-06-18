@@ -40,6 +40,8 @@ export const translations = {
       directions: 'Directions'
     },
     footer: {
+      privacyPolicy: 'Privacy Policy',
+      termsAndConditions: 'Terms & Conditions',
       maps: 'Google Maps',
       linktree: 'Linktree',
       instagram: 'Instagram',
@@ -615,6 +617,8 @@ export const translations = {
       directions: 'దిశలు'
     },
     footer: {
+      privacyPolicy: 'Privacy Policy',
+      termsAndConditions: 'Terms & Conditions',
       maps: 'గూగుల్ మ్యాప్స్',
       linktree: 'లింక్‌ట్రీ',
       instagram: 'ఇన్‌స్టాగ్రామ్',

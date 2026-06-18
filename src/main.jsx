@@ -18,6 +18,8 @@ const OTIcuCare = lazy(() => import('./pages/OTIcuCare.jsx'))
 const Testimonials = lazy(() => import('./pages/Testimonials.jsx'))
 const Achievements = lazy(() => import('./pages/Achievements.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions.jsx'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
 const router = createBrowserRouter([
@@ -34,6 +36,8 @@ const router = createBrowserRouter([
       { path: 'testimonials', element: <Testimonials /> },
       { path: 'achievements', element: <Achievements /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'terms-and-conditions', element: <TermsAndConditions /> },
+      { path: 'privacy-policy', element: <PrivacyPolicy /> },
       { path: '*', element: <NotFound /> },
     ],
   },

@@ -65,6 +65,20 @@ export default function SEOMetaTags() {
         ogTitle: 'Contact Us | Dr.Ramaswamy Hospitals',
         ogDescription: 'Contact Kavali\'s first Super Speciality Hospital. Location, phone, email. Emergency: +91 99127 57854',
       },
+      '/privacy-policy': {
+        title: 'Dr.Ramaswamy Hospitals | Privacy Policy',
+        description: 'Privacy Policy for Dr.Ramaswamy Hospitals website. Learn how we collect, use, and protect your personal information.',
+        keywords: 'privacy policy, dr ramaswamy hospitals privacy, hospital website privacy kavali',
+        ogTitle: 'Privacy Policy | Dr.Ramaswamy Hospitals',
+        ogDescription: 'How Dr.Ramaswamy Hospitals collects, uses, and protects your personal information.',
+      },
+      '/terms-and-conditions': {
+        title: 'Dr.Ramaswamy Hospitals | Terms & Conditions',
+        description: 'Terms and Conditions for using the Dr.Ramaswamy Hospitals website. Read our website usage policies and disclaimers.',
+        keywords: 'terms and conditions, dr ramaswamy hospitals terms, hospital website terms kavali',
+        ogTitle: 'Terms & Conditions | Dr.Ramaswamy Hospitals',
+        ogDescription: 'Terms and Conditions for using the Dr.Ramaswamy Hospitals website.',
+      },
     }
     
     // Get SEO data for current route or use default

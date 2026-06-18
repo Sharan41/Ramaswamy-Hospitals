@@ -379,6 +379,8 @@ function App() {
             <div className="footer-division-text">(A Division of Balaji Wellness Pvt. Ltd.)</div>
           </div>
           <div className="links">
+            <Link to="/privacy-policy">{t.footer.privacyPolicy}</Link>
+            <Link to="/terms-and-conditions">{t.footer.termsAndConditions}</Link>
             <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
             <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
             <a href="https://www.instagram.com/drramaswamyhospitals_kavali/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>

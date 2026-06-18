@@ -16,9 +16,12 @@ export default function Breadcrumbs() {
       'services': t.nav.services,
       'doctors': t.nav.doctors,
       'facilities': t.nav.facilities,
+      'ot-icu-care': t.nav.otIcuCare,
       'testimonials': t.nav.testimonials,
       'achievements': t.nav.achievements,
-      'contact': t.nav.contact
+      'contact': t.nav.contact,
+      'terms-and-conditions': t.footer.termsAndConditions,
+      'privacy-policy': t.footer.privacyPolicy,
     }
     return mapping[name] || name
   }
