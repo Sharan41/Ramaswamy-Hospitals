@@ -4,7 +4,7 @@ import { ParallaxSection } from '../components/ParallaxSection'
 import drRamaswamy from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Ramaswamy 1.jpg?format=webp&w=600&quality=80'
 import drJaheerBasha from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Jaheer Basha.jpg?format=webp&w=600&quality=80'
 import drPadmavathi from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Padmavathi.jpg?format=webp&w=600&quality=80'
-import drPushpika from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr.Pushpika.jpg?format=webp&w=600&quality=80'
+import drRajithaKata from '../assets/WhatsApp Image 2026-07-06 at 14.44.18.jpeg'
 import drRasiVeeraiahGoud from '../assets/WhatsApp Image 2026-02-19 at 20.59.14.jpeg'
 
 export default function Doctors() {
@@ -20,12 +20,12 @@ export default function Doctors() {
       image: drRamaswamy
     },
     { 
-      name: t.doctors.drPushpikaName,
-      specialty: t.doctors.drPushpikaSpecialty,
-      bio: t.doctors.drPushpikaBio,
-      education: t.doctors.drPushpikaEducation,
-      specialties: [t.doctors.drPushpikaSpec1, t.doctors.drPushpikaSpec2],
-      image: drPushpika
+      name: t.doctors.drRajithaKataName,
+      specialty: t.doctors.drRajithaKataSpecialty,
+      bio: t.doctors.drRajithaKataBio,
+      education: t.doctors.drRajithaKataEducation,
+      specialties: [t.doctors.drRajithaKataSpec1, t.doctors.drRajithaKataSpec2],
+      image: drRajithaKata
     },
     { 
       name: t.doctors.drSurendraName,
